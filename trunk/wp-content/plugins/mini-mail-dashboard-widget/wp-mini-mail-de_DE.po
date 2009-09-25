@@ -1,0 +1,540 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mini Mail Dashboard Widget v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2009-09-17 16:22+0200\n"
+"Last-Translator: jungleboy <info@jungleboy.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: wp-mini-mail-class.php:241
+#: wp-mini-mail-class.php:248
+#: wp-mini-mail-class.php:249
+#: wp-mini-mail-class.php:286
+#: wp-mini-mail-class.php:1320
+#@ wp-mini-mail
+msgid "Mini Mail"
+msgstr "Mini Mail"
+
+#: wp-mini-mail-class.php:258
+#@ wp-mini-mail
+msgid "Resources"
+msgstr "Hilfe"
+
+#: wp-mini-mail-class.php:260
+#@ wp-mini-mail
+msgid "Usage instructions"
+msgstr "Anweisungen zum Gebrauch"
+
+#: wp-mini-mail-class.php:261
+#@ wp-mini-mail
+msgid "Frequently asked questions"
+msgstr "FAQ - Häufig gestellte Fragen"
+
+#: wp-mini-mail-class.php:262
+#@ wp-mini-mail
+msgid "Support page"
+msgstr "Support-Seite"
+
+#: wp-mini-mail-class.php:263
+#@ wp-mini-mail
+msgid "About the author"
+msgstr "Über den Autor"
+
+#: wp-mini-mail-class.php:357
+#: wp-mini-mail-class.php:360
+#@ wp-mini-mail
+msgid "Settings updated"
+msgstr "Einstellungen aktualisiert"
+
+#: wp-mini-mail-class.php:366
+#@ wp-mini-mail
+msgid "General"
+msgstr "Generales"
+
+#: wp-mini-mail-class.php:370
+#@ wp-mini-mail
+msgid "Time format:"
+msgstr "Zeitformat:"
+
+#: wp-mini-mail-class.php:373
+#: wp-mini-mail-class.php:714
+#@ wp-mini-mail
+msgid "Details"
+msgstr "Details"
+
+#: wp-mini-mail-class.php:377
+#@ wp-mini-mail
+msgid "Max. cache age:"
+msgstr "Max. Cache-Alter:"
+
+#: wp-mini-mail-class.php:381
+#: wp-mini-mail-class.php:388
+#@ wp-mini-mail
+msgid "Minutes"
+msgstr "Minuten"
+
+#: wp-mini-mail-class.php:385
+#@ wp-mini-mail
+msgid "Mail check interval:"
+msgstr "Mail Check-Intervall:"
+
+#: wp-mini-mail-class.php:392
+#@ wp-mini-mail
+msgid "HTTP time-out:"
+msgstr "HTTP-time-out:"
+
+#: wp-mini-mail-class.php:395
+#@ wp-mini-mail
+msgid "Seconds"
+msgstr "Sekunden"
+
+#: wp-mini-mail-class.php:399
+#@ wp-mini-mail
+msgid "Max. SMS length:"
+msgstr "Max. SMS-Länge:"
+
+#: wp-mini-mail-class.php:402
+#@ wp-mini-mail
+msgid "Characters"
+msgstr "Zeichen"
+
+#: wp-mini-mail-class.php:406
+#@ wp-mini-mail
+msgid "WordPress address book:"
+msgstr "WordPress Adressbuch:"
+
+#: wp-mini-mail-class.php:412
+#@ wp-mini-mail
+msgid "Debug:"
+msgstr "Debug:"
+
+#: wp-mini-mail-class.php:418
+#@ wp-mini-mail
+msgid "Clean on deactivate:"
+msgstr "Beim Deaktivieren zurücksetzen:"
+
+#: wp-mini-mail-class.php:427
+#@ wp-mini-mail
+msgid "Mail"
+msgstr "Mail"
+
+#: wp-mini-mail-class.php:431
+#@ wp-mini-mail
+msgid "Your name:"
+msgstr "Ihr Name:"
+
+#: wp-mini-mail-class.php:437
+#@ wp-mini-mail
+msgid "Your e-mail:"
+msgstr "Ihre E-Mail:"
+
+#: wp-mini-mail-class.php:443
+#@ wp-mini-mail
+msgid "Receive method:"
+msgstr "Empfangs-Methode:"
+
+#: wp-mini-mail-class.php:447
+#: wp-mini-mail-class.php:458
+#@ wp-mini-mail
+msgid "Off"
+msgstr "Aus"
+
+#: wp-mini-mail-class.php:454
+#@ wp-mini-mail
+msgid "Send method:"
+msgstr "Versand-Methode:"
+
+#: wp-mini-mail-class.php:465
+#@ wp-mini-mail
+msgid "Address book:"
+msgstr "Adressbuch:"
+
+#: wp-mini-mail-class.php:473
+#@ wp-mini-mail
+msgid "POP3"
+msgstr "POP3"
+
+#: wp-mini-mail-class.php:477
+#: wp-mini-mail-class.php:518
+#: wp-mini-mail-class.php:564
+#@ wp-mini-mail
+msgid "Host:"
+msgstr "Host:"
+
+#: wp-mini-mail-class.php:480
+#: wp-mini-mail-class.php:567
+#@ wp-mini-mail
+msgid "Frequenty used"
+msgstr "Regelmässig verwendet"
+
+#: wp-mini-mail-class.php:484
+#: wp-mini-mail-class.php:524
+#: wp-mini-mail-class.php:571
+#@ wp-mini-mail
+msgid "Secure transfer:"
+msgstr "Sichere Übertragung:"
+
+#: wp-mini-mail-class.php:495
+#: wp-mini-mail-class.php:535
+#: wp-mini-mail-class.php:582
+#@ wp-mini-mail
+msgid "Port:"
+msgstr "Port:"
+
+#: wp-mini-mail-class.php:501
+#: wp-mini-mail-class.php:541
+#: wp-mini-mail-class.php:600
+#: wp-mini-mail-class.php:661
+#@ wp-mini-mail
+msgid "User name:"
+msgstr "Benutzername:"
+
+#: wp-mini-mail-class.php:507
+#: wp-mini-mail-class.php:547
+#: wp-mini-mail-class.php:606
+#: wp-mini-mail-class.php:667
+#@ wp-mini-mail
+msgid "Password:"
+msgstr "Passwort:"
+
+#: wp-mini-mail-class.php:514
+#@ wp-mini-mail
+msgid "IMAP"
+msgstr "IMAP"
+
+#: wp-mini-mail-class.php:553
+#@ wp-mini-mail
+msgid "Folder:"
+msgstr "Ordner:"
+
+#: wp-mini-mail-class.php:560
+#@ wp-mini-mail
+msgid "SMTP"
+msgstr "SMTP"
+
+#: wp-mini-mail-class.php:588
+#@ wp-mini-mail
+msgid "Authentication:"
+msgstr "Authentifizierung:"
+
+#: wp-mini-mail-class.php:613
+#: wp-mini-mail-class.php:777
+#@ wp-mini-mail
+msgid "SMS"
+msgstr "SMS"
+
+#: wp-mini-mail-class.php:616
+#@ wp-mini-mail
+msgid "Use VoipBuster or one of its clones"
+msgstr "Verwenden sie VoipBuster oder einer seiner Klone"
+
+#: wp-mini-mail-class.php:621
+#@ wp-mini-mail
+msgid "Enable:"
+msgstr "Aktivieren:"
+
+#: wp-mini-mail-class.php:627
+#@ wp-mini-mail
+msgid "Notifications:"
+msgstr "Benachrichtigung:"
+
+#: wp-mini-mail-class.php:633
+#@ wp-mini-mail
+msgid "Separator:"
+msgstr "Separator:"
+
+#: wp-mini-mail-class.php:636
+#@ wp-mini-mail
+msgid "Between from/subject/text; default is space"
+msgstr "Zwischen Von/Betreff/Nachricht; (Grundeinstellung ist Leerzeichen)"
+
+#: wp-mini-mail-class.php:640
+#@ wp-mini-mail
+msgid "Shorten from:"
+msgstr "Absender abkürzen:"
+
+#: wp-mini-mail-class.php:643
+#: wp-mini-mail-class.php:650
+#: wp-mini-mail-class.php:657
+#@ wp-mini-mail
+msgid "-1 is off; empty is maximum"
+msgstr "-1 ist Aus; Leerlassen ist Maximum"
+
+#: wp-mini-mail-class.php:647
+#@ wp-mini-mail
+msgid "Shorten subject:"
+msgstr "Betreff abkürzen:"
+
+#: wp-mini-mail-class.php:654
+#@ wp-mini-mail
+msgid "Shorten text:"
+msgstr "Nachricht abkürzen:"
+
+#: wp-mini-mail-class.php:673
+#@ wp-mini-mail
+msgid "From number:"
+msgstr "Von Nummer:"
+
+#: wp-mini-mail-class.php:679
+#@ wp-mini-mail
+msgid "Notifications to:"
+msgstr "Benachrichtigungen an:"
+
+#: wp-mini-mail-class.php:685
+#@ wp-mini-mail
+msgid "Url:"
+msgstr "Url:"
+
+#: wp-mini-mail-class.php:688
+#@ wp-mini-mail
+msgid "VoipBuster"
+msgstr "VoipBuster"
+
+#: wp-mini-mail-class.php:692
+#@ wp-mini-mail
+msgid "Max. SMS/day:"
+msgstr "Max. SMS/ Tag:"
+
+#: wp-mini-mail-class.php:695
+#@ wp-mini-mail
+msgid "0 is unlimited"
+msgstr "0 steht für unlimitiert"
+
+#: wp-mini-mail-class.php:699
+#@ wp-mini-mail
+msgid "Phone book:"
+msgstr "Telefonbuch:"
+
+#: wp-mini-mail-class.php:708
+#@ wp-mini-mail
+msgid "Schedule:"
+msgstr "Zeitplan:"
+
+#: wp-mini-mail-class.php:713
+#@ wp-mini-mail
+msgid "Works like a mechanical time switch; lines starting with + switches on, with - off."
+msgstr "Funktioniert wie eine mechanische Schaltuhr, Zeilen beginnend mit + schalten die Funktion ein, Zeilen beginnend mit - schalten sie aus."
+
+#: wp-mini-mail-class.php:719
+#@ wp-mini-mail
+msgid "All passwords are stored and sent in plain text"
+msgstr "Alle Kennwörter werden in Klartext (plain text) gespeichert und gesendet."
+
+#: wp-mini-mail-class.php:722
+#@ wp-mini-mail
+msgid "Save"
+msgstr "Speichern"
+
+#: wp-mini-mail-class.php:770
+#@ wp-mini-mail
+msgid "Check"
+msgstr "Check"
+
+#: wp-mini-mail-class.php:773
+#@ wp-mini-mail
+msgid "Compose"
+msgstr "Schreiben"
+
+#: wp-mini-mail-class.php:774
+#@ wp-mini-mail
+msgid "Announce"
+msgstr "WP-Mitteilung"
+
+#: wp-mini-mail-class.php:779
+#@ wp-mini-mail
+msgid "Log"
+msgstr "Protokoll"
+
+#: wp-mini-mail-class.php:780
+#@ wp-mini-mail
+msgid "Clear"
+msgstr "Leeren"
+
+#: wp-mini-mail-class.php:782
+#@ wp-mini-mail
+msgid "Cron"
+msgstr "Cron"
+
+#: wp-mini-mail-class.php:784
+#@ wp-mini-mail
+msgid "Donate"
+msgstr "Spenden"
+
+#: wp-mini-mail-class.php:789
+#: wp-mini-mail-class.php:955
+#: wp-mini-mail-class.php:1169
+#@ wp-mini-mail
+msgid "Date:"
+msgstr "Datum:"
+
+#: wp-mini-mail-class.php:791
+#: wp-mini-mail-class.php:956
+#: wp-mini-mail-class.php:1166
+#@ wp-mini-mail
+msgid "From:"
+msgstr "Von:"
+
+#: wp-mini-mail-class.php:793
+#: wp-mini-mail-class.php:826
+#: wp-mini-mail-class.php:957
+#: wp-mini-mail-class.php:1167
+#@ wp-mini-mail
+msgid "Subject:"
+msgstr "Betreff:"
+
+#: wp-mini-mail-class.php:795
+#@ wp-mini-mail
+msgid "Attachments:"
+msgstr "Anhänge:"
+
+#: wp-mini-mail-class.php:801
+#@ wp-mini-mail
+msgid "Reply"
+msgstr "Antworten"
+
+#: wp-mini-mail-class.php:802
+#@ wp-mini-mail
+msgid "Forward"
+msgstr "Vorwärts"
+
+#: wp-mini-mail-class.php:804
+#@ wp-mini-mail
+msgid "HTML"
+msgstr "HTML"
+
+#: wp-mini-mail-class.php:805
+#: wp-mini-mail-class.php:846
+#@ wp-mini-mail
+msgid "Close"
+msgstr "Schließen"
+
+#: wp-mini-mail-class.php:812
+#: wp-mini-mail-class.php:1168
+#@ wp-mini-mail
+msgid "To:"
+msgstr "An:"
+
+#: wp-mini-mail-class.php:819
+#@ wp-mini-mail
+msgid "CC:"
+msgstr "CC:"
+
+#: wp-mini-mail-class.php:828
+#@ wp-mini-mail
+msgid "Phone:"
+msgstr "Telefon:"
+
+#: wp-mini-mail-class.php:837
+#@ wp-mini-mail
+msgid "Send"
+msgstr "Senden"
+
+#: wp-mini-mail-class.php:838
+#@ wp-mini-mail
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: wp-mini-mail-class.php:954
+#@ wp-mini-mail
+msgid "Are you sure to delete this message?"
+msgstr "Möchten Sie diese Nachricht wirklich löschen?"
+
+#: wp-mini-mail-class.php:1114
+#@ wp-mini-mail
+msgid "Are you sure to clear the log?"
+msgstr "Möchten sie das Protokoll wirklich leeren?"
+
+#: wp-mini-mail-class.php:1155
+#@ wp-mini-mail
+msgid "Re: "
+msgstr "Re:"
+
+#: wp-mini-mail-class.php:1158
+#@ wp-mini-mail
+msgid "Fwd: "
+msgstr "Fwd:"
+
+#: wp-mini-mail-class.php:1164
+#@ wp-mini-mail
+msgid "On"
+msgstr "An"
+
+#: wp-mini-mail-class.php:1165
+#@ wp-mini-mail
+msgid "wrote:"
+msgstr "schrieb:"
+
+#: wp-mini-mail-class.php:1304
+#@ wp-mini-mail
+msgid "Select"
+msgstr "Auswählen"
+
+#: wp-mini-mail-class.php:1559
+#@ wp-mini-mail
+msgid "Date"
+msgstr "Datum"
+
+#: wp-mini-mail-class.php:1560
+#@ wp-mini-mail
+msgid "From"
+msgstr "Von"
+
+#: wp-mini-mail-class.php:1561
+#@ wp-mini-mail
+msgid "Subject"
+msgstr "Betreff"
+
+#: wp-mini-mail-class.php:1618
+#: wp-mini-mail-class.php:1741
+#: wp-mini-mail-class.php:1774
+#@ wp-mini-mail
+msgid "n/a"
+msgstr "n/a"
+
+#: wp-mini-mail-class.php:1620
+#: wp-mini-mail-class.php:1682
+#: wp-mini-mail-class.php:1743
+#: wp-mini-mail-class.php:1778
+#@ wp-mini-mail
+msgid "Gone"
+msgstr "weg"
+
+#: wp-mini-mail-class.php:1644
+#@ wp-mini-mail
+msgid "E-mail address missing"
+msgstr "E-Mail Adresse fehlt"
+
+#: wp-mini-mail-class.php:1649
+#: wp-mini-mail-class.php:1668
+#@ wp-mini-mail
+msgid "Sent to"
+msgstr "Gesendet an"
+
+#: wp-mini-mail-class.php:1664
+#@ wp-mini-mail
+msgid "Phone number missing"
+msgstr "Telefon-Nummer fehlt"
+
+#: wp-mini-mail-class.php:1682
+#@ wp-mini-mail
+msgid "OK"
+msgstr "OK"
+
+#: wp-mini-mail-class.php:2119
+#@ wp-mini-mail
+msgid "Not configured"
+msgstr "Nicht konfiguriert"
+
