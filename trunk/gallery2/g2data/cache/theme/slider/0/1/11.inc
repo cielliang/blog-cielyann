@@ -1,0 +1,1 @@
+|a:1:{s:13:"sidebarBlocks";s:330:"a:6:{i:0;a:2:{i:0;s:18:"search.SearchBlock";i:1;a:1:{s:16:"showAdvancedLink";b:1;}}i:1;a:2:{i:0;s:21:"imageblock.ImageBlock";i:1;a:0:{}}i:2;a:2:{i:0;s:20:"comment.ViewComments";i:1;a:0:{}}i:3;a:2:{i:0;s:18:"comment.AddComment";i:1;a:0:{}}i:4;a:2:{i:0;s:13:"rating.Rating";i:1;a:0:{}}i:5;a:2:{i:0;s:14:"core.ItemLinks";i:1;a:0:{}}}";}

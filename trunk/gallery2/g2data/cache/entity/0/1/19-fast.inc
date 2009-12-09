@@ -1,0 +1,1 @@
+<?php function GalleryFastDownload() { return $GLOBALS['gallery']->fastDownload('albums/life_in_shanghai/large_6618m150.jpg', 'large_6618m150.jpg', 'Thu, 22 Oct 2009 10:36:19 GMT', 'image/jpeg', 31973);} ?>
