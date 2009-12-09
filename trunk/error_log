@@ -3,3 +3,6 @@
 [24-Sep-2009 22:42:37] PHP Fatal error:  Call to undefined function  wp_get_current_user() in /home/cielyann/public_html/blog/wordpress/wp-includes/user.php on line 225
 [24-Sep-2009 22:42:53] PHP Fatal error:  Call to undefined function  wp_get_current_user() in /home/cielyann/public_html/blog/wordpress/wp-includes/user.php on line 225
 [24-Sep-2009 23:30:25] PHP Fatal error:  Call to undefined function  wp_get_current_user() in /home/cielyann/public_html/blog/wordpress/wp-includes/user.php on line 225
+[25-Sep-2009 02:23:13] PHP Fatal error:  Call to undefined function  wp_get_current_user() in /home/cielyann/public_html/blog/wordpress/wp-includes/user.php on line 225
+[25-Sep-2009 02:39:39] PHP Fatal error:  Call to undefined function  wp_get_current_user() in /home/cielyann/public_html/blog/wordpress/wp-includes/user.php on line 225
+[25-Sep-2009 02:40:33] PHP Fatal error:  Call to undefined function  wp_get_current_user() in /home/cielyann/public_html/blog/wordpress/wp-includes/user.php on line 225

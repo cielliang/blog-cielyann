@@ -1,0 +1,1622 @@
+/*
+Theme Name: CrimsonSky
+Description: Do you see the crimson sky? A clever Wordpress theme!
+Version: 1.1
+Author: Stephan
+Author URI: http://www.dialogue-theme.com/about
+Tags: fixed-width, red, three-columns, translation-ready
+
+Released under GPL License. Feel free to edit the code!
+
+*/
+
+/* Page */
+
+
+body
+{
+	margin: 0 auto;
+	padding: 0;
+	background-color: #4A4A4A;
+}
+
+#cs-main
+{
+	position: relative;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+
+
+
+
+
+#cs-page-background-simple-gradient
+{
+	position: absolute;
+	background-image: url('images/Page-BgSimpleGradient.jpg');
+	background-repeat: repeat-x;
+	top:0;
+	width: 100%;
+	height: 900px;
+}
+
+.cleared
+{
+	float: none;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size:1px;
+}
+
+
+form
+{
+	padding:0 !important;
+	margin:0 !important;
+}
+
+table.position
+{
+	position: relative;
+	width: 100%;
+	table-layout: fixed;
+}
+/* end Page */
+
+/* begin Box, Sheet */
+.cs-Sheet
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	width: 900px;
+	min-width:31px;
+	min-height:31px;
+}
+
+.cs-Sheet-body
+{
+	position: relative;
+	z-index:1;
+	padding: 10px;
+}
+
+.cs-Sheet-tr, .cs-Sheet-tl, .cs-Sheet-br, .cs-Sheet-bl, .cs-Sheet-tc, .cs-Sheet-bc,.cs-Sheet-cr, .cs-Sheet-cl
+{
+	position:absolute;
+	z-index:-1;
+}
+
+.cs-Sheet-tr, .cs-Sheet-tl, .cs-Sheet-br, .cs-Sheet-bl
+{
+	width: 50px;
+	height: 50px;
+	background-image: url('images/Sheet-s.png');
+}
+
+.cs-Sheet-tl
+{
+	top:0;
+	left:0;
+	clip: rect(auto, 25px, 25px, auto);
+}
+
+.cs-Sheet-tr
+{
+	top: 0;
+	right: 0;
+	clip: rect(auto, auto, 25px, 25px);
+}
+
+.cs-Sheet-bl
+{
+	bottom: 0;
+	left: 0;
+	clip: rect(25px, 25px, auto, auto);
+}
+
+.cs-Sheet-br
+{
+	bottom: 0;
+	right: 0;
+	clip: rect(25px, auto, auto, 25px);
+}
+
+.cs-Sheet-tc, .cs-Sheet-bc
+{
+	left: 25px;
+	right: 25px;
+	height: 50px;
+	background-image: url('images/Sheet-h.png');
+}
+
+.cs-Sheet-tc
+{
+	top: 0;
+	clip: rect(auto, auto, 25px, auto);
+}
+
+.cs-Sheet-bc
+{
+	bottom: 0;
+	clip: rect(25px, auto, auto, auto);
+}
+
+.cs-Sheet-cr, .cs-Sheet-cl
+{
+	top: 25px;
+	bottom: 25px;
+	width: 50px;
+	background-image: url('images/Sheet-v.png');
+}
+
+.cs-Sheet-cr
+{
+	right:0;
+	clip: rect(auto, auto, auto, 25px);
+}
+
+.cs-Sheet-cl
+{
+	left:0;
+	clip: rect(auto, 25px, auto, auto);
+}
+
+.cs-Sheet-cc
+{
+	position:absolute;
+	z-index:-1;
+	top: 25px;
+	left: 25px;
+	right: 25px;
+	bottom: 25px;
+	background-color: #363636;
+}
+
+
+.cs-Sheet
+{
+	margin-top: 20px !important;
+}
+
+#cs-page-background-simple-gradient, #cs-page-background-gradient, #cs-page-background-glare
+{
+	min-width:900px;
+}
+
+/* end Box, Sheet */
+
+/* begin Header */
+div.cs-Header
+{
+	margin: 0 auto;
+	position: relative;
+	z-index:0;
+	width: 880px;
+	height: 250px;
+}
+
+
+div.cs-Header-jpeg
+{
+	position: absolute;
+	z-index:-1;
+	top: 0;
+	left: 0;
+	width: 880px;
+	height: 250px;
+	background-image: url('images/Header.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+/* end Header */
+
+/* begin Logo */
+.cs-Logo
+{
+	display : block;
+	position: absolute;
+	left: 10px;
+	top: 93px;
+	width: 860px;
+}
+
+h1.cs-Logo-name
+{
+	display: block;
+	text-align: left;
+}
+
+h1.cs-Logo-name, h1.cs-Logo-name a, h1.cs-Logo-name a:link, h1.cs-Logo-name a:visited, h1.cs-Logo-name a:hover
+{
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+	font-size: 34px;
+	text-decoration: none;
+	padding:0;
+	margin:0;
+	color: #FDF0D8 !important;
+}
+
+.cs-Logo-text
+{
+	display: block;
+	text-align: left;
+}
+
+.cs-Logo-text, .cs-Logo-text a
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-size: 19px;
+	font-style: normal;
+	font-weight: bold;
+	padding:0;
+	margin:0;
+	color: #FDF0D8 !important;
+}
+/* end Logo */
+
+/* begin Menu */
+/* menu structure */
+
+.cs-menu a, .cs-menu a:link, .cs-menu a:visited, .cs-menu a:hover
+{
+	text-align:left;
+	text-decoration:none;
+	outline:none;
+	letter-spacing:normal;
+	word-spacing:normal;
+}
+
+.cs-menu, .cs-menu ul
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style-type: none;
+	display: block;
+}
+
+.cs-menu li
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+	float: left;
+	position: relative;
+	z-index: 5;
+	background:none;
+}
+
+.cs-menu li:hover
+{
+	z-index: 10000;
+	white-space: normal;
+}
+
+.cs-menu li li
+{
+	float: none;
+}
+
+.cs-menu ul
+{
+	visibility: hidden;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	background:none;
+}
+
+.cs-menu li:hover>ul
+{
+	visibility: visible;
+	top: 100%;
+}
+
+.cs-menu li li:hover>ul
+{
+	top: 0;
+	left: 100%;
+}
+
+.cs-menu:after, .cs-menu ul:after
+{
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+}
+.cs-menu, .cs-menu ul
+{
+	min-height: 0;
+}
+
+.cs-menu ul
+{
+	background-image: url(images/spacer.gif);
+	padding: 10px 30px 30px 30px;
+	margin: -10px 0 0 -30px;
+}
+
+.cs-menu ul ul
+{
+	padding: 30px 30px 30px 10px;
+	margin: -30px 0 0 -10px;
+}
+
+
+
+
+
+/* menu structure */
+
+.cs-menu
+{
+	padding: 4px 4px 4px 4px;
+}
+
+.cs-nav
+{
+	position: relative;
+	height: 32px;
+	z-index: 100;
+}
+
+
+/* end Menu */
+
+/* begin MenuItem */
+.cs-menu ul li
+{
+	clear: both;
+}
+
+.cs-menu a
+{
+	position:relative;
+	display: block;
+	overflow:hidden;
+	height: 24px;
+	cursor: pointer;
+	text-decoration: none;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
+
+.cs-menu a .r, .cs-menu a .l
+{
+	position:absolute;
+	display: block;
+	top:0;
+	z-index:-1;
+	height: 72px;
+	background-image: url('images/MenuItem.png');
+}
+
+.cs-menu a .l
+{
+	left:0;
+	right:6px;
+}
+
+.cs-menu a .r
+{
+	width:412px;
+	right:0;
+	clip: rect(auto, auto, auto, 406px);
+}
+
+.cs-menu a .t 
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-size: 10px;
+	color: #F4CAB4;
+	padding: 0 7px;
+	margin: 0 6px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.cs-menu a:hover .l, .cs-menu a:hover .r
+{
+	top:-24px;
+}
+
+.cs-menu li:hover>a .l, .cs-menu li:hover>a .r
+{
+	top:-24px;
+}
+
+.cs-menu li:hover a .l, .cs-menu li:hover a .r
+{
+	top:-24px;
+}
+.cs-menu a:hover .t
+{
+	color: #F0F0F0;
+}
+
+.cs-menu li:hover a .t
+{
+	color: #F0F0F0;
+}
+
+.cs-menu li:hover>a .t
+{
+	color: #F0F0F0;
+}
+
+
+.cs-menu a.active .l, .cs-menu a.active .r
+{
+	top: -48px;
+}
+
+.cs-menu a.active .t
+{
+	color: #FCE6BF;
+}
+
+
+/* end MenuItem */
+
+/* begin MenuSeparator */
+.cs-nav .cs-menu-separator
+{
+	display: block;
+	width: 1px;
+	height: 24px;
+	background-image: url('images/MenuSeparator.png');
+}
+
+/* end MenuSeparator */
+
+/* begin MenuSubItem */
+.cs-menu ul a
+{
+	display:block;
+	text-align: center;
+	white-space: nowrap;
+	height: 20px;
+	width: 180px;
+	overflow:hidden;
+	line-height: 20px;
+	margin-right: auto;
+
+
+	background-image: url('images/subitem-bg.png');
+	background-position: left top;
+	background-repeat: repeat-x;
+	border-width: 0px;
+	border-style: solid;
+}
+
+.cs-nav ul.cs-menu ul span, .cs-nav ul.cs-menu ul span span
+{
+	display: inline;
+	float: none;
+	margin: inherit;
+	padding: inherit;
+	background-image: none;
+	text-align: inherit;
+	text-decoration: inherit;
+}
+
+.cs-menu ul a, .cs-menu ul a:link, .cs-menu ul a:visited, .cs-menu ul a:hover, .cs-menu ul a:active, .cs-nav ul.cs-menu ul span, .cs-nav ul.cs-menu ul span span
+{
+	text-align: left;
+	text-indent: 12px;
+	text-decoration: none;
+	line-height: 20px;
+	color: #FCF3ED;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-size: 10px;
+}
+
+.cs-menu ul ul a
+{
+	margin-left: auto;
+}
+
+.cs-menu ul li a:hover
+{
+	color: #F2F2F2;
+	background-position: 0 -20px;
+}
+
+.cs-menu ul li:hover>a
+{
+	color: #F2F2F2;
+	background-position: 0 -20px;
+}
+
+.cs-nav .cs-menu ul li a:hover span, .cs-nav .cs-menu ul li a:hover span span
+{
+	color: #F2F2F2;
+}
+
+.cs-nav .cs-menu ul li:hover>a span, .cs-nav .cs-menu ul li:hover>a span span
+{
+	color: #F2F2F2;
+}
+
+
+/* end MenuSubItem */
+
+/* begin ContentLayout */
+.cs-contentLayout
+{
+	position: relative;
+	margin-bottom: 0px;
+	width: 880px;
+}
+/* end ContentLayout */
+
+/* begin Box, Block */
+.cs-Block
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	min-width:23px;
+	min-height:23px;
+}
+
+.cs-Block-body
+{
+	position: relative;
+	z-index:1;
+	padding: 0px;
+}
+
+.cs-Block-tr, .cs-Block-tl, .cs-Block-br, .cs-Block-bl, .cs-Block-tc, .cs-Block-bc,.cs-Block-cr, .cs-Block-cl
+{
+	position:absolute;
+	z-index:-1;
+}
+
+.cs-Block-tr, .cs-Block-tl, .cs-Block-br, .cs-Block-bl
+{
+	width: 22px;
+	height: 22px;
+	background-image: url('images/Block-s.png');
+}
+
+.cs-Block-tl
+{
+	top:0;
+	left:0;
+	clip: rect(auto, 11px, 11px, auto);
+}
+
+.cs-Block-tr
+{
+	top: 0;
+	right: 0;
+	clip: rect(auto, auto, 11px, 11px);
+}
+
+.cs-Block-bl
+{
+	bottom: 0;
+	left: 0;
+	clip: rect(11px, 11px, auto, auto);
+}
+
+.cs-Block-br
+{
+	bottom: 0;
+	right: 0;
+	clip: rect(11px, auto, auto, 11px);
+}
+
+.cs-Block-tc, .cs-Block-bc
+{
+	left: 11px;
+	right: 11px;
+	height: 22px;
+	background-image: url('images/Block-h.png');
+}
+
+.cs-Block-tc
+{
+	top: 0;
+	clip: rect(auto, auto, 11px, auto);
+}
+
+.cs-Block-bc
+{
+	bottom: 0;
+	clip: rect(11px, auto, auto, auto);
+}
+
+.cs-Block-cr, .cs-Block-cl
+{
+	top: 11px;
+	bottom: 11px;
+	width: 22px;
+	background-image: url('images/Block-v.png');
+}
+
+.cs-Block-cr
+{
+	right:0;
+	clip: rect(auto, auto, auto, 11px);
+}
+
+.cs-Block-cl
+{
+	left:0;
+	clip: rect(auto, 11px, auto, auto);
+}
+
+.cs-Block-cc
+{
+	position:absolute;
+	z-index:-1;
+	top: 11px;
+	left: 11px;
+	right: 11px;
+	bottom: 11px;
+	background-color: #474747;
+}
+
+
+.cs-Block
+{
+	margin: 10px;
+}
+
+/* end Box, Block */
+
+/* begin BlockHeader */
+.cs-BlockHeader
+{
+	position:relative;
+	z-index:0;
+	height: 30px;
+	padding: 0 6px;
+	margin-bottom: 0px;
+}
+
+.cs-BlockHeader .t
+{
+	height: 30px;
+	color: #B5B5B5;
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	white-space : nowrap;
+	padding: 0 7px;
+	line-height: 30px;
+}
+
+
+
+
+/* end BlockHeader */
+
+/* begin Box, BlockContent */
+.cs-BlockContent
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	min-width:1px;
+	min-height:1px;
+}
+
+.cs-BlockContent-body
+{
+	position: relative;
+	z-index:1;
+	padding: 6px;
+}
+
+
+
+.cs-BlockContent-body
+{
+	color:#CFCFCF;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-size: 10px;
+}
+
+.cs-BlockContent-body a:link
+{
+	color: #ECA883;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-decoration: underline;
+}
+
+.cs-BlockContent-body a:visited, .cs-BlockContent-body a.visited
+{
+	color: #9E9E9E;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-decoration: underline;
+}
+
+.cs-BlockContent-body a:hover, .cs-BlockContent-body a.hover
+{
+	color: #FBDCA7;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-decoration: none;
+}
+
+.cs-BlockContent-body ul
+{
+	list-style-type: none;
+	color: #B5B5B5;
+	margin:0;
+	padding:0;
+}
+
+.cs-BlockContent-body li
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-size: 10px;
+}
+
+.cs-BlockContent-body ul li
+{
+	padding:0px 0 0px 10px;
+	background-image: url('images/BlockContentBullets.png');
+	background-repeat:no-repeat;
+	margin:0.5em 0 0.5em 0;
+	line-height:1.2em;
+}
+
+/* end Box, BlockContent */
+
+/* begin Box, Post */
+.cs-Post
+{
+	position:relative;
+	z-index:0;
+	margin:0 auto;
+	min-width:1px;
+	min-height:1px;
+}
+
+.cs-Post-body
+{
+	position: relative;
+	z-index:1;
+	padding: 7px;
+}
+
+
+
+.cs-Post
+{
+	margin: 7px;
+}
+
+/* start images */
+a img
+{
+	border: 0;
+}
+
+.cs-csicle img, img.cs-csicle
+{
+	border: solid 1px #363636;
+	margin: 1em;
+}
+
+.cs-metadata-icons img
+{
+	border: none;
+	vertical-align: middle;
+	margin:2px;
+}
+/* Finish images */
+
+/* start tables */
+
+.cs-csicle table, table.cs-csicle
+{
+	border-collapse: collapse;
+	margin: 1px;
+	width:auto;
+}
+
+.cs-csicle table, table.cs-csicle .cs-csicle tr, .cs-csicle th, .cs-csicle td
+{
+	background-color:Transparent;
+}
+
+.cs-csicle th, .cs-csicle td
+{
+	padding: 2px;
+	border: solid 1px #696969;
+	vertical-align: top;
+	text-align:left;
+}
+
+.cs-csicle th
+{
+	text-align:center;
+	vertical-align:middle;
+	padding: 7px;
+}
+
+/* Finish tables */
+/* end Box, Post */
+
+/* begin PostHeaderIcon */
+.cs-PostHeaderIcon-wrapper
+{
+	text-decoration:none;
+	margin: 0.2em 0;
+	padding: 0;
+	font-weight:normal;
+	font-style:normal;
+	letter-spacing:normal;
+	word-spacing:normal;
+	font-variant:normal;
+	text-decoration:none;
+	font-variant:normal;
+	text-transform:none;
+	text-align:left;
+	text-indent:0;
+	line-height:inherit;
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color: #F4CAB4;
+}
+
+.cs-PostHeaderIcon-wrapper, .cs-PostHeaderIcon-wrapper a, .cs-PostHeaderIcon-wrapper a:link, .cs-PostHeaderIcon-wrapper a:visited, .cs-PostHeaderIcon-wrapper a:hover
+{
+	font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color: #F4CAB4;
+}
+
+/* end PostHeaderIcon */
+
+/* begin PostHeader */
+.cs-PostHeader a:link
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+  text-decoration: none;
+  text-align: left;
+  color: #F0BA9D;
+}
+
+.cs-PostHeader a:visited, .cs-PostHeader a.visited
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+  text-decoration: none;
+  text-align: left;
+  color: #C7C7C7;
+}
+
+.cs-PostHeader a:hover, .cs-PostHeader a.hovered
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+  text-decoration: underline;
+  text-align: left;
+  color: #F6AA28;
+}
+/* end PostHeader */
+
+/* begin PostIcons */
+.cs-PostHeaderIcons
+{
+	padding:1px;
+}
+
+.cs-PostHeaderIcons, .cs-PostHeaderIcons a, .cs-PostHeaderIcons a:link, .cs-PostHeaderIcons a:visited, .cs-PostHeaderIcons a:hover
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-style: italic;
+	font-weight: normal;
+	color: #FDE8C4;
+}
+
+.cs-PostHeaderIcons a, .cs-PostHeaderIcons a:link, .cs-PostHeaderIcons a:visited, .cs-PostHeaderIcons a:hover
+{
+	margin:0;
+}
+
+.cs-PostHeaderIcons a:link
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-style: italic;
+	font-weight: normal;
+	text-decoration: underline;
+	color: #E89568;
+}
+
+.cs-PostHeaderIcons a:visited, .cs-PostHeaderIcons a.visited
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-decoration: underline;
+	color: #E89568;
+}
+
+.cs-PostHeaderIcons a:hover, .cs-PostHeaderIcons a.hover
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-decoration: none;
+	color: #F8BE59;
+}
+/* end PostIcons */
+
+/* begin PostContent */
+/* Content Text Font & Color (Default) */
+body
+{
+  font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: normal;
+  color: #C4C4C4;
+}
+
+.cs-PostContent
+{
+  font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+  color: #C4C4C4;
+}
+
+
+/* start Content link style */
+/*
+The right order of link pseudo-classes: Link-Visited-Hover-Focus-Active.
+http://www.w3schools.com/CSS/css_pseudo_classes.asp
+http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states/
+*/
+a
+{
+  font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+  text-decoration: underline;
+  color: #E89568;
+}
+
+/* Adds special style to an unvisited link. */
+a:link
+{
+  font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+  text-decoration: underline;
+  color: #E89568;
+}
+
+/* Adds special style to a visited link. */
+a:visited, a.visited
+{
+  font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+  text-decoration: underline;
+  color: #9E9E9E;
+}
+
+/* :hover - adds special style to an element when you mouse over it. */
+a:hover, a.hover
+{
+  font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+  text-decoration: none;
+  color: #F6AA28;
+}
+
+/* Finish Content link style */
+
+/* Resert some headings default style & links default style for links in headings*/
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited
+{
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+
+
+/* start Content headings Fonts & Colors  */
+h1, h1 a, h1 a:link, h1 a:visited, h1 a:hover
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+  color: #E89568;
+}
+
+h2, h2 a, h2 a:link, h2 a:visited, h2 a:hover
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+  font-size: 14px;
+  text-align: left;
+  color: #E89568;
+}
+
+h3, h3 a, h3 a:link, h3 a:visited, h3 a:hover
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+  color: #FCFCFC;
+}
+
+h4, h4 a, h4 a:link, h4 a:visited, h4 a:hover
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+  font-size: 13px;
+  text-align: left;
+  color: #C4C4C4;
+}
+
+h5, h5 a, h5 a:link, h5 a:visited, h5 a:hover
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+  font-size: 11px;
+  text-align: left;
+  color: #C4C4C4;
+}
+
+h6, h6 a, h6 a:link, h6 a:visited, h6 a:hover
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, Sans-Serif;
+  font-size: 10px;
+  text-align: left;
+  color: #C4C4C4;
+}
+/* Finish Content headings Fonts & Colors  */
+/* end PostContent */
+
+/* begin PostBullets */
+/* start Content list */
+ol, ul
+{
+	color: #A8A8A8;
+	margin:1em 0 1em 2em;
+	padding:0;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-size: 10px;
+}
+
+li ol, li ul
+{
+	margin:0.5em 0 0.5em 2em;
+	padding:0;
+}
+
+li 
+{
+	margin:0.2em 0;
+	padding:0;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+ol
+{
+	list-style-position:inside;
+	
+}
+
+
+
+.cs-Post li
+{
+	padding:0px 0 0px 9px;
+	line-height:1.2em;
+}
+
+.cs-Post ol li, .cs-Post ul ol li
+{
+	background: none;
+	padding-left:0;
+}
+
+.cs-Post ul li, .cs-Post ol ul li 
+{
+	background-image: url('images/PostBullets.png');
+	background-repeat:no-repeat;
+	padding-left:9px;
+}
+
+
+/* Finish Content list */
+/* end PostBullets */
+
+/* begin PostQuote */
+/* start blockquote */
+blockquote p
+{
+	color:#FBDAA2;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-align: left;
+}
+
+blockquote
+{
+		margin:10px 10px 10px 50px;
+	padding:5px 5px 5px 41px;
+	background-color:#595959;
+	background-image:url('images/PostQuote.png');
+	background-position:left top;
+	background-repeat:no-repeat;
+}
+
+
+/* Finish blockuote */
+/* end PostQuote */
+
+/* begin PostIcons */
+.cs-PostFooterIcons
+{
+	padding:1px;
+}
+
+.cs-PostFooterIcons, .cs-PostFooterIcons a, .cs-PostFooterIcons a:link, .cs-PostFooterIcons a:visited, .cs-PostFooterIcons a:hover
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-style: italic;
+	font-weight: normal;
+	color: #A8A8A8;
+}
+
+.cs-PostFooterIcons a, .cs-PostFooterIcons a:link, .cs-PostFooterIcons a:visited, .cs-PostFooterIcons a:hover
+{
+	margin:0;
+}
+
+.cs-PostFooterIcons a:link
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-style: italic;
+	font-weight: normal;
+	text-decoration: underline;
+	color: #E89568;
+}
+
+.cs-PostFooterIcons a:visited, .cs-PostFooterIcons a.visited
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-decoration: underline;
+	color: #E89568;
+}
+
+.cs-PostFooterIcons a:hover, .cs-PostFooterIcons a.hover
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-decoration: none;
+	color: #F8BE59;
+}
+/* end PostIcons */
+
+/* begin Button */
+.cs-button-wrapper .cs-button
+{
+	display:inline-block;
+	width: auto;
+	outline:none;
+	border:none;
+	background:none;
+	line-height:24px;
+	margin:0 !important;
+	padding:0 !important;
+	overflow: visible;
+	cursor: default;
+	text-decoration: none !important;
+	z-index:0;
+}
+
+.cs-button-wrapper
+{
+	display:inline-block;
+	position:relative;
+	height: 24px;
+	overflow:hidden;
+	white-space: nowrap;
+	width: auto;
+	z-index:0;
+}
+
+.cs-button-wrapper .cs-button
+{
+	display:block;
+	height: 24px;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	white-space: nowrap;
+	text-align: left;
+	padding: 0 9px !important;
+	line-height: 24px;
+	text-decoration: none !important;
+	color: #FBECE4 !important;
+}
+
+input, select
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.cs-button-wrapper.hover .cs-button, .cs-button:hover
+{
+	color: #242424 !important;
+	text-decoration: none !important;
+}
+
+.cs-button-wrapper.active .cs-button
+{
+	color: #F0F0F0 !important;
+}
+
+.cs-button-wrapper .l, .cs-button-wrapper .r
+{
+	display:block;
+	position:absolute;
+	z-index:-1;
+	height: 72px;
+	background-image: url('images/Button.png');
+}
+
+.cs-button-wrapper .l
+{
+	left:0;
+	right:7px;
+}
+
+.cs-button-wrapper .r
+{
+	width:407px;
+	right:0;
+	clip: rect(auto, auto, auto, 400px);
+}
+
+.cs-button-wrapper.hover .l, .cs-button-wrapper.hover .r
+{
+	top: -24px;
+}
+
+.cs-button-wrapper.active .l, .cs-button-wrapper.active .r
+{
+	top: -48px;
+}
+
+
+/* end Button */
+
+/* begin Footer */
+.cs-Footer
+{
+	position:relative;
+	z-index:0;
+	overflow:hidden;
+	width: 880px;
+	margin: 5px auto 0px auto;
+}
+
+.cs-Footer .cs-Footer-inner
+{
+	height:1%;
+	position: relative;
+	z-index: 0;
+	padding: 8px;
+	text-align: center;
+}
+
+.cs-Footer .cs-Footer-background
+{
+	position:absolute;
+	z-index:-1;
+	background-repeat:no-repeat;
+	background-image: url('images/Footer.png');
+	width: 880px;
+	height: 150px;
+	bottom:0;
+	left:0;
+}
+
+
+.cs-rss-tag-icon
+{
+	position: relative;
+	display:block;
+	float:left;
+	background-image: url('images/rssIcon.png');
+	background-position: center right;
+	background-repeat: no-repeat;
+	margin: 0 5px 0 0;
+	height: 32px;
+	width: 30px;
+}
+
+
+
+
+.cs-Footer .cs-Footer-text p
+{
+	margin: 0;
+}
+
+.cs-Footer .cs-Footer-text
+{
+	display:inline-block;
+	color:#C4C4C4;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	letter-spacing: 1px;
+}
+
+.cs-Footer .cs-Footer-text a:link
+{
+	text-decoration: none;
+	color: #EA9B71;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-decoration: underline;
+}
+
+.cs-Footer .cs-Footer-text a:visited
+{
+	text-decoration: none;
+	color: #9E9E9E;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-decoration: underline;
+}
+
+.cs-Footer .cs-Footer-text a:hover
+{
+	text-decoration: none;
+	color: #F6AE31;
+	font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+	text-decoration: none;
+}
+/* end Footer */
+
+/* begin PageFooter */
+.cs-page-footer, .cs-page-footer a, .cs-page-footer a:link, .cs-page-footer a:visited, .cs-page-footer a:hover
+{
+	font-family:Arial;
+	font-size:10px;
+	letter-spacing:normal;
+	word-spacing:normal;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:underline;
+	color:#E37C45;
+	
+}
+
+.cs-page-footer
+{
+	margin:1em;
+	text-align:center;
+	text-decoration:none;
+	//color:#525252;
+	color:#EEEEEE;
+}
+/* end PageFooter */
+
+/* begin LayoutCell */
+.cs-contentLayout .cs-content
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	float: left;
+	overflow: hidden;
+	width: 529px;
+}
+.cs-contentLayout .cs-content-sidebar1
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	float: left;
+	overflow: hidden;
+	width: 704px;
+}
+.cs-contentLayout .cs-content-sidebar2
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	float: left;
+	overflow: hidden;
+	width: 704px;
+}
+.cs-contentLayout .cs-content-wide
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	float: left;
+	overflow: hidden;
+	width: 879px;
+}
+/* end LayoutCell */
+
+/* begin LayoutCell */
+.cs-contentLayout .cs-sidebar1
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	float: left;
+	overflow: hidden;
+	width: 175px;
+}
+/* end LayoutCell */
+
+/* begin LayoutCell */
+.cs-contentLayout .cs-sidebar2
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	float: left;
+	overflow: hidden;
+	width: 175px;
+}
+/* end LayoutCell */
+
+
+
+.commentlist, .commentlist li
+{
+	background: none;
+}
+
+.commentlist li li
+{
+	margin-left:30px;
+}
+
+.commentlist li .avatar
+{
+	float: right;
+	border: 1px solid #eee;
+	padding: 2px;
+	margin:1px;
+	background: #fff;
+}
+
+.commentlist li cite
+{
+	font-size:1.2em;
+}
+
+#commentform textarea
+{
+	width: 100%;
+}
+
+img.wp-smiley
+{
+	border:none;
+	margin:0;
+	padding:0;
+}
+
+.navigation
+{
+	display: block;
+	text-align: center;
+}
+
+/* Recommended by http://codex.wordpress.org/CSS */
+/* Begin */
+.aligncenter, div.aligncenter, .cs-csicle .aligncenter img, .aligncenter img.cs-csicle, .aligncenter img, img.aligncenter
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft
+{
+	float: left;
+}
+
+.alignright
+{
+	float: right;
+}
+
+.alignright img, img.alignright
+{
+	margin: 1em;
+	margin-right: 0;
+}
+
+.alignleft img, img.alignleft
+{
+	margin: 1em;
+	margin-left: 0;
+}
+
+.wp-caption
+{
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+}
+
+.wp-caption img
+{
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text
+{
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+/* End */
+
+
+.hidden
+{
+	display: none;
+}
+
+/* Calendar */
+#wp-calendar {
+	empty-cells: show;
+	margin: 10px auto 0;
+	width: 155px;
+}
+
+#wp-calendar #next a {
+	padding-right: 10px;
+	text-align: right;
+}
+
+#wp-calendar #prev a {
+	padding-left: 10px;
+	text-align: left;
+}
+
+#wp-calendar a {
+	display: block;
+}
+
+#wp-calendar caption {
+	text-align: center;
+	width: 100%;
+}
+
+#wp-calendar td {
+	padding: 3px 0;
+	text-align: center;
+}

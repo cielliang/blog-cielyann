@@ -2,7 +2,7 @@
 Contributors: orenshmu
 Tags: photos, flash, flv, slideshow, images, amazon, gallery, media, cooliris, admin, post, photo-albums, pictures, widget, photo, picture, s3, music, playlists, playlist, sidebar, ajax, video, vidavee, iphone, cms, ipod, smooth gallery 
 Requires at least: 2.0.2
-Tested up to: 2.8.4
+Tested up to: 2.8.5
 
 Post your videos and photo galleries/flash slideshows easily and in seconds.
 
@@ -16,13 +16,12 @@ One professional plugin handles **all your needs**
     *  Music playlists
     *  Podcast
     *  Menus and much more
-    
 
 
 * **42 skins and more** - slideshow, videos, playlists, flash, full-screen, Cooliris etc
 * **Automatic uploading and hosting**
-* Automatic resizing of photos
-* Automatic transcoding of videos to flv/3gp/mp4
+* Automatic **resizing** of photos
+* Automatic **video transcoding** to flv/3gp/mp4
 * Support iPhone/iPod and smart phones
 * Hosting and delivering your media on Amazon S3 Web Services ensure scalability and reliability.
 * Managment of the galleries is simple and straight forward
@@ -52,6 +51,10 @@ For comments, questions and support use this email [oren.wp.plugin@cincopa.com](
 
 == Frequently Asked Questions ==
 
+= What about non-WordPress sites/blogs ? =
+
+You can also embed your gallery in other sites/blogs using a HTML code. To create your gallery start here http://www.cincopa.com/wpplugin/start.aspx and follow the instructions.
+
 = How much storage do I need to post videos and photos ? =
 
 None, You don't need any space on your server, your files will be stored on Cincopa server.
@@ -70,15 +73,16 @@ In the post page, just click on the C icon and follow the instructions.
 
 = Do I need to upload my videos/photos to the server before starting ? =
 
-No. Cincopa agent will do it for you after you've completed the post.
+No. Cincopa agent will do it for you after you've completed the post or you can batch upload it.
 
 = Do I need to register with Cincopa ? =
 
-Yes. After clicking the C in the post page follow the instructions to register with Cincopa.
+Yes. After clicking the C icon in the post page follow the instructions to register with Cincopa.
 
-= What about non-WordPress sites/blogs ? =
+= Why can't I use my server ? =
 
-You can also embed your gallery in other sites/blogs using a HTML code. To create your gallery start here http://www.cincopa.com/wpplugin/start.aspx and follow the instructions.
+If you are using one of those low cost shared hosting solution then you better let Cincopa do the media hosting for you. Your hosting is perfect for hosting your site but they are not optimized to serve your videos, photos or music. Combining your hosting solution with Cincopa will render a professional site.
+
 
 == Screenshots ==
 

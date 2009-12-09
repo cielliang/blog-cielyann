@@ -3,7 +3,7 @@
 Plugin Name: Dooodl! 
 Plugin URI: http://nocreativity.com/blog/dooodls-for-everyone
 Description: Enables your blog's visitors to draw a little Doodle and save it to your site. Powered by AMFPHP and TiltViewer! Best integration with ShadowBox-JS!
-Version: 1.0.9
+Version: 1.0.10
 Author: Ronny Welter
 Author URI: http://noCreativity.com
 */
@@ -29,7 +29,7 @@ Author URI: http://noCreativity.com
 require_once("globals.php");
 
 $plugin = plugin_basename(__FILE__); 
-add_filter("plugin_action_links_$plugin", 'my_plugin_actlinks' ); 
+add_filter("plugin_action_links_$plugin", 'dooodl_actlinks' ); 
 
 
 add_action('admin_menu', 'Dooodl_menu');//add Admin menu
@@ -42,7 +42,7 @@ add_action('wp_head', 'Dooodl_head');
 add_action('wp_footer', 'Dooodl_autoLoad',15); // Add the badge's CSS to the head.
 
 
-function my_plugin_actlinks( $links ) { 
+function dooodl_actlinks( $links ) { 
 	 // Add a link to this plugin's settings page
 	 $settings_link = '<a href="options-general.php?page=wp-dooodl">Settings</a>'; 
 	 array_unshift( $links, $settings_link ); 
@@ -155,23 +155,23 @@ function Dooodl_widget($args=NULL){
 					LIMIT 0 , 1 ";
 		
 		$result = $wpdb->get_row($sql);
-		$html = '<a rel="shadowbox" href="'. WP_CONTENT_URL.'/uploads/doodls/'.$result->id.'.jpg" target="_blank"><img style="float:left; margin-right:5px; margin-bottom:5px;" height="120" src="'. WP_CONTENT_URL.'/uploads/doodls/'.$result->id.'.jpg"/></a>最新的 Doodle: <br/><b>'.$result->title.'</b> 作者 <b>'. $result->username.'</b> <br/> ';
+		$html = '<a rel="shadowbox" href="'. WP_CONTENT_URL.'/uploads/doodls/'.$result->id.'.jpg" target="_blank"><img style="float:left; margin-right:5px; margin-bottom:5px;" height="120" src="'. WP_CONTENT_URL.'/uploads/doodls/'.$result->id.'.jpg"/></a>最新的Doodle: <br/><b>'.$result->title.'</b> by <b>'. $result->username.'</b> <br/> ';
 				
 		
 		echo $before_widget; 
 		
 		?>
-		<h2 class="widgettitle">乱画 Dooodl!</h2>
+		<h2 class="widgettitle" style="margin-left:5px;">Dooodl! 乱画!</h2>
         <div>
        	<?
 		echo $html;
 		?>
        	<br/>
-        <a onclick="updateURL('#dooodlviewer')" rel="shadowbox;width=880;height=600;player=iframe;options={onClose:function(){checkURL()}}" href="<?= WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)) ?>s#theviewer" target="_blank">点这里</a> 可以看到别人留下的 Dooodl 喔!
+        <a onclick="updateURL('#dooodlviewer')" rel="shadowbox;width=880;height=600;player=iframe;options={onClose:function(){checkURL()}}" href="<?= WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)) ?>s#theviewer" target="_blank">单击这里</a> 浏览所有访客的Dooodl!
         
         <br clear="all"/>
         
-         满腔创意吧? <a onclick="updateURL('#drawadooodl')" rel="shadowbox;width=700;height=400;player=iframe;options={onClose:function(){checkURL()}}" href="<?= WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)) ?>creator" target="_blank">点这里,</a> 在我的边栏这里留下你的 Dooodl 吧!
+         如果你也想乱画一通， <a onclick="updateURL('#drawadooodl')" rel="shadowbox;width=700;height=400;player=iframe;options={onClose:function(){checkURL()}}" href="<?= WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)) ?>creator" target="_blank">单击这里</a>，就可以在这上面留下你的 dooodl 啦！
         
         </div>
 		<br clear="all"/>

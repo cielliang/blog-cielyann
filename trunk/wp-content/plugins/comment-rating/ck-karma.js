@@ -23,7 +23,7 @@
 	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 	*/
 
-function createXMLHttpRequest(){
+function ckratingcreateXMLHttpRequest(){
     var xmlhttp = null;
     try {
         // Moz supports XMLHttpRequest. IE uses ActiveX.
@@ -37,35 +37,47 @@ function createXMLHttpRequest(){
     return xmlhttp;
 }
 
-var xhr = createXMLHttpRequest();
+var ckratingXhr = ckratingcreateXMLHttpRequest();
 
 function ckratingKarma(id, action, path, imgIndex){
-    xhr.open('get', 'http\://'+ path +'ck-processkarma.php?id='+ id +'&action='+ action +'&path='+ path +'&imgIndex='+imgIndex);
-    xhr.onreadystatechange = handleResponse;
-    xhr.send(null);
+    ckratingXhr.open('get', 'http\://'+ path +'ck-processkarma.php?id='+ id +'&action='+ action +'&path='+ path +'&imgIndex='+imgIndex);
+    ckratingXhr.onreadystatechange = ckratingHandleResponse;
+    ckratingXhr.send(null);
 }
 
-function handleResponse(){
-    if(xhr.readyState == 4){
-        var response = xhr.responseText.split('|');
+function ckratingHandleResponse(){
+    if(ckratingXhr.readyState == 4){
+        var response = ckratingXhr.responseText.split('|');
         
         if(response[0] == 'done'){
             if(response[1]){
                 //Changes the thumbs to dull gray and disable the action
                 if (response[4] == 'down') {
-                   document.getElementById("down-"+response[1]).src = "http://"+response[3]+'images/'+response[6]+'checkmark.png';
+                  if ( document.getElementById("down-"+response[1]) != null ) { 
+                      document.getElementById("down-"+response[1]).src = "http://"+response[3]+'images/'+response[6]+'checkmark.png';
+                  }
                 }
                 else {
-                   document.getElementById("down-"+response[1]).src = "http://"+response[3]+'images/'+response[6]+'gray_down.png';
+                  if ( document.getElementById("down-"+response[1]) != null ) {
+                      document.getElementById("down-"+response[1]).src = "http://"+response[3]+'images/'+response[6]+'gray_down.png';
+                  }
                 }
-                document.getElementById("down-"+response[1]).onclick    = '';
+                if ( document.getElementById("down-"+response[1]) != null ) {
+                   document.getElementById("down-"+response[1]).onclick    = '';
+                }
                 if (response[4] == 'up') {
-                   document.getElementById("up-"+response[1]).src   = "http://"+response[3]+'images/'+response[6]+'checkmark.png';
+                   if ( document.getElementById("up-"+response[1]) != null ) {
+                      document.getElementById("up-"+response[1]).src   = "http://"+response[3]+'images/'+response[6]+'checkmark.png';
+                   }
                 }
                 else {
-                   document.getElementById("up-"+response[1]).src   = "http://"+response[3]+'images/'+response[6]+'gray_up.png';
+                   if ( document.getElementById("up-"+response[1]) != null ) {
+                      document.getElementById("up-"+response[1]).src   = "http://"+response[3]+'images/'+response[6]+'gray_up.png';
+                   }
                 }
-                document.getElementById("up-"+response[1]).onclick      = '';
+                if ( document.getElementById("up-"+response[1]) != null ) {
+                   document.getElementById("up-"+response[1]).onclick      = '';
+                }
                 //Update the karma number display
                 if(!response[2]){
                 	alert("Response has no value");

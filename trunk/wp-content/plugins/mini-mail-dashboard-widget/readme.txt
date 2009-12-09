@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=AJSBB
 Tags: e-mail, email, mail, sms, notify, notification, admin, dashboard, widget, security, ajax
 Requires at least: 2.7
 Tested up to: 2.8.4
-Stable tag: 1.0.2
+Stable tag: 1.0.4
 
 Send and receive e-mails on the administration panel and optionally receive SMS messages when new messages arrive.
 
@@ -98,6 +98,12 @@ You can write comments on the [support page](http://blog.bokhorst.biz/2414/compu
 1. The Mini Mail Dashboard Widget
 
 == Changelog ==
+
+= 1.0.4 =
+* Updated Farsi translation
+
+= 1.0.3 =
+* Added Farsi (fa\_IR) translation by [Jafar](http://www.nanakar.ir/ "Jafar")
 
 = 1.0.2 =
 * Updated everything, but forgot to add translation to subversion ...

@@ -1,0 +1,105 @@
+/* begin Box, Sheet */
+.cs-Sheet-tl
+{
+	clip: rect(auto 25px 25px auto);
+}
+
+.cs-Sheet-tr
+{
+	clip: rect(auto auto 25px 25px);
+}
+
+.cs-Sheet-bl
+{
+	clip: rect(25px 25px auto auto);
+}
+
+.cs-Sheet-br
+{
+	clip: rect(25px auto auto 25px);
+}
+
+.cs-Sheet-tc
+{
+	clip: rect(auto auto 25px auto);
+}
+
+.cs-Sheet-bc
+{
+	clip: rect(25px auto auto auto);
+}
+
+.cs-Sheet-cr
+{
+	clip: rect(auto auto auto 25px);
+}
+
+.cs-Sheet-cl
+{
+	clip: rect(auto 25px auto auto);
+}
+/* end Box, Sheet */
+
+/* begin MenuItem */
+.cs-menu a .r
+{
+	clip: rect(auto auto auto 406px);
+}
+/* end MenuItem */
+
+/* begin Box, Block */
+.cs-Block-tl
+{
+	clip: rect(auto 11px 11px auto);
+}
+
+.cs-Block-tr
+{
+	clip: rect(auto auto 11px 11px);
+}
+
+.cs-Block-bl
+{
+	clip: rect(11px 11px auto auto);
+}
+
+.cs-Block-br
+{
+	clip: rect(11px auto auto 11px);
+}
+
+.cs-Block-tc
+{
+	clip: rect(auto auto 11px auto);
+}
+
+.cs-Block-bc
+{
+	clip: rect(11px auto auto auto);
+}
+
+.cs-Block-cr
+{
+	clip: rect(auto auto auto 11px);
+}
+
+.cs-Block-cl
+{
+	clip: rect(auto 11px auto auto);
+}
+/* end Box, Block */
+
+/* begin PostContent */
+.cs-PostContent
+{
+	height:1%;
+}
+/* end PostContent */
+
+/* begin Button */
+.cs-button-wrapper .r
+{
+	clip: rect(auto auto auto 400px);
+}
+/* end Button */
+

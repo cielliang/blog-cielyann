@@ -4,13 +4,13 @@ Plugin Name: Post videos and photo galleries
 Plugin URI: http://www.cincopa.com/wpplugin/wordpress-plugin.aspx
 Description: Post rich videos and photos galleries from your cincopa account
 Author: Cincopa 
-Version: 1.29
+Version: 1.33
 */
 
 
 function plugin_ver()
 {
-	return '1.29';
+	return '1.33';
 }
 
 function cincopa_url()
@@ -126,8 +126,9 @@ function cincopa_plugin_callback($match)
 	$uni = uniqid('');
 
 	$ret = '
-<!-- Powered by Cincopa WordPress plugin '.plugin_ver().': http://www.cincopa.com/wpplugin/wordpress-video-plugin.aspx -->
-<div id="_cincopa_widget_'.$uni.'"><img alt="Powered by Cincopa WordPress plugin" src="http://www.cincopa.com/wpplugin/runtime/loading.gif" style="border:0;"/><a href="http://www.cincopa.com/wpplugin/wordpress-video-plugin.aspx" style="font-size:6px;">WordPress Video</a></div>
+<style type="text/css">.cplinkbox{display:none;}</style>
+<!-- Powered by Cincopa WordPress plugin '.plugin_ver().': http://www.cincopa.com/wpplugin/wordpress-plugin.aspx -->
+<div id="_cincopa_widget_'.$uni.'"><img alt="Powered by Cincopa WordPress plugin" src="http://www.cincopa.com/wpplugin/runtime/loading.gif" style="border:0;"/><a class="cplinkbox" href="http://www.cincopa.com/mediasend/start.aspx">Send Large Files</a></div>
 <script src="'.cincopa_url().'/wpplugin/runtime/widget.aspx?fid='.urlencode($match[0]).'&id=_cincopa_widget_'.$uni.'" type="text/javascript">
 </script>
 ';
@@ -157,13 +158,13 @@ function cincopa_dashboard()
 function cincopa_dashboard_content()
 {
 
-	print("<p>Monitor <a target=_black href='http://www.cincopa.com/wpplugin/wizard_edit.aspx'>your galleries</a>.</p>");
+	print("<p>Monitor <a target=_black href='http://www.cincopa.com/wpplugin/wizard_edit.aspx?ver=".plugin_ver()."&rdt=".urlencode(selfURL())."'>your galleries</a>.</p>");
 
 	print("<p>Visit our <a target=_black href='http://forum.cincopa.com/'>support forum</a>.</p>");
 
-	print("<p>Monitor <a target=_black href='http://www.cincopa.com/cincopaManager/ManageAccount.aspx'>your Cincopa account</a>.</p>");
+	print("<p>Monitor <a target=_black href='http://www.cincopa.com/cincopaManager/ManageAccount.aspx?ver=".plugin_ver()."&rdt=".urlencode(selfURL())."'>your Cincopa account</a>.</p>");
 
-	print("<p>Check <a target=_black href='http://www.cincopa.com/cincopaManager/directory.aspx'>other Cincopa products</a>.</p>");
+	print("<p>Check <a target=_black href='http://www.cincopa.com/cincopaManager/directory.aspx?ver=".plugin_ver()."&rdt=".urlencode(selfURL())."'>other Cincopa products</a>.</p>");
 
 }
 
@@ -249,19 +250,19 @@ function mt_manage_page() {
 */
 
 function mt_cincopa_toplevel_page() {
-    echo "<iframe src='http://www.cincopa.com/wpplugin' width='98%' height='2000px'></iframe>";
+    echo "<iframe src='http://www.cincopa.com/wpplugin/start.aspx?ver=".plugin_ver()."&rdt=".urlencode(selfURL())."' width='98%' height='2000px'></iframe>";
 }
 
 function mt_cincopa_sublevel_create() {
-    echo "<iframe src='http://www.cincopa.com/wpplugin/wizard_name.aspx' width='98%' height='2000px'></iframe>";
+    echo "<iframe src='http://www.cincopa.com/wpplugin/wizard_name.aspx?ver=".plugin_ver()."&rdt=".urlencode(selfURL())."' width='98%' height='2000px'></iframe>";
 }
 
 function mt_cincopa_sublevel_monitor() {
-    echo "<iframe src='http://www.cincopa.com/wpplugin/wizard_edit.aspx' width='98%' height='2000px'></iframe>";
+    echo "<iframe src='http://www.cincopa.com/wpplugin/wizard_edit.aspx?ver=".plugin_ver()."&rdt=".urlencode(selfURL())."' width='98%' height='2000px'></iframe>";
 }
 
 function mt_cincopa_sublevel_myaccount() {
-    echo "<iframe src='http://www.cincopa.com/cincopaManager/ManageAccount.aspx' width='98%' height='2000px'></iframe>";
+    echo "<iframe src='http://www.cincopa.com/cincopaManager/ManageAccount.aspx?ver=".plugin_ver()."&rdt=".urlencode(selfURL())."' width='98%' height='2000px'></iframe>";
 }
 
 function mt_cincopa_sublevel_forum() {

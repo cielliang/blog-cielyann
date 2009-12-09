@@ -3,7 +3,7 @@
 Plugin Name: Mini Mail Dashboard Widget
 Plugin URI: http://blog.bokhorst.biz/2414/computers-en-internet/wordpress-plugin-mini-mail-dashboard-widget/
 Description: Send and receive e-mails on the administration panel and optionally receive SMS messages when new messages arrive
-Version: 1.0.2
+Version: 1.0.4
 Author: Marcel Bokhorst
 Author URI: http://blog.bokhorst.biz/about/
 */
