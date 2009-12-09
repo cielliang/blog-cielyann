@@ -77,6 +77,9 @@ Sorry for the problems, guys. I hope none of you lost anything. If you did, I'm 
 
 == Changelog ==
 
+= 1.0.10 =
+* Fixed a compatibility issue caused by a action_handler in the plugin. 
+
 = 1.0.9 = 
 * 'stripslash()'ed the description and the title in the Viewer HTML and XML feeds.
 

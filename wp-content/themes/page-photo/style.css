@@ -1,0 +1,151 @@
+/*
+THEME NAME: page-photo
+THEME URI: http://www.pagemod.cn/2009/08/page-photo-released.html
+Description: Designed for photo-blog, and with PSD files.
+VERSION: 1.9.1
+AUTHOR: page
+AUTHOR URI: http://www.pagemod.cn
+TAGS: brown,green,fixed-width,photoblogging,theme-options,threaded-comments
+	The CSS, XHTML and design is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+*/
+
+/* Begin html tags */
+* { margin:0; padding:0; } 
+body {font-size: 62.5%; /* Resets 1em to 10px */font-family:Verdana,"BitStream vera Sans",Tahoma,Helvetica,Sans-serif;background: #F5F5F5;color: #282c2f;	margin:auto;height:auto;}
+hr{display: none;}
+a{color: #536F23;text-decoration: none;}
+a:hover {color: #06c;text-decoration: underline;}
+ul{list-style-type: none;}
+h2{font-size:1.3em;}
+h3,h4{font-size:1.1em;font-weight:bold;}
+small{font-size:1em;}
+.clear{clear:both;}
+/* End html tags */
+
+
+/* Begin Structure */
+#header {height:220px;margin:auto;color: #5C5F56;font-size:1.2em;background:#E1DAC3 url(img/head.jpg) repeat-x top center;}
+#content{width:960px;margin:0px auto;font-size:1.2em;}
+#maincontent{width:960px;line-height:1.5em;overflow:hidden;}
+#sidebar{margin-top:10px;width:940px;text-align:left;border-top:1px solid #B2AA74;padding:10px;}
+#footer-top{height:100px;background:#E1DAC3 url(img/foot.jpg) repeat-x top center;}
+#footer{width:950px;height:90px;margin:auto;font-size:1.2em;padding:5px 0;color:#536F23;background:#E1DAC3 url(img/footer.jpg) no-repeat top center;}
+	#footer a{color:#70683B;}
+/* End Structure */
+
+/* begin header*/
+#header h1{font-size:2.2em;}
+#header h1 a{color:#969B39;text-decoration: none;}
+.description{padding:3px 0 0 10px;}
+#menulist{margin:auto;width:940px;padding:4px 0px 0 0;}
+#menu{background:#E1DAC3;font-size:1.2em}
+
+#menus {float:right;margin-top:4px;}
+#menus li{float:left;}
+#menus li a{padding:5px 10px;display:block;color:#000;}
+#menus li a:hover{text-decoration: underline;}
+#menus li ul{position:absolute;z-index:1;}
+#menus li ul li ul{position:relative;float:none;}
+#menus li li {list-style:none;float:none;}
+#social{float:right;}
+#twitter{float:left;background: url(img/twitter.png) no-repeat;margin-left:10px;display:block;height:20px;padding:5px 0 0 24px !important;}
+#rssfeed{float:right;background: url(img/rss.png) no-repeat 0 2px;margin-left:10px;display:block;height:20px;padding:5px 0 0 26px !important;}
+#social a:hover{text-decoration:none;}
+#topsearch{float:right;margin-left:20px;}
+#banner{width:960px;height:220px;margin:auto;background:url(img/banner.jpg) no-repeat top left;}
+/* End header*/
+
+
+
+/* begin maincontent*/
+
+.contentpadding{padding:0px;}
+.contentpadding img{max-width:940px;cursor:pointer;height:auto;}
+	#maincontent a:hover{color:#704D08;}
+	#maincontent h2 a{color:#719D25;text-decoration: none;}
+	#maincontent a{text-decoration: underline;}
+.entry{margin-top:5px;}
+
+	.entry p {margin-bottom:0.5em;}
+	.entry ol {padding: 0 0 0 35px;}
+	.entry ul {list-style-type:none;}
+	.entry ul li{list-style-type : disc;list-style-position : inside;margin-left:10px;}
+	.entry img {border:1px solid #A39856;padding:2px;margin-top:5px;}
+
+blockquote{margin:5px;padding:5px 5px 5px 10px;background:#E1E1E1;border:1px dashed #ccc;}
+.postmetadata{padding:1px 5px;margin:1em 0 25px;border-left:5px solid #DCDBBF;}
+
+.ping-track,.page-link{padding:5px;background:#E1E1E1;margin:0 0 1em 0;}
+.postnav{margin:1em 0;}
+
+.page-link a{padding:0 5px;}
+/* End maincontent */
+
+/* Begin sidebar */
+#sidebar h2,#sidebar h3,.widget h3{text-transform:uppercase;font-size:1em;color:#658D21;border-bottom:1px solid #D7D2AF;margin-top:1em;padding-bottom:2px;}
+#sidebar ul li{max-width:200px;float:left;margin:0 15px 0 10px;}
+#sidebar ul li ul li{float:none;margin-left:-6px;}
+#sidebar ul li ul{padding-left:15px;}
+#sidebar ul ul li a{padding:2px 0 2px 2px;color:#67664A;display:block;}
+#sidebar ul ul li a:hover{padding:2px 0 2px 2px;color:#A4573A;text-decoration: none;}
+
+.searchf input.sbm-b{width:150px;border:1px solid #BFB37D;padding:4px;background:#D7D2AF;color:#A39856;}
+
+/* End sidebar */
+
+
+/* Begin wp-tags*/
+img.centered {display: block;margin-left: auto;margin-right: auto;}
+img.alignright {padding: 2px;margin: 0 0 2px 7px;display: inline;}
+img.alignleft {padding: 2px;margin: 0 7px 2px 0;display: inline;}
+
+.aligncenter {display: block;margin-left: auto;margin-right: auto;}
+.alignright {float: right;}
+.alignleft {float: left}
+
+.wp-caption {border: 1px solid #ddd;text-align: center;background-color: #f3f3f3;padding-top: 4px;margin: 10px;}
+.wp-caption img {margin: 0;padding: 0;border: 0 none;}
+.wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; padding: 0 4px 5px; margin: 0;}
+
+
+
+#wp-calendar{width:160px;text-align:center;}
+#wp-calendar a{color:#536F23;}
+#wp-calendar td { text-align:center;}
+#wp-calendar tfoot{width:100%;}
+/* End wp-tags */
+
+
+/* Begin comments*/
+.message{width:90%;}
+#response{margin:2em 0 0 20px;}
+.comleft{width:20%;float:left;vertical-align:middle;text-align:right;padding:5px;}
+.comleft a{color:#333;}
+.message-by{}
+.avatar-place{}
+.message-count{float:left;}
+.message-content{margin:10px 20px;width:80%;padding-bottom:5px;border-bottom:2px solid #7E8C60;}
+.alt{}
+.author{}
+.message-entry{float:left;padding:5px 0 0 20px;width:60%;vertical-align:middle;}
+.inputs input,#commentform input{border:0;padding:6px 0 0 8px;background:url(img/input.gif) no-repeat top left;width:166px;height:30px;}
+.message textarea,#comment{border:0;height:180px;background:url(img/textarea.gif) no-repeat top left;padding:5px;width:440px;overflow:hidden;}
+.submit{margin-top:10px;}
+.submit input,#commentform #submit{border:0;width:60px;height:30px;background: #A2B180 url(img/submit.gif) no-repeat top left;color:#000;padding:0;}
+#commentform p{line-height:2.5em;}
+.backtotop{text-align:right;}
+.submit{margin-top:1em;}
+.children li{margin-left:15px;}
+.children li.bypostauthor{}
+.commentlist{margin-left:10px;}
+.commentlist li{margin:5px;padding:2px 0 0 30px !important;}
+.commentlist li li{background: url(img/commentchi.jpg) no-repeat top left;}
+.comment{overflow:hidden;background: url(img/comment.jpg) no-repeat top left;}
+.byuser{}
+.comment-author-admin{}
+#respond{}
+/* End comments */
+#urcomment{float:left;width:50%;}
+#ads{width:370px;float:right;}
+.chalt{background:#F5F5F5 !important;}

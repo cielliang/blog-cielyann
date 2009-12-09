@@ -117,7 +117,7 @@ object { display:block; margin:0 auto; }
 .side_box { color:#666; margin:0 15px 25px; font-size:11px; background:url(img/dot1.gif) repeat-x top; clear:both; padding:30px 0 0; }
 .first_side_box { background:none; padding:0; }
 
-#right_col h3 { font-size:11px; color:#999; font-weight:normal; text-transform:uppercase; line-height:100%; margin:0 0 1em 0; padding:0; }
+#right_col h3 { font-size:13px; color:#999; font-weight:normal; text-transform:uppercase; line-height:100%; margin:0 0 1em 0; padding:0; }
 #right_col a, #right_col a:visited { color:#7d7d7d; }
 #right_col a:hover { color:#f3dc19; }
 

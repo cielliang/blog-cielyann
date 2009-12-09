@@ -1,5 +1,4 @@
 <?php
-require_once('../../../wp-config.php');
 	/*
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -15,11 +14,16 @@ require_once('../../../wp-config.php');
 	along with this program; if not, write to the Free Software
 	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 	*/
+
+require_once('../../../wp-config.php');
+require_once('../../../wp-includes/functions.php');
+
 $k_id = $wpdb->escape($_GET['id']);
 $k_action = $wpdb->escape($_GET['action']);
 $k_path = $wpdb->escape($_GET['path']);
 $k_imgIndex = $wpdb->escape($_GET['imgIndex']);
 $table_name = $wpdb->prefix . 'comment_rating';
+$comment_table_name = $wpdb->prefix . 'comments';
 
 if($k_id && $k_action && $k_path) {
     //Check to see if the comment id exists and grab the rating
@@ -74,6 +78,23 @@ if($k_id && $k_action && $k_path) {
          {
             die('error|affected '. $rating);
          }
+         
+         $karma_modified = 0;
+         if (get_option('ckrating_karma_type') == 'likes' && $k_action == 'add') {
+            $karma_modified = 1; $karma = $rating;
+         }
+         if (get_option('ckrating_karma_type') == 'dislikes' && $k_action == 'subtract') {
+            $karma_modified = 1; $karma = $rating;
+         }
+         if (get_option('ckrating_karma_type') == 'both') {
+            $karma_modified = 1; $karma = $total;
+         }
+
+         if ($karma_modified) {
+            $query = "UPDATE `$comment_table_name` SET comment_karma = '$karma' WHERE comment_ID = $k_id";
+            $result = mysql_query($query); 
+            if(!$result) die('error|Comment Query error');
+         }
       }
    } else {
         die('error|Comment doesnt exist'); //Comment id not found in db, something wrong ?
@@ -86,5 +107,7 @@ if($k_id && $k_action && $k_path) {
 if ($total > 0) { $total = "+$total"; }
 
 //This sends the data back to the js to process and show on the page
-echo("done|$k_id|$rating|$k_path|$direction|$total|$k_imgIndex");
+// The dummy field will separate out any potential garbage that
+// WP-superCache may attached to the end of the return.
+echo("done|$k_id|$rating|$k_path|$direction|$total|$k_imgIndex|dummy");
 ?>
