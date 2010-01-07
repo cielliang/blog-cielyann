@@ -3,11 +3,11 @@
 	Plugin Name: WP-Cumulus
 	Plugin URI: http://www.roytanck.com/2008/03/15/wp-cumulus-released
 	Description: Flash based Tag Cloud for WordPress
-	Version: 1.22
+	Version: 1.23
 	Author: Roy Tanck
 	Author URI: http://www.roytanck.com
 	
-	Copyright 2008, Roy Tanck
+	Copyright 2009, Roy Tanck
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -140,7 +140,7 @@ function wp_cumulus_createflashcode( $widget=false, $atts=NULL ){
 		// alternate content
 		if( $options['mode'] != "cats" ){ $flashtag .= urldecode($tagcloud); }
 		if( $options['mode'] != "tags" ){ $flashtag .= urldecode($cats); }
-		$flashtag .= '</p><p>WP Cumulus Flash tag cloud by <a href="http://www.roytanck.com">Roy Tanck</a> requires Flash Player 9 or better.</p></div>';
+		$flashtag .= '</p><p>WP Cumulus Flash tag cloud by <a href="http://www.roytanck.com">Roy Tanck</a> and <a href="http://lukemorton.co.uk/">Luke Morton</a> requires <a href="http://www.macromedia.com/go/getflashplayer">Flash Player</a> 9 or better.</p></div>';
 		$flashtag .= '<script type="text/javascript">';
 		$flashtag .= 'var '.$soname.' = new SWFObject("'.$movie.'", "tagcloudflash", "'.$options['width'].'", "'.$options['height'].'", "9", "#'.$options['bgcolor'].'");';
 		if( $options['trans'] == 'true' ){
@@ -190,7 +190,7 @@ function wp_cumulus_createflashcode( $widget=false, $atts=NULL ){
 		// alternate content
 		if( $options['mode'] != "cats" ){ $flashtag .= '<p>'.urldecode($tagcloud).'</p>'; }
 		if( $options['mode'] != "tags" ){ $flashtag .= '<p>'.urldecode($cats).'</p>'; }
-		$flashtag .= '<p>WP-Cumulus by <a href="http://www.roytanck.com/">Roy Tanck</a> requires Flash Player 9 or better.</p>';
+		$flashtag .= '<p>WP-Cumulus by <a href="http://www.roytanck.com/">Roy Tanck</a> and <a href="http://lukemorton.co.uk/">Luke Morton</a> requires <a href="http://www.macromedia.com/go/getflashplayer">Flash Player</a> 9 or better.</p>';
 		$flashtag .= '</object>';
 	}
 	return $flashtag;

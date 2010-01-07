@@ -1,10 +1,10 @@
 === Comment Rating ===
 Contributors: bobking
-Tags: comments, vote, poll, polls, image, images, rating, ratings, comment, AJAX, javascript, automatic, button, plugin, plugins, Dislike, Like, embed, Formatting, user, users, visitors, text, counter, cms, highlight, digg, integration, thumb, tool, style, youtube, community
+Tags: comments, vote, poll, polls, image, images, performance, rating, ratings, comment, AJAX, javascript, automatic, button, plugin, plugins, Dislike, Like, embed, Formatting, user, users, visitors, text, counter, cms, highlight, digg, integration, thumb, tool, style, youtube, community
 Donate link: http://WealthyNetizen.com/donate/
 Requires at least: 2.3
-Tested up to: 2.8.5
-Stable tag: 2.8.4
+Tested up to: 2.8.6
+Stable tag: 2.9.7
 
 Allows visitors to rate comments in Like vs. Dislike fashion with
 clickable images. Poorly-rated & highly-rated comments are displayed differently.
@@ -32,7 +32,7 @@ can be highlighted.  Hotly-debated comments (many Likes and
 Dislikes) can also be highlighted to draw more attention, to encourage
 more votes and comments. 
 
-The threshholds for all three types of comments are configurable.
+The thresholds for all three types of comments are configurable.
 So are the styling.  Styling can be done with background color,
 opacity,fonts, etc. on the comment as well as the entire comment box.
 
@@ -47,7 +47,7 @@ Summary of key features;
 *  Configurable display of two vote numbers, a combined one or both
 *  Preventing voting fraud with one vote per IP address. This is less subject to manipulation than cookie based approaches. The author of a comment cannot rate his/her own comment.
 *  Styling of popular and mostly debated comments based on on the votes
-*  Poorly rated comments can be hidden in a click-to-see fashion. 
+*  Poorly rated comments can be hidden in a click-to-see fashion. There's no point of silencing your own voice on your blog.  When readers mark a comment by the blog author or admin as poorly rated, the comment will not be hidden, but only marked as poorly rated.  
 *  Styling of the vote numbers differently. 
 *  Mouseover effect on images to entice voting
 *  Choice of images and image size
@@ -55,7 +55,16 @@ Summary of key features;
 *  Functions are provide for theme customization.
 *  Allow vote types of: positive only, negative only votes or both.
 *  Store votes in wp_comments table comment_karma field. Stored votes can be: positive only, negative only or combined.
+*  A widget is provided as Comment Rating Widget to display the ratings along with recent comments.  
 *  Simple and light-weight (i.e. high performance).  It's also wp-cache and wp-super-cache friendly.
+
+There's also a <a href="http://wealthynetizen.com/comment-rating-pro/"> Pro version</a> which has all the functionality of the standard version, and the following features.
+
+* Styling comment image and text with a CSS class
+* Disabling voting restrictions, i.e. disabling one-vote-per-IP-address and allow unrestricted voting
+* Additional functions to retrieve comments ordered by their ratings
+
+More details about <a href="http://wealthynetizen.com/comment-rating-pro/"> the Comment Rating Pro and how to obtain it can be found here</a>.
 
 Comment Rating plugin is built on top of Alex Bailey's discontinued Comment Karma.
 Thanks to Jean-Paul Horn and many other users for ideas and suggestions.
@@ -82,7 +91,68 @@ More about custom installation in the <a href="http://wealthynetizen.com/comment
 
 == Frequently Asked Questions ==
 
-Please see <a href="http://wealthynetizen.com/comment-rating-plugin-faq/"> Comment Rating plugin FAQ</a>.
+For complete and most up-to-date FAQ, please see <a href="http://wealthynetizen.com/comment-rating-plugin-faq/"> Comment Rating plugin FAQ</a>.
+
+* Why are the voting image in gray?
+
+If the thumbs are grey, it's most likely working well. Comment
+author cannot vote on his/her own comments. That's why the voting
+images are grayed out and don't respond to mouse-over. But if you
+change to a different IP address, you'll be able to see the
+clickable images and mouse-over effects.
+
+If all your computers go through the same ADSL/Cable router, they
+all have the same external IP address. The thumb will stay gray,
+until your IP address changes (e.g. rebooting the router).
+
+To others, the thumbs should be in color.
+
+* Can I style the whole comment box of highly-rated/poorly-rated/hotly-debated comments
+
+Yes. the comment styling uses the new comment_class filter
+(introduced in WordPress 2.7). If your theme doesn't use
+WordPress 2.7 wp_list_comments(), you'll only see the comment
+text background being styled or highlighted. To fix the problem, you
+need to add comment_class into your existing theme. For example
+code, please see here.  
+
+* My nested comment box highlighting is messed up!
+
+When using nested comments, the styling of a highly or poorly-rated
+comment is passed on to every comment below it. This means that
+every comment nested below a low-rated comment becomes semi-opaque,
+even if it is high-rated itself. The end result is huge blocks of
+dim text that are difficult to read.
+
+Also highly-rated comments pass on that style to everything below
+it, resulting in huge blocks of styled text that obscure the rating
+of comments that are not really highly rated.
+
+The problem is caused by styling the whole comment box. To solve the problem, just turn off comment box styling.
+
+* How do I set the thresholds of highly-rated/poorly-rated/hotly-debated comments?
+
+This is the tricky part. Setting the thresholds too low, every comment becomes highlighted or hidden. Setting them too high, nothing changes and you cannot draw readers attention.
+
+Every blog's readers are different.  Some have passionate and
+active readers who vote on almost every comment.  Some have
+indifferent readers who don't want to click.
+
+There's no magic formula.  You'll have to experiment.  Hopefully, it's fun to play with the numbers.
+
+* Can a comment be both highly-rated, and poorly-rated or hotly-debated?
+
+Yes, if you're not careful with your thresholds. Won't there be messy formatting? No, there won't be. Rest assured.  Comment Rating will use only one style based on the following descending priorities: highly-rated, poorly-rated, hotly-debated.
+
+* Can I style the whole comment box of highly-rated/poorly-rated/hotly-debated comments
+
+Yes. the comment styling uses the new comment_class filter
+(introduced in WordPress 2.7). If your theme doesn't use
+WordPress 2.7 wp_list_comments(), you'll only see the comment
+text background being styled or highlighted. To fix the problem, you
+need to add comment_class into your existing theme. For example
+code, please see here.  
+
 
 == ToDo List ==
 
@@ -98,11 +168,59 @@ If you want to request a feature, please post to <a href="http://wealthynetizen.
 
 == Changelog ==
 
-= 2.8.3 =
+= 2.9.7 =
+
+Add choice to tooltips for "Thumb up" or "Thumb down", contributed
+by <a href="http://seemaximumresults.com"> Eric Peterka</a>. 
+
+= 2.9.6 =
+
+* Make sure Comment Rating is the last filter to run.  This avoids
+conflicts with Kaskus Emoticons plugin.
+* Fix the duplicated image id causing problem with Comment Rating Widget
+
+= 2.9.5 =
+
+Remove browser not supporting XMLHttpRequest object.  It doesn't
+help ordinary user. 
+
+= 2.9.4 =
+
+There's no point of silencing your own voice on your blog.  When
+readers mark a comment by the blog author or admin as poorly rated,
+the comment will not be hidden, but only marked as poorly rated.
+
+= 2.9.3 =
+
+Fix the multiple alert message when the voting icons are double clicked.
+
+= 2.9.2 =
+
+Tested on Wordpress 2.8.6.  Added non-breakable space between voting
+images and numbers
+
+= 2.9.1 =
+
+Belorussian translation by <a href="http://www.fatcow.com"> FatCow</a>
+
+= 2.9.0 =
+
+Added function to enable widget (Comment Rating Widget plugin) to display the ratings along with recent comments.  
+
+= 2.8.6 =
+
+Fixed the bug when auto-insert is turned off, highlighting won't
+have any effect
+
+= 2.8.5 =
+
+Fixed a bug in Spanish translation.
+
+= 2.8.4 =
 
 French translation by Charlie Borghini.
 
-= 2.8.2 =
+= 2.8.3 =
 
 Tested on WordPress 2.8.5
 

@@ -34,9 +34,11 @@
 							</div>
 
 							<?php the_content('Read the rest of this entry &raquo;'); ?>
+							
+							<?php if (function_exists('wp_link_pages')) wp_link_pages(); ?>
+							
 							<?php the_tags('<span class="tag"> Tags: ', ', ', '</span>'); ?>
 							<?php edit_post_link('Edit', '<p class="edit">', '</p>'); ?>
-							
 						</li>
 							<?php endwhile; ?>
 						<?php else : ?>
@@ -46,7 +48,15 @@
 						</li>
 						<?php endif; ?>
 					</ul>
+					<?php if (function_exists('wp_list_comments')): ?>
+							
+					<!-- WP 2.7 and above -->
+					<?php comments_template('', true); ?>
+
+					<?php else : ?>
+					<!-- WP 2.6 and below -->
 					<?php comments_template(); ?>
+					<?php endif; ?>
 				</div>
 				<div class="span-8 last sidebar">
 				<?php get_sidebar(); ?>

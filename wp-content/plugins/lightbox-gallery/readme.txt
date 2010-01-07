@@ -1,10 +1,10 @@
 === Lightbox Gallery ===
 Contributors: Hiroaki Miyashita
 Donate link: http://wpgogo.com/development/lightbox-gallery.html
-Tags: lightbox, gallery, image, images, album, photo, photos, picture, pictures
+Tags: lightbox, gallery, image, images, album, photo, photos, picture, pictures, jQuery, Highslide
 Requires at least: 2.5
-Tested up to: 2.8.4
-Stable tag: 0.5
+Tested up to: 2.9
+Stable tag: 0.6.2
 
 This plugin changes the view of galleries to the lightbox.
 
@@ -18,6 +18,7 @@ The Lightbox Gallery plugin changes the view of galleries to the lightbox.
 * Divides Gallery into several pages
 * Extends the default Gallery options
 * Additional settings are set in the option page
+* Switch to the Highslide JS display
 
 You can also make regular images appear in a lightbox. See Faq.
 
@@ -32,6 +33,8 @@ Localization
 * Dutch (nl_NL) - [Peter Arends](http://www.peterarends.net/)
 * Polish (pl_PL) - Otmar
 * Russian (ru_RU) - [Fat Cow](http://www.fatcow.com/)
+* Turkish (tr_TR) - [Hakan Demiray](http://www.dmry.net/)
+* Ukrainian (uk_UA) - [Vitalij Lew](http://wpp.pp.ua/)
 
 If you have translated into your language, please let me know.
 
@@ -57,13 +60,8 @@ Just add rel="lightbox" into "a" tag. Here is a sample.
 
 * How can I handle multiple galleries in one page as separate ones?
 
-You need to do two steps. If you would like to handle galleries separately, 
-add different class names into [gallery] and add codes as many as class names 
-into `lightbox-gallery.js`.
- 
-
-1. Edit `lightbox-gallery.js` and add some codes. Look at the comment of the file.
-2. Add a class into [gallery]. ex) [gallery class="gallery2"]
+If you would like to handle galleries separately, add different class names 
+into [gallery]. ex) [gallery class="gallery2"]
 
 == Screenshots ==
 
@@ -119,6 +117,18 @@ If you would like not to show the navigation, set `0`. The default is `1`.
 [gallery num="10" pagenavi="0"]
 
 == Changelog ==
+
+= 0.6.2 =
+* Enforced loading option of lightbox gallery scripts.
+
+= 0.6.1 =
+* Bugfix: JavaScript error.
+
+= 0.6 =
+* If you set the `class` attribute into [gallery], galleries are handled separately. ex) [gallery class="gallery2"]
+* Support for the Highslide JS.
+* Support for the javascript loading in the footer.
+* Turkish (tr_TR) - Hakan Demiray
 
 = 0.5 =
 * Brazilian Portuguese (pt_BR) - Emmanuel Carvalho

@@ -29,9 +29,9 @@
 							<div class="hr"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/<?php echo $scissors; ?>" alt="scissors" /></div>
 
 							<?php the_content('Read the rest of this entry &raquo;'); ?>
+							
 							<?php the_tags('<span class="tag"> Tags: ', ', ', '</span>'); ?>
 							<?php edit_post_link('Edit', '<p class="edit">', '</p>'); ?>
-							
 						</li>
 							<?php endwhile; ?>
 						<?php else : ?>

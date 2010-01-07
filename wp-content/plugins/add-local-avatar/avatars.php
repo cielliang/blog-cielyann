@@ -4,7 +4,7 @@
 	Plugin URI:		http://www.sterling-adventures.co.uk/blog/2008/03/01/avatars-plugin/
 	Description:	A plugin to manage public and private avatars.
 	Author:			Peter Sterling
-	Version:		7.3
+	Version:		7.5
 	Changes:		0.1 - Initial release.
 					1.0 - Added pagination of users list.
 					2.0 - Added pagination of the commenters list too.
@@ -32,13 +32,26 @@
 					7.1 - Update for Marc Adrian to provide support for option for showing text in the optional widget.
 					7.2 - Class added to help with styling widget.
 					7.3 - Fix for user avatar upload that doesn't need re-sizing and a Russian translation thanks to Fatcow - http://www.fatcow.com/
+					7.4 - Root directory no longer DOCUMENT_ROOT.
+					7.5 - Use DOCUMENT_ROOT option for legacy users.
 	Author URI:		http://www.sterling-adventures.co.uk/
 */
 
+define('AVATAR_VER', '7.5');												// Plug-in version.
 define('UNKNOWN', 'unknown@gravatar.com');									// Unknown e-mail.
 define('BLANK', 'blank');													// Blank e-mail.
 define('FALLBACK', 'http://www.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536');
 define('SCALED_SIZE', '80');
+
+// Helper function to find root directory.
+function avatar_root()
+{
+	global $avatar_options;
+	if($avatar_options['legacy'] == 'on') return $_SERVER['DOCUMENT_ROOT'];
+	$tmp = ABSPATH;
+	return substr($tmp, 0, -strlen(strrchr(substr($tmp, 0, -1), '/')) - 1);
+}
+
 
 // Default options...
 $avatar_options = get_option('plugin_avatars');
@@ -56,6 +69,7 @@ if(!is_array($avatar_options)) {
 		'name' => 'on',
 		'widget_enabled' => 'on',
 		'location' => 'website',
+		'legacy' => 'off',
 		'upload_allowed' => 'Y'
 	);
 	update_option('plugin_avatars', $avatar_options);
@@ -214,11 +228,12 @@ function manage_avatar_cache()
 			'resize' => $_POST['resize'],
 			'snapshots' => $_POST['snapshots'],
 			'in_posts' => $_POST['in_posts'],
-			'credit' => ($_POST['credit'] == 'on' ? 'on' : 'off'),
+			'credit' => $_POST['credit'],
 			'default' => $_POST['default'],
 			'upload_dir' => $_POST['upload_dir'],
 			'name' => $_POST['name'],
 			'location' => $_POST['location'],
+			'legacy' => $_POST['legacy'],
 			'widget_enabled' => $_POST['widget_enabled'],
 			'upload_allowed' => $_POST['upload_allowed']
 		);
@@ -366,7 +381,7 @@ function manage_avatar_cache()
 			}
 		?>
 
-		<h3><?php echo __('Avatar Options', 'avatars'); ?></h3>
+		<h3><?php echo __('Avatar Options', 'avatars'); ?> (v <?php echo AVATAR_VER; ?>)</h3>
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF'] . '?page=' . basename(__FILE__); ?>&updated=true">
 			<table class='form-table'>
 				<tr>
@@ -441,7 +456,9 @@ function manage_avatar_cache()
 					<td>
 						<input type='text' name='upload_dir' value='<?php echo $avatar_options['upload_dir']; ?>' size='70' />
 						<br />
-						<small><?php echo __('If allowed, use this directory for user avatar uploads, e.g.', 'avatars'); ?> <code>/avatars</code>. <?php echo __('Must have write access and is relative to your web root, i.e. ', 'avatars'); ?><code><?php echo $_SERVER['DOCUMENT_ROOT']; ?></code>.</small>
+						<small><?php echo __('If allowed, use this directory for user avatar uploads, e.g.', 'avatars'); ?> <code>/avatars</code>. <?php echo __('Must have write access and is relative to ', 'avatars'); ?><code><?php echo avatar_root(); ?></code>.</small>
+						<br />
+						Or, use legacy (v7.3 and lower) <code>$_SERVER['DOCUMENT_ROOT']</code> method <input type="checkbox" name="legacy" <?php echo $avatar_options['legacy'] == 'on' ? 'checked' : ''; ?> />
 					</td>
 				</tr>
 				<tr>
@@ -481,9 +498,17 @@ function manage_avatar_cache()
 					</td>
 				</tr>
 				<tr>
-					<td><?php echo __('Credit:', 'avatars'); ?></td>
-					<td><input type="checkbox" name="credit" <?php echo $avatar_options['credit'] == 'on' ? 'checked' : ''; ?> /></td>
-					<td><small><?php echo __('Includes an invisible credit to', 'avatars'); ?> <a href='http://www.sterling-adventures.co.uk/' title='Sterling Adventures'>Sterling Adventures</a></small></td>
+					<td><?php echo __('Credit:', 'avatars'); ?><br /><small><?php echo __("Link to the author if you value the plugin.", 'avatars'); ?></small></td>
+					<td>
+						<input type='radio' name='credit' value='vis' <?php echo ($avatar_options['credit'] == 'vis' ? 'checked="checked"' : ''); ?> />&nbsp;<?php echo __('Visible', 'avatars'); ?><br />
+						<input type='radio' name='credit' value='on'  <?php echo ($avatar_options['credit'] == 'on'  ? 'checked="checked"' : ''); ?> />&nbsp;<?php echo __('Hidden', 'avatars'); ?><br />
+						<input type='radio' name='credit' value='off' <?php echo ($avatar_options['credit'] == 'off' ? 'checked="checked"' : ''); ?> />&nbsp;<?php echo __('None', 'avatars'); ?><br />
+					</td>
+					<td>
+						- <?php echo __('Includes a visible credit. Customise the style in', 'avatars'), ' <code>', dirname(__FILE__); ?>/avatars.css</code>.<br />
+						- <?php echo __('Includes an invisible credit. Invisibile to preserve the <i>look</i> of your WP theme.', 'avatars'); ?><br />
+						- <?php echo __('No credit.', 'avatars'); ?>
+					</td>
 				</tr>
 			</table>
 			<p class="submit"><input type="submit" name="submit" value="<?php echo __('Update Avatar Options', 'avatars'); ?>" /></p>
@@ -515,7 +540,15 @@ function manage_avatar_cache()
 function avatar_footer()
 {
 	global $avatar_options;
-	if($avatar_options['credit'] == 'on') echo '<div id="avatar_footer" style="display: none;"><a href="http://www.sterling-adventures.co.uk/blog/">Adventures</a></div>';
+	if($avatar_options['credit'] != 'off') {
+		if($avatar_options['credit'] == 'vis') {
+			printf("<link rel='stylesheet' media='screen' type='text/css' href='%s/wp-content/plugins/add-local-avatar/avatars.css' />\n", get_settings('home'));
+		}
+		else {
+			echo '<style type="text/css" media="all">#avatar_footer { display: none; } /* Change this in Users > Avatars. */ </style>';
+		}
+		echo '<div id="avatar_footer">Avatars by <a href="http://www.sterling-adventures.co.uk/blog/">Sterling Adventures</a></div>';
+	}
 }
 
 
@@ -647,7 +680,7 @@ function avatar_upload($user_id)
 	);
 
 	// The web-server root directory.  Used to create absolute paths.
-	$root = $_SERVER['DOCUMENT_ROOT'];
+	$root = avatar_root();
 
 	// Remove local avatar data and file.
 	if($_POST['avatar_delete'] == 'on') {

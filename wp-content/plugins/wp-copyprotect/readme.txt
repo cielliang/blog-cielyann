@@ -1,10 +1,10 @@
 === WP-CopyProtect [Protect your posts] ===
 Contributors: cchetanonline
 Donate link: http://www.thechetan.com/wp-copyprotect/#donate
-Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO, page, plugin, access, content, javascript, security, wp-copyprotect, RSS, fetcher, duplicate,
+Tags: post, posts, copy, protect, right, click, disable, copyprotect, Google, SEO, page, plugin, access, content, javascript, security, wp-copyprotect, RSS, fetcher, duplicate, Bing, 
 Requires at least: 2
-Tested up to: 2.8
-Stable tag: 1.9
+Tested up to: 2.9
+Stable tag: 1.9.1
 
 Protect your blog content from getting copied. A simple plug-in developed to stop the Copy cats
 
@@ -24,10 +24,10 @@ So that no one can simply copy and paste the content of your blog in there blog 
 
  Why dont you rate the plugin if you like it !! :)  >> 
 
-** *Latest* release 1.9 : VALID XHTML (Validation errors removed) **
+** *Latest* release 1.9.1 : VALID XHTML (Validation errors removed) + Compatable with WP-2.9 **
 
 
-By [Chetan Gole](http://www.thechetan.com/).
+By [Chetan Gole](http://chetangole.com/).
 
 == Installation ==
 
@@ -52,5 +52,6 @@ Catch me on [Wp-CopyProtect Homepage](http://www.thechetan.com/wp-copyprotect/)
 1. Configuration page
 
 == Change Log ==
-* ver : 1.9 : VALID XHTML (Validation errors removed).
-* ver : 1.8 : Update for Wordpress 2.8 with change in settng page.
+* ver : 1.9.1.0 : Compatiblility tag added for Wp 2.9 .
+* ver : 1.9.0.0 : VALID XHTML (Validation errors removed).
+* ver : 1.8.0.0 : Update for Wordpress 2.8 with change in settng page.

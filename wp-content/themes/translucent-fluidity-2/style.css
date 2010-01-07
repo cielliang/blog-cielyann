@@ -1,0 +1,92 @@
+/*
+Theme Name: Translucent Fluidity 2
+Version: 3.1
+Description: A fluid two-column style that's widget ready and ported to WordPress from my original open source template
+Author: Karen Blundell
+Author URI: http://karenblundell.com
+Tags: flowers, white, two columns, fluid width, widget ready, right sidebar
+*/
+
+
+body { background: #FFF url('images/back8.jpg') no-repeat top left fixed; margin: 0 0 20px 0; padding: 0; font-family: Verdana, sans-serif; font-size: 0.95em; color: #000; line-height: 1.5em; }
+
+#header { width: 80%; background:transparent; margin: 0 auto; padding: 0; height: 101px; }
+#header h1 { padding: 30px 0 0 0; color: #999; font-size: 1.4em; letter-spacing: 3px; margin: 0; text-align: right; }
+#header a, #header a:visited { color: #999; text-decoration: none; }
+#header a:hover { color: #666 }
+#desc { padding: 0px 10px; margin: 0 ; text-align: right; }
+
+#nav { position: absolute; top: 85px; left: 10%; width: auto; padding: 0; margin: 0 auto; font: bold 11px Verdana, sans-serif; height: 25px; }
+#nav li { list-style: none; margin: 0; padding: 0; display: inline; }
+#nav li a { padding: 3px; margin: 0; border: 1px solid #B78E96; border-bottom: none;
+background: transparent url(images/trans6.gif) repeat; text-decoration: none; }
+#nav li a:link { color: #000; }
+#nav li a:visited { color: #fff; }
+#nav li a:hover { color: #fff; background: transparent url(images/trans7.gif) repeat; }
+#nav li a.active { background: transparent url(images/trans7.gif) repeat; border-bottom: 1px solid #999; }
+
+#container { background: transparent url('images/trans5.gif') repeat; width: 80%; margin: 0 auto; padding: 0; }
+
+#content { margin: 0; padding: 10px; width: 59%; float: left; }
+#content h1 { color: #999; border-bottom: 1px solid #999; margin: 0; padding: 10px 0 1px 0; font-size: 1.2em; }
+#content .post p { padding: 0 0 15px 0 }
+#content .post blockquote { padding-top: 0px; padding-bottom: 0px; }
+#content .post blockquote p { margin: 5px 0 0 0; padding: 10px 5px 10px 5px; border-left: 2px solid #fff; }
+#content .post li { list-style-type: disc;  color: #000; margin: 0px 5px 0px 5px; padding: 0px 5px 5px 0px; }
+#content .post ol { margin: 0px; padding: 0 5px 0 40px; }
+#content .post ol li { list-style-type: decimal;  color: #000; margin: 0px 5px 0px 5px; padding: 0px 5px 5px 0px; }
+#content .post img { display: inline; border:0; margin:0 7px; padding:0; vertical-align: middle; }
+
+#menu { float: left; width: 30.5%; margin: 17px 0 0 20px; padding: 5px; }
+#menu ul { padding: 0; list-style: none; margin: 0; }
+#menu ul li { list-style-type: none; margin: 0px; padding: 0px 0px 15px 0px; }
+#menu ul ul li { list-style-type: none; color: #999; margin: 0px 0px 0px 5px; padding: 0px 5px 5px 5px; font-size: 0.75em; line-height: 1.2em; }
+#menu ul.children { margin: 0px; padding: 5px 5px 0px 0px; }
+#menu ul.children li { margin: 0px; padding: 0px 7px 5px 5px; }
+
+#footer { background: transparent; padding: 5px 10px 2px 0; text-align: right; font-size: 0.75em; clear: both; line-height: 1.15em; }
+
+a, a:visited { background: transparent; color: #999; text-decoration: none; font-weight: bold; }
+
+a:hover, a:active { background: transparent; color: #666; }
+
+h2 { color: #666; margin: 0 0 10px 0; padding: 0; font-size: 0.95em; border-bottom: 1px solid #666; }	
+
+#commentlist { margin: 0px; padding: 0px; }
+#commentlist li { list-style-type: none; margin: 10px 0px 10px 0px; padding: 5px 5px 0px 5px; border-bottom: 1px solid #666; }
+#commentlist p { margin: 0px; padding: 10px 5px; }
+#commentlist .commentmeta { font-weight: bold; margin-bottom: 5px; font-size: 0.75em; }
+#commentlist .alt { border-bottom: 1px solid #666; }
+#commentlist blockquote { border: 1px solid #fff; }
+#commentlist .alt blockquote { border-color: #fff; }
+#commentform p { margin: 10px 0px 0px 0px; padding: 0px; }
+#commentform textarea { width: 350px; }
+
+.meta { margin: -2px 0px 0px 0px; padding: 0; font-size: 0.75em; font-weight: bold; }
+.postmetadata { font-size: 0.75em; font-weight: bold; text-align: center; }
+
+form { margin: 0px; padding: 0px; }
+form input, form textarea, form submit { border: 1px solid #B78E96;  background-color: transparent; }
+acronym { cursor: help; border-bottom: 1px dotted #B78E96 }
+
+img.centered {display:block; margin: 0 auto 5px auto; border:0; padding:0; }
+
+img.alignright { display: inline; border:0; margin:5px 7px 0 7px; padding:0; vertical-align: middle; }
+
+img.alignleft { display: inline; border:0; margin:5px 7px 0 7px; padding:0; vertical-align: middle; }
+
+img a { border: 0; }
+
+.alignleft { float:left; text-align:left; }
+
+.alignright { float:right; text-align:right; }
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+

@@ -2,7 +2,7 @@
 Contributors: noCreativity
 Tags: doodle, doodles, guestbook, drawing, Flash, sidebar, images,  fun, paint
 Requires at least: 2.7
-Tested up to: 2.8.4
+Tested up to: 2.8.5
 Stable tag: trunk
 
 Live Demo: [noCreativity.com](http://nocreativity.com/blog/ "View a live demo of Dooodle in the sidebar") 
@@ -76,6 +76,16 @@ More info: The previous versions of this plugin saved the Doodls in the plugin f
 Sorry for the problems, guys. I hope none of you lost anything. If you did, I'm terribly sorry. I really didn't know the plugin would be deleted (and therefore deleting the files inside the doodls folder)
 
 == Changelog ==
+
+= 1.0.13 =
+* Little Javascript error.
+* Note: Ever since Shadowbox-js updated the autoload() doesn't work anymore... 
+
+= 1.0.12 =
+* Added stripslashes to the widget. Overlooked that a few times. My bad :)
+
+= 1.0.11 =
+* Changed the xml.php output in order to make sure the content is fully validated.
 
 = 1.0.10 =
 * Fixed a compatibility issue caused by a action_handler in the plugin. 
