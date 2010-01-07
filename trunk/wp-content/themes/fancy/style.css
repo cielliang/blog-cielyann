@@ -2,10 +2,10 @@
 Theme Name: Fancy
 Theme URI: http://www.azmoney.co.uk/wordpress-themes/fancy
 Description: "Fancy" is a free WordPress theme which really lets your blog stand out from the crowd. Make your blog unique by changing the main blog color (pink, yellow, green), background pattern (available over 20 background variations), banner etc through an options page. In addition you have the ability to choose the color of sidebar blocks (violet, yellow, green). Tech folks might find interesting that we built this theme based on css framework "Blueprint". Valid CSS & HTML. Designed by <a href="http://www.azmoney.co.uk">AZ Money</a> Web Design.
-Version: 1.1.1
+Version: 1.1.4
 Author: AZ Money
 Author URI: http://www.azmoney.co.uk
-Tags: yellow, pink, green, white, black, two-columns, right-sidebar, fixed-width, theme-options
+Tags: yellow, pink, green, white, black, two-columns, right-sidebar, fixed-width, theme-options, threaded-comments
 	
 	The CSS, XHTML and design is released under GPL:
 	http://www.opensource.org/licenses/gpl-license.php
@@ -571,7 +571,7 @@ div.content {
 	}
 	.sidebar div a {
 		color: #252525;
-		padding: 0px;
+		padding: 2px;
 		color: white;
 		background-color: #252525;
 		text-decoration: none;
@@ -746,20 +746,38 @@ div.footer {
 
 
 
+
+/* Comments template */
+
 div.com {
 	margin-bottom: 30px;
 }
-.list-4 {
+.com ul li, .com ol li {
+	background: none;
+}
+.com .children {
+	margin: 0 0 0 1.5em;
+}
+.com .list-4 {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-	.list-4 li {
-		border: 1px solid #e9eaea;
+	.com .list-4 li .admin {
+		border: 2px dashed #FE0059;
+	}
+	.com .list-4 li {
+		/*
+		border: 1px solid #E7E9E4;
 		padding: 15px 15px 0 15px;
 		margin: 0 0 15px 0;
+		*/
+		
+		border: none;
+		padding: 0;
+		margin: 0;
 	}
-		* html .list-4 li {
+		* html .com .list-4 li {
 			padding:0 40px 0 20px !important;
 		}
 		*:first-child+html .list-4 li {
@@ -777,10 +795,14 @@ div.com {
 		*:first-child+html .list-4 p img {
 			margin:0px auto auto 0;
 		}
+	.com-wrapper {
+		border: 1px solid #E7E9E4;
+		padding: 15px 15px 0;
+		margin: 0 0 15px;
+	}
 	.com-header {
 		padding-bottom: 15px;
-		border-bottom: 1px solid #e9eaea;
-		margin-bottom: 15px;
+		margin: 0;
 	}
 		.com-header img {
 			display: block;
@@ -794,30 +816,6 @@ div.com {
 		}
 			.tp span, .tp span a {
 				font-weight: bold;
+				display: block;
 				line-height: 150%;
 			}
-			.tp span {
-				display: block;
-				margin-bottom: 6px;
-			}
-		.reply input {
-			margin-right: 15px;
-		}
-	.com blockquote {
-		margin: 0;
-	}
-		.com blockquote p {
-			background-color: #e9eaea;
-			padding: 0.5em 0.75em;
-			margin-bottom: 10px;
-		}
-	.com code {
-		margin: 0;
-		padding: 0.75em 15px;
-		display: block;
-		color: #666666;
-		font-family: monospace;
-		font-size: 12px;
-		border: 1px dashed #e9eaea;
-		clear: both;
-	}

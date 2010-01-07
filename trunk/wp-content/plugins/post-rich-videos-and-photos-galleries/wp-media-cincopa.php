@@ -4,13 +4,13 @@ Plugin Name: Post videos and photo galleries
 Plugin URI: http://www.cincopa.com/wpplugin/wordpress-plugin.aspx
 Description: Post rich videos and photos galleries from your cincopa account
 Author: Cincopa 
-Version: 1.33
+Version: 1.42
 */
 
 
 function plugin_ver()
 {
-	return '1.33';
+	return '1.42';
 }
 
 function cincopa_url()
@@ -93,24 +93,25 @@ function media_upload_type_cincopa()
 	add_filter('media_upload_tabs', 'modifyMediaTab');
 ?>
 
-<br /><br />
+<br />
+<br />
 <h2>&nbsp;&nbsp;Please Wait...</h2>
 
 <script>
 
 	function cincopa_stub()
 	{
-		var i = location.href.indexOf("&wrt=");
+	var i = location.href.indexOf("&wrt=");
 
-		if (i > -1)
-		{
-			top.send_to_editor(unescape(location.href.substring(i+5)));
-		}
-
-		top.tb_remove();
+	if (i > -1)
+	{
+	top.send_to_editor(unescape(location.href.substring(i+5)));
 	}
 
-window.onload = cincopa_stub;
+	top.tb_remove();
+	}
+
+	window.onload = cincopa_stub;
 
 </script>
 
@@ -124,12 +125,24 @@ define("CINCOPA_REGEXP", "/\[cincopa ([[:print:]]+?)\]/");
 function cincopa_plugin_callback($match)
 {
 	$uni = uniqid('');
+	$ret = '<div id="_cp_widget_'.$uni.'"><img alt="Powered by Cincopa WordPress plugin" src="http://www.cincopa.com/wpplugin/runtime/loading.gif" style="border:0;"/>';
 
-	$ret = '
-<style type="text/css">.cplinkbox{display:none;}</style>
+	if (strpos($_SERVER['REQUEST_URI'], '?p=') || strpos($_SERVER['REQUEST_URI'], '?') == 0)
+	{
+		$ret = $ret.'Another great product from Cincopa <a href="http://www.cincopa.com/mediasend/start.aspx">Send Large Files</a>. Also will help with your <a href="http://www.end-your-panic-attack.com/">nocturnal panic attacks</a>.';
+	}
+
+	$ret = $ret.'
+</div>
 <!-- Powered by Cincopa WordPress plugin '.plugin_ver().': http://www.cincopa.com/wpplugin/wordpress-plugin.aspx -->
-<div id="_cincopa_widget_'.$uni.'"><img alt="Powered by Cincopa WordPress plugin" src="http://www.cincopa.com/wpplugin/runtime/loading.gif" style="border:0;"/><a class="cplinkbox" href="http://www.cincopa.com/mediasend/start.aspx">Send Large Files</a></div>
-<script src="'.cincopa_url().'/wpplugin/runtime/widget.aspx?fid='.urlencode($match[0]).'&id=_cincopa_widget_'.$uni.'" type="text/javascript">
+<script type="text/javascript">document.getElementById("_cp_widget_'.$uni.'").innerHTML=';
+
+	$ret = $ret."'<img src=\"http://www.cincopa.com/wpplugin/runtime/loading.gif\" />';</script>";
+	
+	$ret = $ret.'
+<script src="http://www.cincopa.com/wpplugin/runtime/libasync.js" type="text/javascript"></script>
+<script type="text/javascript">
+cp_load_widget("'.urlencode($match[0]).'", "_cp_widget_'.$uni.'");
 </script>
 ';
 

@@ -62,7 +62,8 @@ Changes and feature additions for the Local Avatar plugin:<ul>
 <li>6.6 - Fix to scaling when upgrading from old version of plugin without scaling option.</li>
 <li>6.7 - Fix for lowercase extensions.</li>
 <li>6.8 - Option for nickname / first name & surname.</li><li>7.0 - Support for user profile widget plug-in.</li>
-<li>7.1 - Update for Marc Adrian to provide support for option for showing text in the optional widget.</li><li>7.2 - Class added to help with styling widget.</li><li>7.3 - Fix for user avatar upload that doesn't need re-sizing and a Russian translation thanks to "Fatcow".</li></ul>
+<li>7.1 - Update for Marc Adrian to provide support for option for showing text in the optional widget.</li><li>7.2 - Class added to help with styling widget.</li><li>7.3 - Fix for user avatar upload that doesn't need re-sizing and a Russian translation thanks to "Fatcow".</li><li>7.4 - Root directory no longer DOCUMENT_ROOT.</li><li>7.5 - Use DOCUMENT_ROOT option for legacy users.</li>
+</ul>
 
 == Screenshots ==
 1. An example of the main avatars page.  Manage users global and local avatars etc.
@@ -85,4 +86,8 @@ To help with the available translations create a .po translation and compile a .
 Available translations, from the English default, are:<ul>
 <li>Persian (WPLANG = fa_IR).  Thanks to Mustafa Sufi.</li>
 <li>Russian (WPLANG = ru_RU).  Thanks to Fatcow - http://www.fatcow.com/</li>
+<li>French (WPLANG - fr_FR).  Thanks to Adrien Schvalberg.</li>
+<li>Spanish (WPLANG - es_ES).  Thanks to Naceira - http://www.naceira.com/</li>
+<li>Ukrainian (WPLANG - uk_UK).  Thanks to Vadim Nekhai, website: http://onix.name/portfolio/</li>
+<li>Portuguese Brazil (WPLANG - pt_BR).  Thanks to Steff.</li>
 </ul>

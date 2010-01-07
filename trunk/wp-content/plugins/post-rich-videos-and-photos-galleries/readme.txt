@@ -1,27 +1,29 @@
 === Plugin Name ===
 Contributors: orenshmu
-Tags: photos, flash, flv, slideshow, images, amazon, gallery, media, cooliris, admin, post, photo-albums, pictures, widget, photo, picture, s3, music, playlists, playlist, sidebar, ajax, video, vidavee, iphone, cms, ipod, smooth gallery 
+Tags: photos, flash, flv, slideshow, images, amazon, gallery, media, cooliris, admin, post, photo-albums, pictures, widget, photo, picture, s3, music, playlists, playlist, sidebar, ajax, video, vidavee, iphone, cms, ipod, smooth gallery, nextgen, javascript, embed, menus, analytics
 Requires at least: 2.0.2
-Tested up to: 2.8.5
+Tested up to: 2.9.1
 
 Post your videos and photo galleries/flash slideshows easily and in seconds.
 
 == Description ==
 
-One professional plugin handles **all your needs**
+One professional plugin handles **all your multimedia needs**
 
     
-    *  Image galleries and Slideshows
-    *  Videos
-    *  Music playlists
-    *  Podcast
-    *  Menus and much more
+    *  Add Image galleries
+    *  Add Slideshows
+    *  Add Video
+    *  Add Music playlists
+    *  Add Podcast
+    *  Add Menus and much more
 
 
-* **42 skins and more** - slideshow, videos, playlists, flash, full-screen, Cooliris etc
+* **44 skins and more** - slideshow, videos, playlists, flash, full-screen, Cooliris etc
 * **Automatic uploading and hosting**
 * Automatic **resizing** of photos
 * Automatic **video transcoding** to flv/3gp/mp4
+* Complete analytics of your traffic
 * Support iPhone/iPod and smart phones
 * Hosting and delivering your media on Amazon S3 Web Services ensure scalability and reliability.
 * Managment of the galleries is simple and straight forward

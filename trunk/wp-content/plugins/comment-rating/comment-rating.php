@@ -5,7 +5,7 @@
 	Description: Allows visitors to rate comments in a Like vs.  Dislike fashion with clickable images. Poorly-rated & highly-rated comments can be displayed differently. This plugin is simple and light-weight.  Configure it at <a href="options-general.php?page=ckrating">Settings &rarr; Comment Rating</a>. 
 	Author: Bob King
 	Author URI: http://wealthynetizen.com
-	Version: 2.8.4
+	Version: 2.9.7
 	*/ 
 
 	/*
@@ -28,13 +28,15 @@
 
 load_plugin_textdomain('ckrating', "/wp-content/plugins/comment-rating/");
 
-define('COMMENTRATING_VERSION', '2.8.4');
+define('COMMENTRATING_VERSION', '2.9.7');
 define('COMMENTRATING_PATH', WP_CONTENT_DIR.'/plugins/'.plugin_basename(dirname(__FILE__)) );
+define('COMMENTRATING_NAME', plugin_basename(dirname(__FILE__)) );
+
 
 add_action('comment_post', 'ckrating_comment_posted');//Hook into WordPress
 add_action('admin_menu', 'ckrating_options_page');
 add_action('wp_head', 'ckrating_add_highlight_style');
-add_filter('comment_text', 'ckrating_display_filter'); // add comment rating icons 
+add_filter('comment_text', 'ckrating_display_filter', 100000); // add comment rating icons 
 add_filter('comment_class', 'ckrating_comment_class', 10 , 4 );
 add_action('init', 'ckrating_add_javascript');  // add javascript in the footer
 
@@ -83,6 +85,10 @@ function ckrating_show_options_page() {
          update_option('ckrating_dislikes_style', urldecode($_POST['ckrating_dislikes_style']));
          update_option('ckrating_image_index', $_POST['ckrating_image_index']);
          update_option('ckrating_image_size', $_POST['ckrating_image_size']);
+//EP-12-31-2009 Added options for ToolTip text
+         update_option('ckrating_up_alt_text', $_POST['ckrating_up_alt_text']);
+         update_option('ckrating_down_alt_text', $_POST['ckrating_down_alt_text']);
+//EP-12-31-2009 End of added options
          update_option('ckrating_style_debated', urldecode($_POST['ckrating_style_debated']));
          update_option('ckrating_debated', $_POST['ckrating_debated']);
          update_option('ckrating_mouseover', $_POST['ckrating_mouseover']);
@@ -153,6 +159,10 @@ function ckrating_reset_default() {
    update_option('ckrating_dislikes_style', 'font-size:12px; color:#990033');
    update_option('ckrating_image_index', 1);
    update_option('ckrating_image_size', 14);
+//EP-12-31-2009 Added options for ToolTip text.  Note, to BoB, should all the default strings be localized?
+   update_option('ckrating_up_alt_text', __('Thumb up', 'ckrating'));
+   update_option('ckrating_down_alt_text', __('Thumb down', 'ckrating'));
+//EP-12-31-2009 End of added options
    update_option('ckrating_mouseover', 2);
    update_option('ckrating_vote_type', 'both');
    update_option('ckrating_karma_type', 'both');
@@ -225,6 +235,7 @@ function ckrating_get_rating($comment_id)
    }
 }
 
+// Display images and rating in comments
 function ckrating_display_content()
 {
    global $ck_cache;
@@ -251,8 +262,11 @@ function ckrating_display_content()
       else
          // enlarge
          $imgStyle = 'style="padding: 0px; border: none; cursor: pointer;" onmouseover="this.width=this.width*1.3" onmouseout="this.width=this.width/1.2"';
-      $onclick_add = "onclick=\"javascript:ckratingKarma('$ck_comment_ID', 'add', '{$ck_link}/wp-content/plugins/comment-rating/', '$imgIndex');\" title=\"". __('Thumb up','ckrating'). "\"";
-      $onclick_sub = "onclick=\"javascript:ckratingKarma('$ck_comment_ID', 'subtract', '{$ck_link}/wp-content/plugins/comment-rating/', '$imgIndex')\" title=\"". __('Thumb down', 'ckrating') ."\"";
+//      $onclick_add = "onclick=\"javascript:ckratingKarma('$ck_comment_ID', 'add', '{$ck_link}/wp-content/plugins/comment-rating/', '$imgIndex');\" title=\"". __('Thumb up','ckrating'). "\"";
+//      $onclick_sub = "onclick=\"javascript:ckratingKarma('$ck_comment_ID', 'subtract', '{$ck_link}/wp-content/plugins/comment-rating/', '$imgIndex')\" title=\"". __('Thumb down', 'ckrating') ."\"";
+//EP-12-31-2009 Replaced two lines above with line below for Tooltip Text option.  I think __() is the localization. We shouldn't need that for these strings now. 
+      $onclick_add = "onclick=\"javascript:ckratingKarma('$ck_comment_ID', 'add', '{$ck_link}/wp-content/plugins/comment-rating/', '$imgIndex');\" title=\"". get_option('ckrating_up_alt_text')."\"";
+      $onclick_sub = "onclick=\"javascript:ckratingKarma('$ck_comment_ID', 'subtract', '{$ck_link}/wp-content/plugins/comment-rating/', '$imgIndex')\" title=\"".get_option('ckrating_down_alt_text')."\"";
    }
 
    $total = $ck_cache['ck_rating_up'] - $ck_cache['ck_rating_down'];
@@ -300,6 +314,53 @@ function ckrating_display_content()
    return array($content, $ck_cache['ck_rating_up'], $ck_cache['ck_rating_down']);
 }
 
+// Display images and rating for widget on sidebar
+function ckrating_display_sidebar($ck_comment_ID)
+{
+   global $ck_cache;
+   $plugin_path = get_bloginfo('wpurl').'/wp-content/plugins/comment-rating';
+   $ck_link = str_replace('http://', '', get_bloginfo('wpurl'));
+   $content = '';
+   ckrating_get_rating($ck_comment_ID);
+
+   $imgIndex = get_option('ckrating_image_index') . '_' . get_option('ckrating_image_size') . '_';
+   $imgUp = $imgIndex . "up.png";
+   $imgDown = $imgIndex . "down.png";
+   $imgStyle = 'style="padding: 0px; border: none;"';
+   $onclick_add = '';
+   $onclick_sub = '';
+
+   $total = $ck_cache['ck_rating_up'] - $ck_cache['ck_rating_down'];
+   if ($total > 0) $total = "+$total";
+   //Use onClick for the image instead, fixes the style link underline problem as well.
+
+   $likesStyle = 'style="' . get_option('ckrating_likes_style') .  ';"';
+   $dislikesStyle = 'style="' . get_option('ckrating_dislikes_style') .  ';"';
+   // Use ckrating_karma_type to determine the image shape
+   if ( get_option('ckrating_karma_type') != 'dislikes' )
+   {
+      $content .= "&nbsp;<img $imgStyle src=\"{$plugin_path}/images/$imgUp\" alt=\"".__('Thumb up', 'ckrating') ."\" $onclick_add />";
+      if ( get_option('ckrating_value_display') != 'one' )
+         $content .= "&nbsp;<span $likesStyle>{$ck_cache['ck_rating_up']}</span>";
+   }
+   if ( get_option('ckrating_karma_type') != 'likes' )
+   {
+      $content .= "&nbsp;<img $imgStyle src=\"{$plugin_path}/images/$imgDown\" alt=\"". __('Thumb down', 'ckrating')."\" $onclick_sub />"; //Phew
+      if ( get_option('ckrating_value_display') != 'one' )
+         $content .= "&nbsp;<span $dislikesStyle>{$ck_cache['ck_rating_down']}</span>";
+   }
+
+   $totalStyle = '';
+   if ($total > 0) $totalStyle = $likesStyle;
+   else if ($total < 0) $totalStyle = $dislikesStyle;
+   if ( get_option('ckrating_value_display') == 'one' )
+      $content .= "&nbsp;<span id=\"karma-{$ck_comment_ID}-total\" $totalStyle>{$total}</span>";
+   if ( get_option('ckrating_value_display') == 'three' )
+      $content .= "&nbsp;(<span id=\"karma-{$ck_comment_ID}-total\" $totalStyle>{$total}</span>)";
+
+   return $content;
+}
+
 function ckrating_display_filter($text)
 {
    $ck_comment_ID = get_comment_ID();
@@ -321,7 +382,10 @@ function ckrating_display_filter($text)
       $content = '<div style="' . get_option('ckrating_styleComment') . '">' .
                $text .  '</div>';
    }
-   else if ( ((int)$arr[2] - (int)$arr[1])>= (int)get_option('ckrating_negative') ) {
+   else if ( ((int)$arr[2] - (int)$arr[1])>= (int)get_option('ckrating_negative') &&
+             ! ($ck_author_name == $ck_comment_author || $ck_comment_author == 'admin')
+           )
+   {
       $content = '<p>'.__('Hidden due to','ckrating').' '.__('low','ckrating');
       if ( (get_option('ckrating_inline_style_off') == 'yes') &&
            (get_option('ckrating_javascript_off') == 'yes')) {
@@ -344,8 +408,9 @@ function ckrating_display_filter($text)
 
    // No auto insertion of images and ratings
    if (get_option('ckrating_auto_insert') != 'yes')
-      return $text;
+      return $content;
 
+   // Add the images and ratings
    if (get_option('ckrating_position') == 'below')
       return $content. '<p>' . $arr[0] . '</p>';
    else
@@ -405,4 +470,5 @@ function ckrating_comment_class (  $classes, $class, $comment_id, $page_id){
    //send the array back
    return $classes;
 }
+
 ?>

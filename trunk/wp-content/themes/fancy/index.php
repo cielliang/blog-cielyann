@@ -47,10 +47,12 @@
 						</li>
 
 						<?php endif; ?>
-						<li class="post">
-		                    <p class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></p>
-		                    <p class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></p>
-		                </li>
+						<li>
+							<div class="post">
+								<p class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'default')) ?></p>
+		                        <p class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'default')) ?></p>
+	                        </div>
+	                    </li>
 					</ul>
 				</div>
 				<div class="span-8 last sidebar">

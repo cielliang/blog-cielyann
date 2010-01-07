@@ -24,6 +24,8 @@ License: Copyright 2009 Bob King.  http://WealthyNetizen.com/
 */
 ?>
    <p>
+   Comment Rating now has a companion widget plugin <a href="http://wealthynetizen.com/comment-rating-widget/">Comment Rating Widget</a>. <br/>
+   There is also a Pro version with many customizing options <a href="http://wealthynetizen.com/comment-rating-pro/">Comment Rating Pro</a>. <br/>
    To sort comments by votes, hide poor comments entirely, or show images neatly, 
    <a href="http://wealthynetizen.com/donate/customize-your-theme/">ask me to help</a>. <br/>
 
@@ -262,6 +264,20 @@ License: Copyright 2009 Bob King.  http://WealthyNetizen.com/
       </select>
    </td>
    </tr>
+<!--Added by Eric Peterka, 12-31-2009, ToolTip Text options -->
+   <tr>
+   <td>
+      Tooltip text for images:
+   </td>
+   <td>
+      <img src="<?php echo get_bloginfo('wpurl').'/wp-content/plugins/comment-rating/images/3_16_up.png'; ?>" />
+      <input type="text" name="ckrating_up_alt_text" value="<?php echo get_option('ckrating_up_alt_text'); ?>">
+      <br />
+      <img src="<?php echo get_bloginfo('wpurl').'/wp-content/plugins/comment-rating/images/3_16_down.png'; ?>" />
+      <input type="text" name="ckrating_down_alt_text" value="<?php echo get_option('ckrating_down_alt_text'); ?>">
+   </td>
+   </tr>
+<!--End of addition by Eric Peterka, 12-31-2009, ToolTip Text options -->
    <tr> <td> <br/></td> <td> <br/> </td> </tr>
    <tr> <td> <b>Advanced Options</b></td> 
    <td> You don't need to change the following unless you plan to customize your theme.</td>

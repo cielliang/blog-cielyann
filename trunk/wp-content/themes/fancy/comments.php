@@ -8,22 +8,62 @@
 		if ($_COOKIE['wp-postpass_' . COOKIEHASH] != $post->post_password) {  // and it doesn't match the cookie
 			?>
 
-			<p class="nocomments">This post is password protected. Enter the password to view comments.</p>
+			<p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments', 'default'); ?>.</p>
 
 			<?php
 			return;
 		}
 	}
+	
+if (function_exists('wp_list_comments')):
+	//WP 2.7 Comment Loop
+	if ( have_comments() ) : ?>
+
+		<?php if ( ! empty($comments_by_type['comment']) ) :
+		$count = count($comments_by_type['comment']); ?>
+		<div class="clr">&nbsp;</div>
+		<h3 id="comments" class="block"><?php printf(__('%s responses to', 'default'), $count); ?> &#8220;<?php the_title(); ?>&#8221; <a href="<?php bloginfo('comments_rss2_url'); ?>" title="RSS link"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/feed.gif" alt="<?php _e('RSS icon', 'default'); ?>" /></a></h3>
+		
+		<ul class="list-4">
+			<?php wp_list_comments('type=comment&callback=mytheme_comment'); ?>
+		</ul>
+		<?php endif; ?>
+
+		<div class="navigation">
+			<div class="fl"><?php previous_comments_link() ?></div>
+            <div class="fr"><?php next_comments_link() ?></div>
+        	<div class="clear"></div>
+        </div><br />
+
+		<?php if ( ! empty($comments_by_type['pings']) ) :
+		$countp = count($comments_by_type['pings']); ?>
+		<h3 id="trackbacks" class="block"><?php printf(__('%s Trackbacks &#47; Pingbacks', 'default'), $countp); ?></h3>
+
+		<ul class="list-4">
+			  <?php wp_list_comments('type=pings&callback=mytheme_ping'); ?>
+		</ul>
+		<?php endif; ?>
+
+	<?php else : // this is displayed if there are no comments so far ?>
+		<?php if ('open' == $post->comment_status) :
+			// If comments are open, but there are no comments.
+		else : ?><p class="nocomments"><?php _e('Comments are closed', 'default'); ?>.</p>
+		<?php endif;
+	endif;
+else:
+	//WP 2.6 and older Comment Loop
+	/* This variable is for alternating comment background */
 
 	/* This variable is for alternating comment background */
 	$oddcomment = 'class="alt" ';
 ?>
 
 <!-- You can start editing here. -->
-
 <?php if ($comments) : ?>
-	<h3 id="comments" class="block"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
-	<ol class="list-4">
+	<div class="clr">&nbsp;</div>
+	<h3 id="comments" class="block"><?php comments_number( __('No responses to', 'default'), __('One response to', 'default'), __('% responses to', 'default'));?>
+ &#8220;<?php the_title(); ?>&#8221; <a href="<?php bloginfo('comments_rss2_url'); ?>" title="RSS link"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/ico/rss.gif" alt="<?php _e('RSS icon', 'default'); ?>" /></a></h3>
+	<ul class="list-4">
 
 	<?php foreach ($comments as $comment) : ?>
 
@@ -34,11 +74,13 @@
                 <p class="tp">
                     <span><?php comment_author_link() ?></span>
                     <?php if ($comment->comment_approved == '0') : ?>
-                    <em>Your comment is awaiting moderation.</em>
+                    <em><?php _e('Your comment is awaiting moderation', 'default'); ?>.</em>
                     <?php endif; ?>
                     
-        
-                    <span class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></span>
+                    <small class="commentmetadata">
+                    	<a href="#comment-<?php comment_ID() ?>" title=""><?php printf( __('%1$s at %2$s', 'default'), get_comment_time(__('F jS, Y', 'default')), get_comment_time(__('H:i', 'default')) ); ?></a>
+                    	<?php edit_comment_link(__('Edit', 'default'),'&nbsp;&nbsp;',''); ?>
+                    </small>
 				</p>
                 <div class="clear"></div>
             </div>
@@ -53,7 +95,7 @@
 
 	<?php endforeach; /* end for each comment */ ?>
 
-	</ol>
+	</ul>
 
  <?php else : // this is displayed if there are no comments so far ?>
 
@@ -62,8 +104,9 @@
 
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<p class="nocomments">Comments are closed.</p>
-
+		<p class="nocomments"><?php _e('Comments are closed', 'default'); ?>.</p>
+		 
+		<?php endif; ?>
 	<?php endif; ?>
 <?php endif; ?>
 </div>
@@ -72,36 +115,60 @@
 
 <?php if ('open' == $post->comment_status) : ?>
 
-<h3 id="respond" class="title-2 block">我想说..</h3>
+<h3 id="respond" class="title-2 block"><?php _e('Leave a reply', 'default'); ?></h3>
+<?php if (function_exists('cancel_comment_reply_link')) { 
+//2.7 comment loop code ?>
+<div id="cancel-comment-reply">
+	<small><?php cancel_comment_reply_link();?></small>
+</div>
+<?php } ?>
 
 <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
-<p>你必须 <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?redirect_to=<?php echo urlencode(get_permalink()); ?>">登录</a> 才能发表评论</p>
+<?php
+	$login_link = get_option('siteurl') . '/wp-login.php?redirect_to=' . urlencode(get_permalink());
+	printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'default'), $login_link);
+?>
+
 <?php else : ?>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 
-<?php if ( $user_ID ) : ?>
+<?php if ( $user_ID ) : 
+	if (function_exists('wp_logout_url')) {
+		$logout_link = wp_logout_url();
+	} else {
+		$logout_link = get_option('siteurl') . '/wp-login.php?action=logout';
+	} ?>
 
-<p>登录了，我是 <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="退出登录该帐号">退出登录 &raquo;</a></p>
+<p><?php _e('Logged in as', 'default'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo $logout_link ?>" title="<?php _e('Log out of this account', 'default'); ?>"><?php _e('Log out', 'default'); ?> &raquo;</a>
+</p>
 
 <?php else : ?>
 
 <p><input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-<label for="author" class="author">你是 <?php if ($req) echo "(必填)"; ?></label></p>
+<label for="author" class="author"><?php _e('Name', 'default'); ?> <?php if ($req) echo __('(required)', 'default'); ?></label></p>
 
 <p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-<label for="email" class="email">电子邮件 (写吧，不会公布的) <?php if ($req) echo "(必填)"; ?></label></p>
+<label for="email" class="email"><?php _e('Mail (will not be published)', 'default'); ?> <?php if ($req) echo __('(required)', 'default'); ?></label></p>
 
 <p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-<label for="url" class="website">个人网站</label></p>
+<label for="url" class="website"><?php _e('Website', 'default'); ?></label></p>
 
 <?php endif; ?>
 
-<!--<p><small><strong>XHTML:</strong> 你可以使用这些标签： <code><?php echo allowed_tags(); ?></code></small></p>-->
+<?php if (function_exists('cancel_comment_reply_link')) { 
+//2.7 comment loop code ?>
+<p>
+ <?php comment_id_fields(); ?>
+</p>
+<?php } ?>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
 
 <p><textarea name="comment" id="comment" rows="10" tabindex="4" cols="<?php if (get_option('tn_column_number') == '3 columns') { echo '70'; } else { echo '92'; }?>"></textarea></p>
 
-<p><input name="submit" type="submit" id="submit" tabindex="5" value="提交评论" />
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="<?php _e('Submit Comment', 'default'); ?>" />
 <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 </p>
 <?php do_action('comment_form', $post->ID); ?>

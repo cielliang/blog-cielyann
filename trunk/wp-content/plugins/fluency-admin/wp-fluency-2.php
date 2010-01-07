@@ -2,116 +2,138 @@
 /*
 Plugin Name: Fluency Admin
 Plugin URI: http://deanjrobinson.com/projects/fluency-admin/
-Description: Give your WordPress admin the Fluency look, Fluency 2.1.1 is the latest update and is compatible with WP 2.8.x.
+Description: Give your WordPress admin the Fluency look, Fluency 2.2 is the latest update and is compatible with WP 2.9.x.
 Author: Dean Robinson
-Version: 2.1.1
+Version: 2.2
 Author URI: http://deanjrobinson.com/
 */ 
 
+define("FLUENCY_VERSION", "2.2");
+
+/*
+ * Setup Fluency Options when plugin is activated
+ */
 function wp_fluency_init() {
 	if (isset($_GET['activate']) && $_GET['activate'] == 'true' && isset($_GET['plugin']) && $_GET['plugin'] == 'wp-fluency-2/wp-fluency-2.php') {
 		$key_s = get_option('fluency_login_style');
-		if(empty($key_s)) {
-			update_option('fluency_login_style', 'true');
-		}
 		$key_l = get_option('fluency_login_logo');
-		if(empty($key_l)) {
-			update_option('fluency_login_logo', '');
-		}
 		$key_ml = get_option('fluency_menu_logo');
-		if(empty($key_m)) {
-			update_option('fluency_menu_logo', '');
-		}
+		$key_mw = get_option('fluency_menu_width');
+		$key_mp = get_option('fluency_menu_position');
+		$key_mi = get_option('fluency_menu_icons');
+		empty($key_s) ? update_option('fluency_login_style', 'true') : null;
+		empty($key_l) ? update_option('fluency_login_logo', '') : null;
+		empty($key_ml) ? update_option('fluency_menu_logo', '') : null;
+		empty($key_mw) ? update_option('fluency_menu_width', '') : null;
+		empty($key_mp) ? update_option('fluency_menu_position', 'true') : null;
+		empty($key_mi) ? update_option('fluency_menu_icons', 'true') : null;
 	}
 }
 add_action('init', 'wp_fluency_init');
 
-
+/*
+ * Add Fluency Stylesheet to admin head
+ */
 function wp_admin_fluency_css() {
 	global $userdata;
-	wp_admin_fluency_add_css('wp-admin.css','2.1.1');
-	if($userdata->admin_color == 'classic'){
-		wp_admin_fluency_add_css('classic-colors.css','2.1.1');
-	}
+	wp_enqueue_style('fluency',WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/resources/wp-admin.css', $deps = array(), $ver = FLUENCY_VERSION, $media = 'all' );
+	$userdata->admin_color == 'classic' ? wp_enqueue_style('fluency-classic-colors',WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/resources/classic-colors.css', $deps = array(), $ver = FLUENCY_VERSION, $media = 'all' ) : null;
 }
-add_action('admin_head', 'wp_admin_fluency_css',1000);
+add_action('admin_print_styles', 'wp_admin_fluency_css');
 
+/*
+ * Add Style overrides for custom menu width/positioning
+ */
+function wp_admin_fluency_menu_size() {
+	$width = get_option('fluency_menu_width');
+	if(!empty($width) && $width>=140){
+		?>
+		<style>
+			#wpwrap,#footer {border-left-width:<?php echo $width; ?>px;}
+			#adminmenu,#adminmenu li.wp-has-submenu {width:<?php echo $width; ?>px;}
+			#adminmenu a.menu-top {min-width:<?php echo $width-30; ?>px;}
+			#adminmenu li.wp-has-submenu.hover {width:<?php echo $width+8; ?>px;}
+			#adminmenu li div.wp-submenu {left:<?php echo $width+8; ?>px;}
+			#adminmenu .menu-top-last a.menu-top,#adminmenu li a.wp-has-submenu,#adminmenu li.menu-top-first a.wp-has-submenu,#adminmenu li a.menu-top,#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,#adminmenu li.menu-top > a.current,#adminmenu li.wp-first-item.current,#adminmenu li.wp-has-current-submenu,#adminmenu li.menu-top:hover, #adminmenu li.menu-top.hover {background-position:<?php echo $width-140; ?>px bottom;}
+			#adminmenu li.menu-top-last a, #adminmenu li.menu-top-last a:hover, #adminmenu li.menu-top .current, #adminmenu li.menu-top .current:hover {background-position:<?php echo $width-14; ?>px -112px;}
+		</style>
+		<?php
+	}
+	$pos = get_option('fluency_menu_position');
+	if($pos=='false'){ ?><style>#adminmenu{position:absolute;}</style><?php }
+	$icons = get_option('fluency_menu_icons');
+	if($icons=='false'){ ?><style>#adminmenu li div.wp-menu-image{display:none;}.hiddenMenu #adminmenu li div.wp-menu-image{display:block;}</style><?php }
+}
+add_action('admin_head', 'wp_admin_fluency_menu_size');
 
+/*
+ * Add Fluency Javascript to admin footer
+ */
 function wp_admin_fluency_js() {
-	wp_admin_fluency_add_js('fluency.js','2.1.1');
-	if(get_option('fluency_menu_logo')!=''){
-		echo '<script>try{document.getElementById("adminmenu").style.backgroundImage = "url(\'' . get_option('fluency_menu_logo') . '\')";}catch(e){}</script>';
-	}
+	wp_enqueue_script('fluency',WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/resources/fluency.js', $deps = array('jquery'), $ver = FLUENCY_VERSION, $in_footer = true );
+	get_option('fluency_menu_logo')!='' ? add_action('admin_print_footer_scripts', 'wp_admin_fluency_footer_js') : null;
 }
-add_action('admin_print_footer_scripts', 'wp_admin_fluency_js',1000000);
+add_action('admin_print_scripts', 'wp_admin_fluency_js');
 
+/*
+ * Prints Script to override WordPress logo above admin menu
+ */
+function wp_admin_fluency_footer_js(){
+	echo '<script>try{document.getElementById("adminmenu").style.backgroundImage = "url(\'' . get_option('fluency_menu_logo') . '\')";}catch(e){}</script>';
+}
+
+/*
+ * Add Fluency Login Stylesheet to login head
+ */
 function wp_login_fluency_css() {
-	wp_admin_fluency_add_css('wp-login.css','2.1.1');
+	get_option('fluency_login_style')=='true' ? wp_admin_fluency_enqueue_style('fluency-login',WP_PLUGIN_URL . '/' . plugin_basename(dirname(__FILE__)) . '/resources/wp-login.css', $deps = array(), $ver = FLUENCY_VERSION, $media = 'all' ) : null;
 }
-if(get_option('fluency_login_style')=='true'){
-	add_action('login_head', 'wp_login_fluency_css',1000);
-}
+add_action('login_head', 'wp_login_fluency_css');
 
-
+/*
+ * Add Javascript to Login page to override WordPress logo
+ */
 function wp_login_fluency_js() {
-	echo '<script>try{document.getElementById("login").childNodes[0].childNodes[0].style.backgroundImage = "url(\'' . get_option('fluency_login_logo') . '\')";}catch(e){}</script>';
+	echo get_option('fluency_login_logo')!='' ? '<script>try{document.getElementById("login").childNodes[0].childNodes[0].style.backgroundImage = "url(\'' . get_option('fluency_login_logo') . '\')";}catch(e){}</script>' : null;
 }
-if(get_option('fluency_login_logo')!=''){
-	add_action('login_form', 'wp_login_fluency_js',1000);
-}
+add_action('login_form', 'wp_login_fluency_js',1000);
 
-
-function wp_admin_fluency_add_css($file, $version) {
-	$fluency_path = get_settings('siteurl') . '/wp-content/plugins/' . plugin_basename(dirname(__FILE__)) ;
-	echo '<link rel="stylesheet" type="text/css" href="' . $fluency_path . '/resources/' . $file . '?version=' . $version .'" />'."\n";
-}
-
-
-function wp_admin_fluency_add_js($file, $version){
-	$fluency_path = get_settings('siteurl') . '/wp-content/plugins/' . plugin_basename(dirname(__FILE__)) ;
-	echo '<script src="' . $fluency_path . '/resources/' . $file . '?version=' . $version .'" type="text/javascript" charset="utf-8"></script>';
+/*
+ * Function that mimics the core wp_enqueue_style function which doesn't appear to work on the login page
+ */
+function wp_admin_fluency_enqueue_style($handle='',$file='', $deps = array(), $ver = FLUENCY_VERSION, $media = 'all') {
+	echo '<link rel="stylesheet" id="' . $handle . '-css" href="' . $file . '?version=' . $ver .'" type="text/css" media="' . $media . '" />'."\n";
 }
 
-
+/*
+ * Adds Fluency information to wp-admin footer
+ */
 function wp_fluency_footer(){
-	echo "<span id='fluency-footer'><a href='http://deanjrobinson.com/projects/fluency-admin/'>Fluency Admin 2.1.1</a> is a plugin by <a href='http://deanjrobinson.com'>Dean Robinson</a> - <a href='http://deanjrobinson.com/donate/'>Donate</a></span><br/>";
+	echo '<span id="fluency-footer"><a href="http://deanjrobinson.com/projects/fluency-admin/">Fluency Admin '.FLUENCY_VERSION.'</a> is a plugin by <a href="http://deanjrobinson.com">Dean Robinson</a> - <a href="http://deanjrobinson.com/donate/">Donate</a></span><br/>';
 }
 add_action('in_admin_footer', 'wp_fluency_footer',1000);
 
-
-/* Adds Akismet Link to the Comments menu in addtion to the item under Dashboard */
+/*
+ * Adds Akismet Link to the Comments menu in addtion to the item under Dashboard
+ */
 function wp_fluencycomments_akismet_stats_page() {
-	if ( function_exists('add_submenu_page') && function_exists('akismet_init') )
-		add_submenu_page('edit-comments.php', __('Akismet Stats'), __('Akismet Stats'), 'manage_options', 'akismet-stats-display', 'akismet_stats_display');
+	( function_exists('add_submenu_page') && function_exists('akismet_init') ) ? add_submenu_page('edit-comments.php', __('Akismet Stats'), __('Akismet Stats'), 'manage_options', 'akismet-stats-display', 'akismet_stats_display') : null;
 }
 add_action('admin_menu', 'wp_fluencycomments_akismet_stats_page');
 
-
+/*
+ * Fluency Admin Options Page
+ */
 function wp_fluency_options_page() {
 
 	if ( isset($_POST['submit']) ) {
-		if ( function_exists('current_user_can') && !current_user_can('manage_options') ) {
-			die(__('Cheatin&#8217; uh?'));
-		}
-		
-		if(isset($_POST['fluency_login_style'])){
-			update_option('fluency_login_style', 'true');
-		} else {
-			update_option('fluency_login_style', 'false');
-		}
-		
-		if(isset($_POST['fluency_login_logo'])){
-			update_option('fluency_login_logo', strip_tags($_POST['fluency_login_logo']));
-		} else {
-			update_option('fluency_login_logo', '');
-		}
-		
-		if(isset($_POST['fluency_menu_logo'])){
-			update_option('fluency_menu_logo', strip_tags($_POST['fluency_menu_logo']));
-		} else {
-			update_option('fluency_menu_logo', '');
-		}
-
+		( function_exists('current_user_can') && !current_user_can('manage_options') ) ? die(__('Cheatin&#8217; uh?')) : null;
+		isset($_POST['fluency_login_style']) ? update_option('fluency_login_style', 'true') : update_option('fluency_login_style', 'false');
+		isset($_POST['fluency_login_logo']) ? update_option('fluency_login_logo', strip_tags($_POST['fluency_login_logo'])) : update_option('fluency_login_logo', '');
+		isset($_POST['fluency_menu_logo']) ? update_option('fluency_menu_logo', strip_tags($_POST['fluency_menu_logo'])) : update_option('fluency_menu_logo', '');
+		isset($_POST['fluency_menu_width']) ? update_option('fluency_menu_width', strip_tags($_POST['fluency_menu_width'])) : update_option('fluency_menu_width', '');
+		isset($_POST['fluency_menu_position']) ? update_option('fluency_menu_position', 'true') : update_option('fluency_menu_position', 'false');
+		isset($_POST['fluency_menu_icons']) ? update_option('fluency_menu_icons', 'true') : update_option('fluency_menu_icons', 'false');
 	}
 
 ?>
@@ -122,7 +144,6 @@ function wp_fluency_options_page() {
 	<div class="icon32" id="icon-themes"><br/></div>
 	<h2><?php _e('Fluency Admin Options'); ?></h2>
 	<form action="" method="post" id="fluency-options">
-		
 		<table class="form-table">
 			<tbody>
 				<tr>
@@ -144,6 +165,21 @@ function wp_fluency_options_page() {
 					</td>
 				</tr>
 				<tr>
+					<th scope="row"><label for="fluency_menu_width">Custom menu width</label></th>
+					<td>
+						<input type="text" class="small-text" maxlength="3" value="<?php if ( get_option('fluency_menu_width') != '' ) echo get_option('fluency_menu_width'); ?>" id="fluency_menu_width" name="fluency_menu_width"/>px
+						<div class="description">If you find that some menu items are wrapping across multiple lines you can increase the width of the menu. Default is 140px.</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Fixed position menu</th>
+					<td><label><input name="fluency_menu_position" id="fluency_menu_position" value="true" type="checkbox" <?php if ( get_option('fluency_menu_position') == 'true' ) echo ' checked="checked" '; ?> /> <?php _e('Disable if you have lots of plugins that add menu items, or a small screen.'); ?></label></td>
+				</tr>
+				<tr>
+					<th scope="row">Menu item icons</th>
+					<td><label><input name="fluency_menu_icons" id="fluency_menu_icons" value="true" type="checkbox" <?php if ( get_option('fluency_menu_icons') == 'true' ) echo ' checked="checked" '; ?> /> <?php _e('Disable to hide icons from expanded menu.'); ?></label></td>
+				</tr>
+				<tr>
 					<th></th>
 					<td class="submit"><input type="submit" name="submit" value="<?php _e('Update options &raquo;'); ?>" /></td>
 				</tr>
@@ -154,9 +190,11 @@ function wp_fluency_options_page() {
 <?php
 }
 
+/*
+ * Add Fluency Admin Options Page to Settings menu
+ */
 function wp_fluency_options_menu() {
-	if ( function_exists('add_submenu_page') )
-		add_options_page(__('Fluency Options'), __('Fluency Options'), 'manage_options', 'fluency-options', 'wp_fluency_options_page');
+	function_exists('add_submenu_page') ? add_options_page(__('Fluency Options'), __('Fluency Options'), 'manage_options', 'fluency-options', 'wp_fluency_options_page') : null;
 }
 add_action('admin_menu', 'wp_fluency_options_menu');
 

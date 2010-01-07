@@ -32,7 +32,8 @@ function ckratingcreateXMLHttpRequest(){
     } catch (e) {
         // browser doesn’t support ajax. handle however you want
         //document.getElementById("errormsg").innerHTML = "Your browser doesnt support XMLHttpRequest.";
-        alert("Your browser does not support the XMLHttpRequest Object!");
+        // This won't help ordinary users.  Turned off
+        // alert("Your browser does not support the XMLHttpRequest Object!");
     }
     return xmlhttp;
 }
@@ -100,8 +101,11 @@ function ckratingHandleResponse(){
             var error = 'Error: '+response[1];
             alert(error);
         } else {
-        	alert("Reponse: "+response[0]);
+           /*  This causes unnecessary error messages when the icon
+            *  is double clicked.
+        	   alert("Reponse: "+response[0]);
             alert("Karma not changed, please try again later.");
+            */
         }
     }
 }

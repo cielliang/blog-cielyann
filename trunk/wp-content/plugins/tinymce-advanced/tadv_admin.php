@@ -36,7 +36,7 @@ $imgpath = WP_PLUGIN_URL . '/tinymce-advanced/images/';
 $tadv_toolbars = get_option('tadv_toolbars');
 if ( ! is_array($tadv_toolbars) ) {
 	@include_once( WP_PLUGIN_DIR . '/tinymce-advanced/tadv_defaults.php');
-	$tadv_options = array( 'advlink' => 1, 'advimage' => 1, 'importcss' => 0, 'contextmenu' => 0, 'tadvreplace' => 0 );
+	$tadv_options = array( 'advlink' => 1, 'advimage' => 1, 'importcss' => 0, 'contextmenu' => 0, 'fix_autop' => 0 );
 } else {
 	$tadv_options = get_option('tadv_options');
 	$tadv_toolbars['toolbar_1'] = isset($tadv_toolbars['toolbar_1']) ? (array) $tadv_toolbars['toolbar_1'] : array();
@@ -309,7 +309,10 @@ if ( is_array($buttons) ) {
 		</td></tr>
 
 		<tr><td style="border:1px solid #CD0000;padding:2px 12px 8px;">
-		<p style="font-weight:bold;color:#CD0000;"><?php _e('Advanced', 'tadv'); ?></p>
+		<p style="font-weight:bold;color:#CD0000;"><?php _e('Advanced', 'tadv'); ?></p><?php
+
+		if ( function_exists('mceopt_admin') )
+			echo '<p><a href="' . admin_url('options-general.php?page=tinymce-options/tinymce-options.php') . '">' . __('Manage TinyMCE Options', 'tadv') . '</a></p>'; ?>
 
 		<p><label for="importcss" class="tadv-box"><?php _e('Import the current theme CSS classes', 'tadv'); ?> &nbsp;
 		<input type="checkbox" class="tadv-chk"  name="importcss" id="importcss" <?php if ( $tadv_options['importcss'] == '1' ) echo ' checked="checked"'; ?> /></label></p>

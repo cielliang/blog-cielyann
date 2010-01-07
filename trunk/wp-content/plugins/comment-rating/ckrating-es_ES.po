@@ -19,45 +19,45 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: comment-rating.php:200
-#: comment-rating.php:222
+#: comment-rating.php:254
+#: comment-rating.php:281
 #@ ckrating
 msgid "Thumb up"
 msgstr "Voto positivo"
 
-#: comment-rating.php:201
-#: comment-rating.php:228
+#: comment-rating.php:255
+#: comment-rating.php:287
 #@ ckrating
 msgid "Thumb down"
 msgstr "Voto negativo"
 
-#: comment-rating.php:266
+#: comment-rating.php:325
 #@ ckrating
 msgid "Hidden due to"
 msgstr "Escondido debido a"
 
-#: comment-rating.php:266
+#: comment-rating.php:325
 #@ ckrating
 msgid "low"
 msgstr "baja"
 
-#: comment-rating.php:269
-#: comment-rating.php:274
+#: comment-rating.php:328
+#: comment-rating.php:333
 #@ ckrating
 msgid "comment rating"
 msgstr "calificación"
 
-#: comment-rating.php:273
+#: comment-rating.php:332
 #@ ckrating
 msgid "Rated by other readers"
 msgstr "Calificado por otros lectores"
 
-#: comment-rating.php:276
+#: comment-rating.php:335
 #@ ckrating
 msgid "Click to see comment"
 msgstr "Click para ver comentario"
 
-#: comment-rating.php:276
+#: comment-rating.php:335
 #@ ckrating
 msgid "Click here to see"
 msgstr "Click aquí para ver"
