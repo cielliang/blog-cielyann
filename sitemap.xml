@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://blog.cielyann.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/2.9.1" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.2" -->
-<!-- generated-on="January 8, 2010 7:59 am" -->
+<!-- generated-on="January 8, 2010 11:38 am" -->
 <!-- Debug: Total comment count: 12 -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://blog.cielyann.com/</loc>
-		<lastmod>2009-10-22T06:58:26+00:00</lastmod>
+		<lastmod>2010-01-08T11:36:35+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 <!-- Debug: Start Postings -->
+<!-- Debug: Priority report of postID 54: Comments: 0 of 12 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2010/01/08/%e5%8d%87%e7%ba%a7%e5%95%a6%ef%bc%81</loc>
+		<lastmod>2010-01-08T11:36:35+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
 <!-- Debug: Priority report of postID 35: Comments: 0 of 12 = 0 points -->
 	<url>
 		<loc>http://blog.cielyann.com/2009/10/17/%e5%8f%98%e6%95%85%ef%bc%8c%e8%bd%ac%e5%8f%98</loc>
