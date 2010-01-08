@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://blog.cielyann.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/2.9.1" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.2" -->
-<!-- generated-on="January 8, 2010 11:38 am" -->
+<!-- generated-on="January 8, 2010 12:47 pm" -->
 <!-- Debug: Total comment count: 12 -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://blog.cielyann.com/</loc>
@@ -9,6 +9,42 @@
 		<priority>1.0</priority>
 	</url>
 <!-- Debug: Start Postings -->
+	<url>
+		<loc>http://blog.cielyann.com/about</loc>
+		<lastmod>2010-01-08T12:46:25+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://blog.cielyann.com/%e6%91%84%e5%bd%b1</loc>
+		<lastmod>2010-01-08T12:46:01+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://blog.cielyann.com/%e7%bb%98%e7%94%bb</loc>
+		<lastmod>2010-01-08T12:44:55+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://blog.cielyann.com/%e9%9f%b3%e4%b9%90/%e7%94%b5%e5%bd%b1%e5%8e%9f%e5%a3%b0</loc>
+		<lastmod>2010-01-08T12:43:28+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://blog.cielyann.com/%e9%9f%b3%e4%b9%90/%e4%b8%93%e8%be%91</loc>
+		<lastmod>2010-01-08T12:42:35+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+	<url>
+		<loc>http://blog.cielyann.com/%e9%9f%b3%e4%b9%90</loc>
+		<lastmod>2010-01-08T12:40:52+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
 <!-- Debug: Priority report of postID 54: Comments: 0 of 12 = 0 points -->
 	<url>
 		<loc>http://blog.cielyann.com/2010/01/08/%e5%8d%87%e7%ba%a7%e5%95%a6%ef%bc%81</loc>
@@ -43,12 +79,6 @@
 		<lastmod>2009-09-25T16:03:21+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
-	</url>
-	<url>
-		<loc>http://blog.cielyann.com/about</loc>
-		<lastmod>2009-09-25T02:17:29+00:00</lastmod>
-		<changefreq>weekly</changefreq>
-		<priority>0.6</priority>
 	</url>
 <!-- Debug: Priority report of postID 24: Comments: 5 of 12 = 0.4 points -->
 	<url>

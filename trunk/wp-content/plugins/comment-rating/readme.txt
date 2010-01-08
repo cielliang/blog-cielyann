@@ -4,7 +4,7 @@ Tags: comments, vote, poll, polls, image, images, performance, rating, ratings, 
 Donate link: http://WealthyNetizen.com/donate/
 Requires at least: 2.3
 Tested up to: 2.8.6
-Stable tag: 2.9.7
+Stable tag: 2.9.8
 
 Allows visitors to rate comments in Like vs. Dislike fashion with
 clickable images. Poorly-rated & highly-rated comments are displayed differently.
@@ -167,6 +167,12 @@ If you want to request a feature, please post to <a href="http://wealthynetizen.
 3. Option page showing the rich & flexible configuration features.
 
 == Changelog ==
+
+= 2.9.8 =
+
+Cannot run Comment Rating as the last filter.  This conflicts with
+WP Threaded Comment plugin.  Weighing the evil, now we are now in
+conflict with Kaskus Emoticons plugin.
 
 = 2.9.7 =
 

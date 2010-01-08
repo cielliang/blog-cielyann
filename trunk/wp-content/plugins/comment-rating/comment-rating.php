@@ -5,7 +5,7 @@
 	Description: Allows visitors to rate comments in a Like vs.  Dislike fashion with clickable images. Poorly-rated & highly-rated comments can be displayed differently. This plugin is simple and light-weight.  Configure it at <a href="options-general.php?page=ckrating">Settings &rarr; Comment Rating</a>. 
 	Author: Bob King
 	Author URI: http://wealthynetizen.com
-	Version: 2.9.7
+	Version: 2.9.8
 	*/ 
 
 	/*
@@ -28,7 +28,7 @@
 
 load_plugin_textdomain('ckrating', "/wp-content/plugins/comment-rating/");
 
-define('COMMENTRATING_VERSION', '2.9.7');
+define('COMMENTRATING_VERSION', '2.9.8');
 define('COMMENTRATING_PATH', WP_CONTENT_DIR.'/plugins/'.plugin_basename(dirname(__FILE__)) );
 define('COMMENTRATING_NAME', plugin_basename(dirname(__FILE__)) );
 
@@ -36,7 +36,8 @@ define('COMMENTRATING_NAME', plugin_basename(dirname(__FILE__)) );
 add_action('comment_post', 'ckrating_comment_posted');//Hook into WordPress
 add_action('admin_menu', 'ckrating_options_page');
 add_action('wp_head', 'ckrating_add_highlight_style');
-add_filter('comment_text', 'ckrating_display_filter', 100000); // add comment rating icons 
+// add_filter('comment_text', 'ckrating_display_filter', 100000); // conflict with threaded comments
+add_filter('comment_text', 'ckrating_display_filter'); // add comment rating icons 
 add_filter('comment_class', 'ckrating_comment_class', 10 , 4 );
 add_action('init', 'ckrating_add_javascript');  // add javascript in the footer
 
