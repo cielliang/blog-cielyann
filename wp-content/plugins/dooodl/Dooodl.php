@@ -155,23 +155,23 @@ function Dooodl_widget($args=NULL){
 					LIMIT 0 , 1 ";
 		
 		$result = $wpdb->get_row($sql);
-		$html = '<a rel="shadowbox" href="'. WP_CONTENT_URL.'/uploads/doodls/'.$result->id.'.jpg" target="_blank"><img style="float:left; margin-right:5px; margin-bottom:5px;" height="120" src="'. WP_CONTENT_URL.'/uploads/doodls/'.$result->id.'.jpg"/></a>The latest Doodle: <br/><b>'.stripslashes($result->title).'</b> by <b>'. stripslashes($result->username).'</b> <br/> ';
+		$html = '<a rel="shadowbox" href="'. WP_CONTENT_URL.'/uploads/doodls/'.$result->id.'.jpg" target="_blank"><img style="float:left; margin-right:5px; margin-bottom:5px;" height="120" src="'. WP_CONTENT_URL.'/uploads/doodls/'.$result->id.'.jpg"/></a>' . __('The latest Doodle:') . '<br/><b>'.stripslashes($result->title).'</b> ' . __('by') . ' <b>'. stripslashes($result->username).'</b> <br/> ';
 				
 		
 		echo $before_widget; 
 		
 		?>
-		<h2 class="widgettitle">Dooodl!</h2>
+		<h2 class="widgettitle"><?php echo __('Dooodl!') ?></h2>
         <div>
        	<?
 		echo $html;
 		?>
        	<br/>
-        <a onclick="updateURL('#dooodlviewer')" rel="shadowbox;width=880;height=600;player=iframe;options={onClose:function(){checkURL()}}" href="<?= WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)) ?>s#theviewer" target="_blank">Click here</a> to view all doodles that visitors created!
+        <a onclick="updateURL('#dooodlviewer')" rel="shadowbox;width=880;height=600;player=iframe;options={onClose:function(){checkURL()}}" href="<?= WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)) ?>s#theviewer" target="_blank"><?php echo __('Click here')?></a> <?php echo  __('to view all doodles that visitors created!') ?>
         
         <br clear="all"/>
         
-         Feeling creative? <a onclick="updateURL('#drawadooodl')" rel="shadowbox;width=700;height=400;player=iframe;options={onClose:function(){checkURL()}}" href="<?= WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)) ?>creator" target="_blank">Click here,</a> draw your own doodle and add it to this sidebar!
+         <?php echo __('Feeling creative?')?> <a onclick="updateURL('#drawadooodl')" rel="shadowbox;width=700;height=400;player=iframe;options={onClose:function(){checkURL()}}" href="<?= WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)) ?>creator" target="_blank"><?php echo __('Click here,')?></a> <?php echo __('draw your own doodle and add it to this sidebar!')?>
         
         </div>
 		<br clear="all"/>
