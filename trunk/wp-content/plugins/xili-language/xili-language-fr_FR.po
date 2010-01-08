@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xili_language\n"
 "POT-Creation-Date: 2009-04-04 11:58+0100\n"
-"PO-Revision-Date: 2009-06-16 12:43+0100\n"
+"PO-Revision-Date: 2009-10-25 12:15+0100\n"
 "Last-Translator: dev.xiligroup.com <contact@xiligroup.com>\n"
 "Language-Team: dev.xiligroup.com <contact@xiligroup.com>\n"
 "MIME-Version: 1.0\n"
@@ -134,4 +134,46 @@ msgstr "définie par logiciel"
 
 msgid "Enable gold functions"
 msgstr "Active les fonctions xilidev"
+
+msgid "Set undefined posts..."
+msgstr "Affecter une langue aux articles indéfinis..."
+
+msgid "Choose target language…"
+msgstr "Choisir la langue cible…"
+
+msgid "Error: other post not present !!!"
+msgstr "Erreur : l'article est absent !!!"
+
+msgid "Special"
+msgstr "Fonctions spéciales"
+
+msgid "Special Gold Actions"
+msgstr "Actions spéciales \"Or\""
+
+msgid "xili-language plugin : THEME_TEXTDOMAIN UNDEFINED"
+msgstr "Extension xili-language : Constante THEME_TEXTDOMAIN non définie"
+
+msgid "no theme domain in index.php"
+msgstr "pas de domaine theme détecté dans index.php"
+
+msgid "no index.php in theme, domain not set"
+msgstr "pas de fichier index.php dans le thème, domain non affecté"
+
+msgid "Theme's informations:"
+msgstr "Informations sur le thème :"
+
+msgid "theme_domain:"
+msgstr "domaine du thème :"
+
+msgid "as function like:"
+msgstr "tel qu'ici :"
+
+msgid "Theme domain NOT defined"
+msgstr "domaine du thème non défini"
+
+msgid "Languages sub-folder:"
+msgstr "Sous dossier des fichiers '.mo' :"
+
+msgid "Available MO files:"
+msgstr "Fichiers .mo disponibles :"
 
