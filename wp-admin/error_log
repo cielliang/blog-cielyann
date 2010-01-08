@@ -125,3 +125,4 @@
 [26-Oct-2009 00:01:25] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2742444 bytes) in /home/cielyann/public_html/blog/wordpress/wp-includes/http.php on line 1327
 [17-Nov-2009 14:39:47] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2593213 bytes) in /home/cielyann/public_html/blog/wordpress/wp-includes/http.php on line 1327
 [17-Nov-2009 14:40:05] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 2593213 bytes) in /home/cielyann/public_html/blog/wordpress/wp-includes/http.php on line 1327
+[08-Jan-2010 08:47:04] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16384 bytes) in /home/cielyann/public_html/blog/wordpress/wp-includes/class-simplepie.php on line 14402

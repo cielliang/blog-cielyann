@@ -2,12 +2,15 @@
 /*
 Plugin Name: xili-language
 Plugin URI: http://dev.xiligroup.com/xili-language/
-Description: This plugin introduce a new taxonomy - here language - to modify on the fly the translation of the theme depending the language of the post or other blog elements - a way to create a real multi-language site (cms or blog).
+Description: This plugin modify on the fly the translation of the theme depending the language of the post or other blog elements - a way to create a real multilanguage site (cms or blog). It introduce a new taxonomy - here language - to describe posts. To complete with tags, use also xili-tidy-tags plugin. 
 Author: dev.xiligroup.com - MS
-Version: 1.1
+Version: 1.1.9
 Author URI: http://dev.xiligroup.com
 */
-
+# updated 091104 - 1.1.9.1 - fixes special functions
+# updated 091103 - 1.1.9 - optional improve hooking ways to be compatible with l10n cache of Johan see line 2200 - fix title of wp_get_archive links with current permalinks.
+# updated 091019 - 1.1.8 - gold functions and shortcode for linked posts - first tests with WP 2.9
+# updated 091007 - 1.1.es - tests - gold functions active - update undefined posts functions in library
 # updated 090918 - 1.1 - xiliml_the_other_posts function improved and upgraded for CMS webmasters
 # updated 090719 - 1.0.2 - fix unexpected like tags metabox added by WP 28 tracs #10437
 # updated 090626 - 1.0.1 - fix filter unique id for category link hooks
@@ -30,7 +33,7 @@ Author URI: http://dev.xiligroup.com
 # License along with this plugin; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
-define('XILILANGUAGE_VER','1.1'); /* used in admin UI*/
+define('XILILANGUAGE_VER','1.1.9'); /* used in admin UI*/
 
 class xili_language {
 	
@@ -50,10 +53,11 @@ class xili_language {
 	var $langs_group_tt_id; 
 	var $get_archives_called = array(); /* if != '' - insert lang in link */
 	var $idx = array(); /* used to identify filter or action set from this class - since 0.9.9.6 */
-	
-	function xili_language($metabox = false, $post_ajax = false) {
+	var $theme_locale = false; /* to control locale hook */
+	function xili_language($metabox = false, $post_ajax = false, $locale_method = false) {
 		$this->is_metabox = $metabox;
 		$this->post_ajax = $post_ajax;
+		$this->locale_method = $locale_method; /* added for compatibility with cache plugin from johan */
 		/*activated when first activation of plug*/
 		register_activation_hook(__FILE__,array(&$this,'xili_language_activate'));
 	
@@ -67,7 +71,9 @@ class xili_language {
 			    'browseroption' => '',
 			    'authorbrowseroption' => '',
 			    'taxolangsgroup' => 'languages_group',
-			    'functions_enable' => ''
+			    'functions_enable' => '',
+			    'langs_folder' => '',
+			    'theme_domain' => '' 
 		    );
 			define('TAXONAME','language');
 			define('QUETAG','lang');
@@ -88,6 +94,7 @@ class xili_language {
 			define('TAXOLANGSGROUP',$this->xili_settings['taxolangsgroup']);
 		}
 		define('XILIFUNCTIONSPATH',WP_PLUGIN_DIR.'/xilidev-libraries'); /* since 1.0 to add xili-libraries */
+		
 		/** add new taxonomy in available taxonomies 
 		 * 1.0.2 - add label false as http://core.trac.wordpress.org/ticket/10437 
 		 * 			to avoid metabox as tag displayed
@@ -106,9 +113,8 @@ class xili_language {
 		}
 		$this->langs_group_id = $thegroup[0]->term_id;
 		$this->langs_group_tt_id = $thegroup[0]->term_taxonomy_id;
-		//print_r($thegroup[0]);
-		/* default values */
 		
+		/* default values */
 		if (''!= WPLANG && strlen(WPLANG)==5) :
 			$this->default_lang = WPLANG;
 		else:
@@ -116,14 +122,17 @@ class xili_language {
 		endif;
 		define('DEFAULTSLUG', $this->get_default_slug());
 		if ( $dir = get_bloginfo('text_direction') ) /* if present in blog options @since 0.9.9 */
-				$this->default_dir = $dir;
+			$this->default_dir = $dir;
 		
 		add_filter('query_vars', array(&$this,'keywords_addQueryVar'));
 		add_filter('posts_join', array(&$this,'with_lang'));
 		add_filter('posts_where', array(&$this,'where_lang'));
 		
-		add_action('wp', array(&$this,'xiliml_language_head')); 
+		add_action('wp', array(&$this,'xiliml_language_wp')); 
 		/* 'wp' = where theme's language is defined just after query */
+		if ($this->locale_method)
+			add_filter('locale', array(&$this,'xiliml_setlocale'), 10);
+		/* to be compatible with l10n cache from Johan since 1.1.9 */
 		add_filter('language_attributes',  array(&$this,'head_language_attributes'));
 		add_action('wp_head', array(&$this,'head_insert_language_metas'),10,2);
  
@@ -159,18 +168,14 @@ class xili_language {
 		
 		add_action('admin_menu', array(&$this,'myplugin_add_custom_box'));
 		add_action('admin_menu', array(&$this,'xili_add_pages'));
-		
-		//add_action('admin_print_styles', array(&$this, 'load_styles') );
-		//add_action('admin_print_scripts', array(&$this, 'load_scripts') );
-
+		/* special to detect theme changing since 1.1.9 */
+		add_action('switch_theme', array(&$this,'theme_switched'));
 		/* inspired from custax */
 		add_action('manage_posts_custom_column', array(&$this,'xili_manage_column'), 10, 2);
 		add_filter('manage_edit_columns', array(&$this,'xili_manage_column_name'));
 
 		add_action('manage_pages_custom_column', array(&$this,'xili_manage_column'), 10, 2);
 		add_filter('manage_edit-pages_columns', array(&$this,'xili_manage_column_name'));
-		
-		//add_filter('locale',array(&$this,'get_locale_filter'));
 		
 		/* new actions for xili-language theme's templates tags */
 		
@@ -180,30 +185,13 @@ class xili_language {
 		$this->add_action('xiliml_the_other_posts','xiliml_the_other_posts',10,4); /* add a param 1.1 */
 		$this->add_action('xiliml_the_category','xiliml_the_category',10,3);
 		$this->add_action('xiliml_langinsearchform','xiliml_langinsearchform',10,2);
-	}
-	
-	function get_locale_filter ($locale) {
-		//echo $locale;
-		//echo $this->curlang;
-		//define('XILITEST', '----'.$this->curlang);
-		//return $this->curlang;
-	}
-	
-	function load_styles () {
-		//wp_admin_css( 'dashboard' );
-		//wp_admin_css( 'global' );
-		//wp_admin_css( 'press-this' );
-		}
 		
-	function load_scripts () {	
-		//wp_enqueue_script('inline-edit-post');	
 	}
 	
 	function add_action ($action, $function = '', $priority = 10, $accepted_args = 1)
 	{
 		add_action ($action, array (&$this, $function == '' ? $action : $function), $priority, $accepted_args);
-		$this->idx[$action] = _wp_filter_build_unique_id($action, array (&$this, $function == '' ? $action : $function), $priority); /* unique id of this filter from object */
-		 
+		$this->idx[$action] = _wp_filter_build_unique_id($action, array (&$this, $function == '' ? $action : $function), $priority); /* unique id of this filter from object */		 
 	}
 	
 	function add_filter ($filter, $function = '', $priority = 10, $accepted_args = 1)
@@ -258,10 +246,7 @@ class xili_language {
 			$count = $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM $wpdb->term_relationships, $wpdb->posts WHERE $wpdb->posts.ID = $wpdb->term_relationships.object_id AND post_status = 'publish' AND term_taxonomy_id = %d", $term ) );
 			$wpdb->update( $wpdb->term_taxonomy, compact( 'count' ), array( 'term_taxonomy_id' => $term ) );
 		}
-		
 	}
-
-
 	
 	/**
 	 * set language when post or page is saved 
@@ -352,7 +337,9 @@ class xili_language {
 			    'browseroption' => '',
 			    'authorbrowseroption' => '',
 			    'taxolangsgroup' => 'languages_group',
-			    'functions_enable' => ''
+			    'functions_enable' => '',
+			    'langs_folder' => '',
+			    'theme_domain' => '' 
 		    );
 		    update_option('xili_language_settings', $this->xili_settings);
 		}
@@ -365,7 +352,6 @@ class xili_language {
 	}
 
 	function get_default_slug() {
-	
 		$listlanguages = get_terms(TAXONAME, array('hide_empty' => false));
 		$default_slug = 'en_us';
 		foreach ($listlanguages as $language) {
@@ -374,8 +360,9 @@ class xili_language {
 		return $default_slug ;
 	}
 	
-	/*filters used when querytag is used - 
-	 *see below and functions.php where rules depend from theme
+	/** 
+	 * filters used when querytag is used - 
+	 * see below and functions.php where rules depend from theme
 	 */
 	function with_lang($join) {
 		global $wp_query, $wpdb;	
@@ -385,6 +372,7 @@ class xili_language {
 	
 	return $join;
 	}
+	
 	/**
 	 * Setup global post data.
 	 *
@@ -435,22 +423,83 @@ class xili_language {
 		return $where;
 	}
 
-	/* template theme live modification */
+	/******** template theme live modifications ********/
 	
 	/**
-	 * wp_head action for theme headers 
+	 * wp action for theme at end of query  
 	 *
 	 * @since 0.9.0
-	 * @updated 0.9.9
+	 * @updated 1.1.9
 	 * can be hooked in functions.php xiliml_cur_lang_head
-	 * call by wp_head()
-	 * @param 
+	 * call by wp hook	 
+	 *   
 	 */
-	function xiliml_language_head() {
+	function xiliml_language_wp() {
 		$this->curlang = $this->xiliml_cur_lang_head();
 		$this->curlang_dir = $this->get_dir_of_cur_language($this->curlang); /* general dir of the theme */
-		$this->set_mofile($this->curlang);
+		if (!defined('THEME_TEXTDOMAIN')) _e('xili-language plugin : THEME_TEXTDOMAIN UNDEFINED','xili-language'); /* here because not visible in admin UI */
+		
+		if ($this->locale_method) {
+			$this->xiliml_load_theme_textdomain (THEME_TEXTDOMAIN); /* new method for cache compatibility - tests */
+		} else {
+			$this->set_mofile($this->curlang);
+		}
 	}
+	
+	/**
+	 * locale hook when load_theme_textdomain is present in functions.php
+	 *
+	 * @since 1.1.9
+	 *
+	 * call by locale hook
+	 */
+	function xiliml_setlocale ($locale) {
+		if ($this->theme_locale === true) {
+			$listlanguages = get_terms(TAXONAME, array('hide_empty' => false,'slug' => $this->curlang));
+			return $listlanguages[0]->name;
+		} else {
+			return $locale; 	
+		}		
+	}
+	
+	/**
+	 * locale hook when load_theme_textdomain is present in functions.php
+	 *
+	 * @since 1.1.9
+	 *
+	 * call by locale hook
+	 */
+	function xiliml_load_theme_textdomain ($domain) {
+		$this->theme_locale = true;
+		$langfolder = (defined('THEME_LANGS_FOLDER')) ? THEME_LANGS_FOLDER : $this->xili_settings['langs_folder'];
+		$langfolder = '/'.str_replace("/","",$langfolder); /* please no lang folder in sub-subfolder */
+		$langfolder = ($langfolder == "/") ? "" : $langfolder;
+		load_theme_textdomain($domain, get_template_directory() . $langfolder);
+		$this->theme_locale = false;		
+	}
+	
+	/**
+	 * select .mo file 
+	 * @since 0.9.0
+	 * @updated 0.9.7.1 - 1.1.9
+	 * call by function xiliml_language_wp()
+	 * @param $curlang .
+	 */
+	function set_mofile($curlang) {
+		// load_theme_textdomain(THEME_TEXTDOMAIN); - replaced to be flexible -
+		if (defined('THEME_TEXTDOMAIN')) {$themetextdomain = THEME_TEXTDOMAIN; } else {$themetextdomain = 'ttd-not-defined';  }
+		$langfolder = (defined('THEME_LANGS_FOLDER')) ? THEME_LANGS_FOLDER : $this->xili_settings['langs_folder'];
+		$langfolder = '/'.str_replace("/","",$langfolder); /* please no lang folder in sub-subfolder */
+		$langfolder = ($langfolder == "/") ? "" : $langfolder;
+		$listlanguages = get_terms(TAXONAME, array('hide_empty' => false,'slug' => $curlang));
+		$filename = $listlanguages[0]->name;
+		$filename .= '.mo';
+		if ('' != $filename) {
+			$mofile = get_template_directory() .$langfolder."/$filename";	
+			load_textdomain($themetextdomain,$mofile);
+		}
+	}
+	
 	/**
 	 * default rules - set curlang in head according rules 
 	 *
@@ -516,26 +565,6 @@ class xili_language {
 	}
 	
 	/**
-	 *select .mo file 
-	 * @since 0.9.0
-	 * @updated 0.9.7.1
-	 * call by function in wp_head : see xiliml_language_head()
-	 * @param $curlang .
-	 */
-	function set_mofile($curlang) {
-	// load_theme_textdomain(THEME_TEXTDOMAIN); - replaced to be flexible -
-		if (defined('THEME_TEXTDOMAIN')) {$themetextdomain = THEME_TEXTDOMAIN; } else {$themetextdomain = 'ttd-not-defined';  }
-		if (defined('THEME_LANGS_FOLDER')) {$langfolder = '/'.str_replace("/","",THEME_LANGS_FOLDER).'/' ;} else {$langfolder = "/"; } /* added when .mo files are in subfolder of themes */
-		$listlanguages = get_terms(TAXONAME, array('hide_empty' => false,'slug' => $curlang));
-		$filename = $listlanguages[0]->name;
-		$filename .= '.mo';
-		if ('' != $filename) {
-			$mofile = get_template_directory() .$langfolder."$filename";	
-			load_textdomain($themetextdomain,$mofile);
-		}
-	}
-	
-	/**
 	 * modify  language_attributes() output
 	 *
 	 * @since 0.9.7.6
@@ -578,7 +607,7 @@ class xili_language {
 	 * modify  insert language metas in head (via wp_head)
 	 *
 	 * @since 0.9.7.6
-	 * @updated 0.9.8 
+	 * @updated 1.1.8 
 	 * @must be defined in functions.php according general theme design (wp_head) 
 	 *   
 	 * @param $curlang
@@ -586,6 +615,7 @@ class xili_language {
 	function head_insert_language_metas($curlang,$undefined=true) {
 		$curlang = $this->curlang;
 		$undefined = $this->langstate;
+		echo "<!-- multilingual website powered with xili-language v. ".XILILANGUAGE_VER." WP plugin of dev.xiligroup.com -->\n";
 			if (has_filter('head_insert_language_metas')) return apply_filters('head_insert_language_metas',$curlang,$undefined);
 	}
 	
@@ -643,7 +673,6 @@ class xili_language {
 	  	
 	  return $link;
 	}
-	
 	
 	/**
 	 * Setup global post data.
@@ -716,6 +745,7 @@ class xili_language {
 		return $join;
 		
 	}
+	
 	function xiliml_getarchives_where($where,$r) {
 		global $wpdb;
 		if (has_filter('xiliml_getarchives_where')) return apply_filters('xiliml_getarchives_where',$where,$r,$this->curlang);
@@ -737,6 +767,7 @@ class xili_language {
 		}		
 		return $where;
 	}
+	
 	/* here basic translation - to improve depending theme features : use hook 'xiliml_get_archives_link' */
 	function xiliml_get_archives_link($link_html) {
 		if (has_filter('xiliml_get_archives_link')) return apply_filters('xiliml_get_archives_link', $link_html,$this->get_archives_called, $this->curlang);
@@ -758,11 +789,16 @@ class xili_language {
 						$month = substr($m,-2);
 						$year = substr($m,0,4);
 					} else {
-						$archivedate = str_replace(get_bloginfo('siteurl').'/date/' , "" , $matches[1][0]);
-						$month = substr($archivedate,-3,2);
-						$year = substr($archivedate,0,4);
-					}		
-					//echo $month . ' - '. $year ;
+						/* Due to prevents post ID and date permalinks from overlapping using /date/ v 1.1.9 
+						 * no / at end for "numeric" permalink giving /archives/date/2009/04
+						 */
+						$thelink = $matches[1][0];
+						$i = preg_match_all("/\/([0-9]{4})\/([0-9]{2})/Ui", $thelink, $results,PREG_PATTERN_ORDER);
+						if ($i) { //print_r($results);
+							$month = $results[2][0];
+							$year = $results[1][0];
+						}
+					}	
 					$time = strtotime($month.'/1/'.$year);
 					$line2print = the_xili_local_time('%B %Y',$time); /* use server local*/
 					$link_html = str_replace($line , $line2print , $link_html);
@@ -831,6 +867,7 @@ class xili_language {
 	 		return strtolower($this->default_lang);
 		}
 	}
+	
 	/**
 	 * Return the list of preferred languages for displaying pages (see in firefox prefs)
 	 * thanks to php.net comments HTTP_ACCEPT_LANGUAGE
@@ -869,6 +906,7 @@ class xili_language {
 			}
 	}
 	
+	/***************** ADMIN UI *************/
 			
 	/**
 	 * add admin menu and associated pages of admin UI
@@ -880,7 +918,6 @@ class xili_language {
 	function xili_add_pages() {
 		 $this->thehook = add_options_page(__('Language','xili-language'), __('Language','xili-language'), 'manage_options', 'language_page', array(&$this,'languages_settings'));
 		 add_action('load-'.$this->thehook, array(&$this,'on_load_page'));
-		 
 	}
 	
 	function on_load_page() {
@@ -889,8 +926,10 @@ class xili_language {
 			wp_enqueue_script('postbox');
 			add_meta_box('xili-language-sidebox-1', __('Message','xili-language'), array(&$this,'on_sidebox_1_content'), $this->thehook , 'side', 'core');
 			add_meta_box('xili-language-sidebox-2', __('Info','xili-language'), array(&$this,'on_sidebox_2_content'), $this->thehook , 'side', 'core');
+			add_meta_box('xili-language-sidebox-4', __('Special','xili-language'), array(&$this,'on_sidebox_4_content'), $this->thehook , 'side', 'core');
 			
 	}
+	
 	/**
 	 * Add action link(s) to plugins page
 	 * 
@@ -900,9 +939,7 @@ class xili_language {
 	 */
 	function xililang_filter_plugin_actions($links, $file){
 		static $this_plugin;
-
 		if( !$this_plugin ) $this_plugin = plugin_basename(__FILE__);
-
 		if( $file == $this_plugin ){
 			$settings_link = '<a href="options-general.php?page=language_page">' . __('Settings') . '</a>';
 			$links = array_merge( array($settings_link), $links); // before other links
@@ -917,8 +954,7 @@ class xili_language {
 	 * @updated 0.9.8.3 : if new post and checked in settings : default language = author's browser's language !
 	 */
 	function xili_language_checkboxes_n() { 
-		global $post_ID,$wp_version;
-	/*list of languages*/
+		global $post_ID, $wp_version;
 		//$listlanguages = get_terms(TAXONAME, array('hide_empty' => false));
 		$listlanguages = get_terms_of_groups_lite ($this->langs_group_id,TAXOLANGSGROUP,TAXONAME,'ASC');
 		if ($this->authorbrowseroption == 'authorbrowser') { // setting = select language of author's browser
@@ -1098,15 +1134,16 @@ class xili_language {
 		$formtitle = 'Add a language'; /* translated in form */
 		$submit_text = __('Add &raquo;','xili-language');
 		$cancel_text = __('Cancel');
+		
 		if (isset($_POST['reset'])) {
 			$action=$_POST['reset'];
-		//$messagepost = $action ;
 		} elseif (isset($_POST['updateoptions'])) {
 			$action='updateoptions';
-		//$messagepost = $action ;
+		} elseif (isset($_POST['updateundefined'])) {
+			$action='updateundefined';
+			
 		} elseif (isset($_POST['action'])) {
 			$action=$_POST['action'];
-		//$messagepost = $action ;
 		}
 		
 		if (isset($_GET['action'])) :
@@ -1115,6 +1152,18 @@ class xili_language {
 		endif;
 		$message = $action ;
 		switch($action) {
+			case 'updateundefined';
+				$targetlang = $_POST['xili_language_toset'];
+				$fromcats = $_POST['from_categories'];
+				if (""!= $targetlang) {
+					$q = xiliml_setlang_of_undefined_posts ($targetlang, $fromcats, 50);
+					$message .= " _ $q ".__('posts are set in:','xili-language')." ".$targetlang." ".__("category")." =[$fromcats]";
+				} else {
+					$q = xiliml_setlang_of_undefined_posts ($targetlang, $fromcats, 50);
+					$message .= " _ around $q ".__('posts are undefined in','xili-language')." ".__("category")."  = [$fromcats]";	
+				}
+				$actiontype = "reset";
+				break;
 			case 'updateoptions';
 				$this->browseroption = $_POST['xili_language_check_option'];
 				$this->authorbrowseroption = $_POST['xili_language_check_option_author'];
@@ -1124,9 +1173,11 @@ class xili_language {
 				$this->xili_settings['functions_enable'] = $this->functions_enable;
 				update_option('xili_language_settings', $this->xili_settings);
 				$message .= " - ".__('Option is updated.','xili-language')." (=> ".$this->browseroption.") (".$this->authorbrowseroption.") (".$this->functions_enable.")";
-
-				$actiontype = "add";
+				if ($this->functions_enable !='' && file_exists(XILIFUNCTIONSPATH . '/functions.php') )
+						include(XILIFUNCTIONSPATH . '/functions.php');
+				$actiontype = "reset";
 				break;
+		
 			case 'add':
 				$term = $_POST['language_name'];
 				$args = array( 'alias_of' => '', 'description' => $_POST['language_description'], 'parent' => 0, 'slug' =>$_POST['language_nicename']);
@@ -1261,10 +1312,63 @@ class xili_language {
 			return $cols;
 		}
 
-
+	/**
+	 * Set language plugin 
+	 * 
+	 *
+	 * @updated 1.1.9
+	 * also include automatic search of domain and lang subfolder in current theme
+	 */
 	function init_textdomain() {
 	/*multilingual for admin pages and menu*/
 		load_plugin_textdomain('xili-language',PLUGINDIR.'/'.dirname(plugin_basename(__FILE__)), dirname(plugin_basename(__FILE__)));
+		if (!defined('THEME_TEXTDOMAIN')) { 
+			if ($this->xili_settings['theme_domain'] != "") {
+				define('THEME_TEXTDOMAIN',$this->xili_settings['theme_domain']);
+				
+			} else { /* search it inside theme folder index.php */
+				if( is_file( get_template_directory().'/index.php') )  { 
+					$lines = @file( get_template_directory().'/index.php'); 
+					foreach ($lines as $line) { 
+						$i = preg_match_all("/_[_e]\('(.*)', ?'(.*)'/Ui", $line, $matches,PREG_PATTERN_ORDER);
+	 					if ($i > 0) { 
+							$resultterms = array_merge ($resultterms, $matches[1]);
+							//print_r($matches[1]);
+							//print_r($matches[2]);
+							$domain = $matches[2][0];
+							$this->xili_settings['theme_domain'] = $domain;
+							update_option('xili_language_settings', $this->xili_settings);
+							define('THEME_TEXTDOMAIN',$this->xili_settings['theme_domain']);
+							break; 
+						}
+			 		}
+			 		if ($domain == "")
+			 			_e('no theme domain in index.php','xili-language');
+				} else {
+					_e('no index.php in theme, domain not set','xili-language');
+				}
+			}	
+		}
+		if (!defined('THEME_LANGS_FOLDER')) { /* set or detect */
+			if ($this->xili_settings['langs_folder'] == "") {
+				$this->find_files(get_template_directory().'/', '/.mo$/', array(&$this,'searchpath'));
+				update_option('xili_language_settings', $this->xili_settings);
+			}
+			
+			define('THEME_LANGS_FOLDER',$this->xili_settings['langs_folder']); // for bkwd compatibility with xili-dictionary
+		}
+	}
+	function searchpath($path, $filename) {
+		$this->xili_settings['langs_folder'] = str_replace(get_template_directory(),'',$path);
+	}
+	/**
+	 * Reset values when theme was changed... updated by previous function
+	 * @since 1.1.9
+	 */ 
+	function theme_switched ($theme) {
+		$this->xili_settings['langs_folder'] ="";
+		$this->xili_settings['theme_domain'] =""; /* to force future search in new theme */
+		update_option('xili_language_settings', $this->xili_settings);
 	}
 	
 	/**
@@ -1328,6 +1432,30 @@ class xili_language {
 		<div style="clear:both; height:1px"></div><?php
 	}
 	
+	function  on_sidebox_4_content() { 
+	 	$update_nonce = wp_create_nonce('xilimloptions');
+	 	?>
+	 	<fieldset style="margin:2px; padding:12px 6px; border:1px solid #ccc;"><legend><?php echo __("Theme's informations:",'xili-dictionary').' ('.get_option("template").')'; ?></legend>
+	 	<p><?php 
+	 	if (defined('THEME_TEXTDOMAIN')) {
+	 		echo __('theme_domain:','xili-language').' '.THEME_TEXTDOMAIN.'<br />'.__('as function like:','xili-language').'<i> _e(\'-->\',\''.THEME_TEXTDOMAIN.'\');</i>'; }
+	 		else {
+	 			_e('Theme domain NOT defined','xili-language');
+	 		} ?><br />
+	 	<?php echo __("Languages sub-folder:",'xili-language').' '.$this->xili_settings['langs_folder']; ?><br />
+	 	<?php _e('Available MO files:','xili-language'); echo '<br />';
+	 	$this->find_files(get_template_directory().'/', '/.mo$/', array(&$this,'available_mo_files')) ;?>
+	 	</p>
+	 	</fieldset>
+		<p><?php _e("Special Gold Actions",'xili-language') ?></p>
+		
+		<?php
+		//echo  '---'.$this->functions_enable;
+		if ($this->functions_enable !='' && function_exists('xiliml_setlang_of_undefined_posts')) {
+			xiliml_special_UI_undefined_posts ($this->langs_group_id);
+		}
+	}
+
 	function on_normal_1_content($data) { 
 		extract($data); ?>
 		<?php //if (!isset($action) || $action=='add' || $action=='edited' || $action=='deleting') :?>
@@ -1441,8 +1569,7 @@ class xili_language {
 	//********************************************//
 	// Functions for themes (hookable by add_action() in functions.php - 0.9.7
 	//********************************************//
-	
-	
+
 	/**
 	 * List of available languages.
 	 *
@@ -1601,6 +1728,7 @@ class xili_language {
 			}			
 		    echo $before.'<input type="radio" name="alllang" value="yes" /> '.__('All',THEME_TEXTDOMAIN).' '.$after;	 // this query alllang is unused -		
 	}
+	
 	/**
 	 * Select latest comments in current lang.
 	 *
@@ -1631,9 +1759,40 @@ class xili_language {
 		}
 		return $comments;
 	}
-		
-} /* end of class */
-
+	
+	/**
+	 * Recursive search of files in a path
+	 * @since 1.1.9
+	 *
+	 */
+	 function find_files($path, $pattern, $callback) {
+		  $path = rtrim(str_replace("\\", "/", $path), '/') . '/';
+		  $matches = Array();
+		  $entries = Array();
+		  $dir = dir($path);
+		  while (false !== ($entry = $dir->read())) {
+		    $entries[] = $entry;
+		  }
+		  $dir->close();
+		  foreach ($entries as $entry) {
+		    $fullname = $path . $entry;
+		    if ($entry != '.' && $entry != '..' && is_dir($fullname)) {
+		      $this->find_files($fullname, $pattern, $callback);
+		    } else if (is_file($fullname) && preg_match($pattern, $entry)) {
+		      call_user_func($callback, $path , $entry);
+		    }
+		  }
+	}
+	/**
+	 * display lines of files in special sidebox
+	 * @since 1.1.9
+	 */
+	function available_mo_files($path , $filename) {
+  		//echo $filename . " in : " . "/".str_replace("/","",str_replace(get_template_directory(),'',$path)) . "<br />";
+  		echo str_replace(".mo","",$filename ). " ("."/".str_replace("/","",str_replace(get_template_directory(),'',$path)).")<br />";
+	}
+			
+} /* end of xili-language class */
 
 
 /**** Functions that improve taxinomy.php ****/
@@ -1784,6 +1943,26 @@ function get_cur_post_lang_dir($post_ID) {
 }
 
 /**
+ * Return language object of a post.
+ *
+ * @since 1.1.8
+ * useful for functions in functions.php or other plugins
+ * 
+ * @param ID of the post
+ * @return false or object with params as in current term (->description = full name of lang, ->count = number of posts in this language,...
+ */
+function xiliml_get_lang_object_of_post($post_ID) {
+	
+	$ress = wp_get_object_terms($post_ID, TAXONAME); /* lang of target post */
+	if ($ress == array()) {
+		return false;
+	} else {
+		//print_r($ress[0]);
+		return $ress[0];
+	}
+}
+
+/**
  * Return the language of current browser.
  *
  * @since 0.9.7.6
@@ -1813,8 +1992,6 @@ function choice_of_browsing_lang_dir() {
 	$dir = $xili_language->get_dir_of_cur_language($lang);
 	return array('lang'=>$lang,'direction'=>$dir);
 }
-
-
 
 /**
  * Activate hooks of plugin in class.
@@ -1863,11 +2040,24 @@ function xiliml_recent_comments($number = 5) {
 	return $xili_language->xiliml_recent_comments($number);
 }
 
-	/* 
-	 **
+/**
+ * Return full object of a language
+ * @since 1.1.8
+ * @param name (fr_FR) or slug (fr_fr)
+ * @return false or full language object (example ->description = full as set in admin UI)
+ */
+function xiliml_get_language($lang_nameorslug="") {
+	$language = is_term( $lang_nameorslug, TAXONAME );
+	if ($language) {
+		return get_term($language['term_id'],TAXONAME,OBJECT,'edit');
+	} else {
+		return false;	
+	}
+}
+ 
+ 	/* 
 	 **
 	 * Template Tags for themes (with current do_action tool some are hookable functions) 
-	 **
 	 **
 	 */
 	 
@@ -2000,16 +2190,17 @@ function ex_pages_by_lang ($pages, $r) {
 }
 add_filter('get_pages','ex_pages_by_lang',10,2);
 
-
 /**
  * instantiation of xili_language class
  *
- * @since 0.9.7 - 0.9.9.4 =& for vintage server with php4 !!!!
+ * @since 0.9.7 - 0.9.9.4 =& for vintage server with php4 !!!! - 1.1.9
  *
- * @param metabox (for other posts in post edit UI - to replace custom fields - beta tests)
- * @param ajax ( true if ajax is activated for post edit admin UI - alpha tests )
+ * @param 1st metabox (for other posts in post edit UI - to replace custom fields - beta tests)
+ * @param 2nd ajax ( true if ajax is activated for post edit admin UI - alpha tests )
+ * 1.1.9
+ * @param 3rd locale_method (true for cache compatibility... in current tests with johan.eenfeldt@kostdoktorn.se)
  */
-$xili_language =& new xili_language(true,false); 
+$xili_language =& new xili_language(true,false,false); 
 
 /**
  * Enable to add functions and filters that are not in theme's functions.php
@@ -2017,7 +2208,7 @@ $xili_language =& new xili_language(true,false);
  * Place your functions.php in folder plugins/xilidev-libraries/
  * if you have a filter in this file, avoid to have similar one in functions.php of the theme !!!
  * 
- * (for tests, uncheck 'enable gold functions' in settings UI)
+ * (for tests, check / uncheck 'enable gold functions' in settings UI)
  * @since 1.0
  *
  */
