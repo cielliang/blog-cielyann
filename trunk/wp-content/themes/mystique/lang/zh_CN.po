@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Mystique 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-12-01 14:23+0200\n"
-"PO-Revision-Date: 2009-12-04 21:51+0800\n"
-"Last-Translator: Awu <awuitcn@gmail.com>\n"
+"PO-Revision-Date: 2010-01-09 02:00+0800\n"
+"Last-Translator: Yann LIANG <weiyin.liang@gmail.com>\n"
 "Language-Team: Awu汉化 <awuitcn@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,7 +98,7 @@ msgstr "没有评论"
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/comments.php:201
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/index.php:45
 msgid "1 comment"
-msgstr "1 评论"
+msgstr "1 条评论"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/archive.php:66
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/author.php:49
@@ -106,7 +106,7 @@ msgstr "1 评论"
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/index.php:45
 #, php-format
 msgid "% comments"
-msgstr "% comments"
+msgstr "% 条评论"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/archive.php:73
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/image.php:19
@@ -319,7 +319,7 @@ msgstr "RSS订阅"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/header.php:56
 msgid "Follow me on Twitter!"
-msgstr "Follow me on Twitter!"
+msgstr "在 Twitter 上订阅我!"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/header.php:65
 msgid "You are Home"
@@ -755,7 +755,7 @@ msgstr "重置到默认"
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/shortcodes.php:117
 #, php-format
 msgid "%s comments"
-msgstr "%s  评论"
+msgstr "%s  条评论"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/shortcodes.php:137
 #, php-format
@@ -786,7 +786,7 @@ msgstr "网站管理"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/shortcodes.php:264
 msgid "Log in"
-msgstr "Log in"
+msgstr "登录"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/variables.php:63
 msgid "Insert Ad slot #1 in every post and page"
@@ -888,7 +888,7 @@ msgstr "现在还没有:("
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:173
 msgid "Sidebar tabs"
-msgstr "Sidebar tabs"
+msgstr "侧栏tabs"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:174
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:488
@@ -999,11 +999,11 @@ msgstr[1] "关于%s秒前"
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:365
 #, php-format
 msgid "%s followers"
-msgstr "%s followers"
+msgstr "%s 粉丝"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:393
 msgid "Error while retrieving tweets (Twitter down?)"
-msgstr "Error while retrieving tweets (Twitter down?)"
+msgstr "接收 tweets 时出错 (Twitter 链接失败?)"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:416
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:522
@@ -1016,7 +1016,7 @@ msgstr "Twitter 用户名:"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:426
 msgid "Number of tweets to show:"
-msgstr "Number of tweets to show:"
+msgstr "显示 tweets 的数目："
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:440
 msgid "Displays Flickr galleries (needs API key)"
@@ -1036,7 +1036,7 @@ msgstr "API密钥:"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:532
 msgid "Number of photos to show:"
-msgstr "Number of photos to show:"
+msgstr "显示照片张数："
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:537
 msgid "Gallery source:"
@@ -1044,7 +1044,7 @@ msgstr "画廊来源:"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:539
 msgid "Photoset"
-msgstr "Photoset"
+msgstr "照片集"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:540
 msgid "User photostream"
@@ -1052,7 +1052,7 @@ msgstr "用户 photostream"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:545
 msgid "Photoset ID:"
-msgstr "Photoset ID:"
+msgstr "照片集 ID:"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:550
 #, php-format
@@ -1061,7 +1061,7 @@ msgstr "用户 ID (use %s to find it):"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:565
 msgid "Login form"
-msgstr "Log in"
+msgstr "登录自"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:566
 msgid "Mystique | Login"
@@ -1074,11 +1074,11 @@ msgstr "登录为 %s "
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:581
 msgid "Dashboard"
-msgstr "侧面板"
+msgstr "后台用户面板"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:583
 msgid "Write"
-msgstr "网址"
+msgstr "写新文章"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:584
 msgid "Comments"
@@ -1086,11 +1086,11 @@ msgstr "评论"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:586
 msgid "Log out"
-msgstr "Log in"
+msgstr "退出登录"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:590
 msgid "User Login"
-msgstr "Log in"
+msgstr "用户登录"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:594
 msgid "User"
@@ -1102,7 +1102,7 @@ msgstr "密码"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:596
 msgid "Login"
-msgstr "Log in"
+msgstr "登录"
 
 #: c:\wamp\www\wordpress\wp-content\themes\mystique/lib/widgets.php:597
 msgid "Remember me"
