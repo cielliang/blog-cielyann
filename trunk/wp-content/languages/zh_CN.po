@@ -14824,7 +14824,9 @@ msgstr "单击这里，"
 
 #: wp-content/plugins/dooodl/dooodl.php:174
 msgid "draw your own doodle and add it to this sidebar!"
-msgstr "乱画一番吧～！ name is not allowed"
+msgstr "乱画一番吧～！ nam: wp-content/plugins/sem-fancy-excerpt/sem-fancy-excerpt.php:46
+msgid "Read more on %s..."
+msgstr "阅读更多 %s... 的内容 name is not allowed"
 msgstr ""
 
 #: wp-includes/ms-functions.php:1029
@@ -16382,14 +16384,11 @@ msgid "Either the file is not writable, or something wrong happened. The file ha
 msgstr "因为文件不可写，或者是发生了其它错误。文件没有更新。"
 
 #: xmlrpc.php:1870
-msgid "Sorry, you are not allowed to post on this blog."
-msgstr "抱歉，您无权发布日志。"
-
-#: xmlrpc.php:1926
-#: xmlrpc.php:1980
-#: xmlrpc.php:2671
-#: xmlrpc.php:3140
-m返回 %s"
+msgid "Sorry, you are not allowed to post on th效用户名邮件组合。"
+#~ msgid "Get New Password &raquo;"
+#~ msgstr "重置密码 &raquo;"
+#~ msgid "Back to %s"
+#~ msgstr "返回 %s"
 #~ msgid "Register &raquo;"
 #~ msgstr "注册 &raquo;"
 #~ msgid ""
