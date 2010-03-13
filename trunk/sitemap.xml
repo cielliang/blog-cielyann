@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://blog.cielyann.com/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/2.9.1" -->
 <!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.2.2" -->
-<!-- generated-on="January 8, 2010 12:47 pm" -->
-<!-- Debug: Total comment count: 12 -->
+<!-- generated-on="February 25, 2010 3:32 pm" -->
+<!-- Debug: Total comment count: 609 -->
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
 		<loc>http://blog.cielyann.com/</loc>
-		<lastmod>2010-01-08T11:36:35+00:00</lastmod>
+		<lastmod>2010-02-25T15:27:46+00:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 <!-- Debug: Start Postings -->
+<!-- Debug: Priority report of postID 10019: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2010/02/25/%e6%83%b3%e4%b8%8d%e6%98%8e%e7%99%bd</loc>
+		<lastmod>2010-02-25T15:27:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 10001: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2010/01/09/%e4%bb%8elive-spaces%e6%90%ac%e5%ae%b6%e5%88%b0wordpress-2-9-1</loc>
+		<lastmod>2010-01-12T16:43:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9999: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2009/09/24/%e5%a4%9c%e6%b8%b8%e4%b8%83%e5%ae%9d-2</loc>
+		<lastmod>2010-01-12T16:37:06+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9822: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/09/29/%e6%80%aa%e7%99%96%e6%b8%b8%e6%88%8f</loc>
+		<lastmod>2010-01-12T16:29:42+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 32: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2009/09/26/%e8%b7%b3%e5%91%80%e8%b7%b3</loc>
+		<lastmod>2010-01-12T16:28:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 10004: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2010/01/12/%e8%af%95%e8%af%95%e6%89%8b%e6%9c%ba%e5%8f%91%e6%96%87%e7%ab%a0</loc>
+		<lastmod>2010-01-11T16:38:10+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
 	<url>
 		<loc>http://blog.cielyann.com/about</loc>
 		<lastmod>2010-01-08T12:46:25+00:00</lastmod>
@@ -45,73 +87,1473 @@
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
-<!-- Debug: Priority report of postID 54: Comments: 0 of 12 = 0 points -->
+<!-- Debug: Priority report of postID 54: Comments: 3 of 609 = 0 points -->
 	<url>
 		<loc>http://blog.cielyann.com/2010/01/08/%e5%8d%87%e7%ba%a7%e5%95%a6%ef%bc%81</loc>
 		<lastmod>2010-01-08T11:36:35+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 35: Comments: 0 of 12 = 0 points -->
+<!-- Debug: Priority report of postID 35: Comments: 0 of 609 = 0 points -->
 	<url>
 		<loc>http://blog.cielyann.com/2009/10/17/%e5%8f%98%e6%95%85%ef%bc%8c%e8%bd%ac%e5%8f%98</loc>
 		<lastmod>2009-10-22T06:58:26+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 39: Comments: 0 of 12 = 0 points -->
+<!-- Debug: Priority report of postID 39: Comments: 0 of 609 = 0 points -->
 	<url>
 		<loc>http://blog.cielyann.com/2009/10/22/%e5%8d%87%e7%ba%a7%e4%b8%ba%e4%b8%ad%e6%96%87%e7%89%88%e5%95%a6</loc>
 		<lastmod>2009-10-22T06:53:16+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 38: Comments: 0 of 12 = 0 points -->
+<!-- Debug: Priority report of postID 38: Comments: 0 of 609 = 0 points -->
 	<url>
 		<loc>http://blog.cielyann.com/2009/10/21/%e4%b8%80%e7%82%b9%e7%82%b9</loc>
 		<lastmod>2009-10-21T07:39:22+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 32: Comments: 0 of 12 = 0 points -->
+<!-- Debug: Priority report of postID 10000: Comments: 2 of 609 = 0 points -->
 	<url>
-		<loc>http://blog.cielyann.com/2009/09/26/%e8%b7%b3%e5%91%80%e8%b7%b3</loc>
-		<lastmod>2009-09-25T16:03:21+00:00</lastmod>
+		<loc>http://blog.cielyann.com/2009/10/17/%e5%8f%98%e6%95%85%ef%bc%8c%e8%bd%ac%e5%8f%98-2</loc>
+		<lastmod>2009-10-17T14:53:38+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 24: Comments: 5 of 12 = 0.4 points -->
+<!-- Debug: Priority report of postID 24: Comments: 5 of 609 = 0 points -->
 	<url>
 		<loc>http://blog.cielyann.com/2009/09/24/%e5%a5%bd%e7%8e%a9</loc>
 		<lastmod>2009-09-24T15:05:30+00:00</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>0.4</priority>
-	</url>
-<!-- Debug: Priority report of postID 20: Comments: 0 of 12 = 0 points -->
-	<url>
-		<loc>http://blog.cielyann.com/2009/09/23/%e5%a4%9c%e6%b8%b8%e4%b8%83%e5%ae%9d</loc>
-		<lastmod>2009-09-23T16:24:59+00:00</lastmod>
-		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 13: Comments: 5 of 12 = 0.4 points -->
+<!-- Debug: Priority report of postID 13: Comments: 5 of 609 = 0 points -->
 	<url>
 		<loc>http://blog.cielyann.com/2009/09/22/%e8%a7%a3%e9%87%8a%e4%b8%80%e4%b8%8b</loc>
 		<lastmod>2009-09-23T07:19:52+00:00</lastmod>
 		<changefreq>monthly</changefreq>
-		<priority>0.4</priority>
+		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 7: Comments: 0 of 12 = 0 points -->
+<!-- Debug: Priority report of postID 7: Comments: 0 of 609 = 0 points -->
 	<url>
 		<loc>http://blog.cielyann.com/2009/09/22/%e5%a6%88%e5%ad%90%e8%ae%b0%ef%bc%8c%e7%94%9f%e6%97%a5%e5%bf%ab%e4%b9%90%ef%bc%81</loc>
 		<lastmod>2009-09-22T11:16:48+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>
-<!-- Debug: Priority report of postID 1: Comments: 2 of 12 = 0.2 points -->
+<!-- Debug: Priority report of postID 1: Comments: 2 of 609 = 0 points -->
 	<url>
 		<loc>http://blog.cielyann.com/2009/09/22/hello-world</loc>
 		<lastmod>2009-09-22T11:01:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9998: Comments: 7 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2009/08/02/%e4%b8%8a%e6%b5%b7</loc>
+		<lastmod>2009-08-01T17:42:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9997: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2009/05/01/bysoft%e5%80%92%e8%ae%a1%e6%97%b6</loc>
+		<lastmod>2009-04-30T16:43:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9996: Comments: 12 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2009/04/23/%e6%96%b0-%e5%b7%a5%e4%bd%9c-%e7%94%9f%e6%b4%bb</loc>
+		<lastmod>2009-04-22T17:34:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9995: Comments: 7 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/12/21/%e7%88%b1%ef%bc%8c%e7%be%8e%e4%b8%bd%e4%b8%8e%e5%bf%ab%e4%b9%90</loc>
+		<lastmod>2008-12-20T17:29:19+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9994: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/09/30/%e6%82%a0%e9%95%bf%e5%81%87%e6%9c%9f</loc>
+		<lastmod>2008-09-29T16:23:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9993: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/09/09/%e5%85%b3%e6%b3%a89-10</loc>
+		<lastmod>2008-09-08T17:18:06+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9992: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/08/31/sans-famille-%e6%98%9f%e4%bb%94%e8%b5%b0%e5%a4%a9%e6%b6%af</loc>
+		<lastmod>2008-08-31T08:11:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9991: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/08/31/%e5%93%bc%ef%bc%8c%e4%bf%ba%e4%b8%8d%e6%98%af%e5%90%83%e7%b4%a0%e7%9a%84%e3%80%82%e3%80%82</loc>
+		<lastmod>2008-08-30T20:41:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9990: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/08/30/%e4%b8%80%e4%b8%aa%e6%9c%88%ef%bc%8c%e8%bf%99%e4%b8%aa%e6%9c%88</loc>
+		<lastmod>2008-08-29T17:14:45+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9989: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/08/22/%e6%a0%87%e9%a2%98%e7%a9%ba%e7%99%bd</loc>
+		<lastmod>2008-08-21T17:12:01+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9988: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/07/28/%e8%b0%88%e8%ae%ba-youtube-randy-pausch-last-lecture-achieving-your-childhood-dreams</loc>
+		<lastmod>2008-07-27T18:42:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9987: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/07/11/%e4%b8%8d%e9%81%91%e5%a4%9a%e8%ae%a9</loc>
+		<lastmod>2008-07-10T16:31:08+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9986: Comments: 8 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/07/09/%e6%98%a8%e6%97%a5%e4%b9%8b%e6%97%a5%e4%b8%8d%e5%8f%af%e7%95%99</loc>
+		<lastmod>2008-07-08T18:32:38+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9985: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/06/13/%e5%91%bb%e4%b8%80%e5%91%bb</loc>
+		<lastmod>2008-06-12T17:26:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9984: Comments: 7 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/05/23/%e4%ba%94%e6%9c%88%e6%9c%ab%ef%bc%8c%e5%a4%9c%e6%9c%aa%e5%a4%ae</loc>
+		<lastmod>2008-05-22T19:05:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9983: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/04/20/%e5%8a%a0%e6%b2%b9%ef%bc%81%e5%9c%a8%e6%b3%95%e5%9b%bd%e7%9a%84%e5%90%8c%e5%ad%a6%e4%bb%ac%e6%9c%8b%e5%8f%8b%e4%bb%ac%e5%90%8c%e8%83%9e%e4%bb%ac%ef%bc%8c%e5%8a%a0%e6%b2%b9%ef%bc%81j-o-beijing-2008</loc>
+		<lastmod>2008-04-20T03:33:36+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9982: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/04/19/%e6%ad%a3%e4%b9%89%e7%9a%84%e5%a3%b0%e9%9f%b3</loc>
+		<lastmod>2008-04-18T17:37:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9981: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/03/20/kiss-the-rain</loc>
+		<lastmod>2008-03-19T18:53:16+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9980: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/03/13/%e7%94%b1%e4%b8%80%e5%b0%81%e9%82%ae%e4%bb%b6%e5%bc%95%e5%8f%91%e7%9a%84%e6%80%9d%e8%80%83</loc>
+		<lastmod>2008-03-12T19:21:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9979: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/03/12/%e5%85%ab%e5%8d%81%e9%a1%b5%e7%9a%84%e4%b9%a6</loc>
+		<lastmod>2008-03-11T18:18:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9978: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/03/07/%e9%95%bf%e8%85%bf%e5%8f%94%e5%8f%94</loc>
+		<lastmod>2008-03-06T17:42:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9977: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/02/23/%e7%a7%af%e6%9e%81%e4%b8%80%e7%82%b9%ef%bc%8c%e8%83%9c%e4%ba%ba%e4%b8%80%e7%ad%b9</loc>
+		<lastmod>2008-02-22T19:44:01+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9976: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/02/20/%e9%9a%8f%e7%ac%94_%e7%9d%a1%e5%89%8d</loc>
+		<lastmod>2008-02-19T17:32:32+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9975: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/02/16/%e5%bf%b5%e5%af%86%e7%a0%81%ef%bc%9a%e5%bf%abd%e5%a5%bd%e7%bf%bb%ef%bd%9e</loc>
+		<lastmod>2008-02-16T14:57:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9974: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/02/16/%e7%bb%99%e8%87%aa%e5%b7%b1%e7%9a%84%e6%8a%a5%e5%91%8a</loc>
+		<lastmod>2008-02-15T18:38:56+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9973: Comments: 7 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/02/02/%e5%bf%83%e6%83%85%e7%9a%84%e5%91%8a%e7%99%bd</loc>
+		<lastmod>2008-02-01T18:37:15+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9972: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/01/20/%e5%b0%8f%e6%99%ba%e6%85%a7</loc>
+		<lastmod>2008-01-20T15:46:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9971: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2008/01/05/%e6%b8%90%e8%80%81%e7%9a%84%e7%88%b6%e6%af%8d</loc>
+		<lastmod>2008-01-04T18:00:54+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9970: Comments: 9 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/12/31/%e5%86%8d%e8%a7%81%e4%ba%86%ef%bc%8c2007</loc>
+		<lastmod>2007-12-31T13:18:04+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9969: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/12/23/%e6%95%b4%e7%90%86%e6%80%9d%e7%bb%aa</loc>
+		<lastmod>2007-12-22T21:36:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9968: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/11/18/%e9%81%93%e8%b0%a2</loc>
+		<lastmod>2007-11-17T16:19:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9967: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/11/15/%e5%85%ad%e4%b8%ad%ef%bc%8c70%e5%b2%81%e5%95%a6</loc>
+		<lastmod>2007-11-14T16:27:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9966: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/11/09/%e8%83%a1%e8%a8%80%e4%b9%b1%e8%af%ad</loc>
+		<lastmod>2007-11-08T17:06:15+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9965: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/11/07/oracle%e7%bd%91%e6%b5%8b%e4%ba%86</loc>
+		<lastmod>2007-11-07T14:36:30+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9964: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/11/05/%e7%ac%94%e8%af%95%ef%bc%88%e9%84%99%e8%a7%86%ef%bc%89%e5%bd%92%e6%9d%a5</loc>
+		<lastmod>2007-11-05T04:02:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9963: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/10/28/%e7%94%9f%e6%b4%bb-%e6%95%b0%e5%ad%a6</loc>
+		<lastmod>2007-10-28T14:58:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9962: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/10/28/%e5%93%a6%e8%82%89%e7%90%83%e5%ae%a3%e8%ae%b2%e4%bc%9a</loc>
+		<lastmod>2007-10-27T16:03:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9961: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/10/17/bonne-chance-mon-pot</loc>
+		<lastmod>2007-10-16T17:45:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9960: Comments: 6 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/10/15/%e7%ac%83%e7%ac%83%e6%92%91%ef%bc%81%e7%89%b9%e5%88%ab%e6%8a%a5%e9%81%93</loc>
+		<lastmod>2007-10-15T09:30:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9959: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/10/11/14%e7%94%9f%e7%9a%84%e5%9b%9e%e9%a1%be</loc>
+		<lastmod>2007-10-10T17:20:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9958: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/10/04/%e7%9d%a1%e4%b8%8d%e7%9d%80</loc>
+		<lastmod>2007-10-03T19:10:33+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9957: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/09/27/%e5%9b%9e%e5%9b%bd%ef%bc%8c%e5%86%b2%e5%88%ba</loc>
+		<lastmod>2007-09-26T16:40:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9956: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/09/07/%e4%bd%9c%e6%9c%80%e5%9d%8f%e7%9a%84%e6%89%93%e7%ae%97</loc>
+		<lastmod>2007-09-07T11:39:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9955: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/09/07/quand-il-fin-il-commence</loc>
+		<lastmod>2007-09-07T00:13:54+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9954: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/08/31/%e6%97%a5%e7%a8%8b</loc>
+		<lastmod>2007-08-30T21:32:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9953: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/08/08/yann%e7%9a%84%e5%a4%8f%e6%97%a5%e4%b9%8b%e6%97%85-%e6%97%85%e9%80%94%e7%af%872</loc>
+		<lastmod>2007-08-08T07:26:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9952: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/08/08/yann%e7%9a%84%e5%a4%8f%e6%97%a5%e4%b9%8b%e6%97%85-%e6%97%85%e9%80%94%e7%af%87</loc>
+		<lastmod>2007-08-07T20:24:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9951: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/08/05/%e8%90%a8%e5%b0%94%e8%8c%a8%e5%a0%a1</loc>
+		<lastmod>2007-08-04T23:19:10+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9950: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/07/18/hadi%e5%90%8c%e5%ad%a6</loc>
+		<lastmod>2007-07-17T19:14:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9949: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/07/14/%e7%9b%ae%e6%a0%87-ciel</loc>
+		<lastmod>2007-07-13T18:41:16+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9948: Comments: 7 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/06/27/%e5%b0%8f%e5%bc%ba%e3%80%82%e3%80%82%e6%8b%9c%e6%8b%9c%ef%bd%9e</loc>
+		<lastmod>2007-06-26T19:17:56+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9947: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/06/26/%e7%b6%ad%e4%bb%96%e5%a5%b6-%e7%95%99%e5%ad%b8%e7%af%87-1992</loc>
+		<lastmod>2007-06-25T18:04:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9946: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/06/20/changer-la-rhythme-de-la-vie</loc>
+		<lastmod>2007-06-20T13:10:28+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9945: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/06/19/%e6%b2%89%e5%af%82%e4%b8%ad%e7%9a%84%e5%a3%b0%e9%9f%b3</loc>
+		<lastmod>2007-06-19T08:06:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9944: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/05/02/%e6%9c%aa%e5%ae%8c%e5%98%8e%ef%bd%9e%ef%bd%9e</loc>
+		<lastmod>2007-05-02T06:27:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9943: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/04/30/%e7%bb%99%e6%9c%8b%e5%8f%8b</loc>
+		<lastmod>2007-04-30T08:17:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9942: Comments: 11 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/04/04/23%e5%b2%81</loc>
+		<lastmod>2007-04-04T08:43:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9941: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/03/31/la-fete-paque</loc>
+		<lastmod>2007-03-31T10:53:22+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9940: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/03/29/%e5%96%9c%e6%8a%a5%ef%bc%81</loc>
+		<lastmod>2007-03-29T12:06:19+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9939: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/03/27/%e7%ba%a2n-n-%e6%ad%a3%e6%97%a0%e7%a9%b7</loc>
+		<lastmod>2007-03-26T17:34:44+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9938: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/03/22/%e4%bb%8e%e5%8f%89%e7%83%a7%e5%8c%85%e5%88%b0%e8%99%be%e9%a5%ba</loc>
+		<lastmod>2007-03-21T16:33:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9937: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/03/19/%e4%b8%8b%e9%9b%aa%e4%ba%86%ef%bc%81%ef%bc%81</loc>
+		<lastmod>2007-03-19T08:58:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9936: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/03/16/%e5%a4%96%e9%9d%a2</loc>
+		<lastmod>2007-03-16T10:30:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9935: Comments: 8 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/02/21/%e7%8c%aa%e5%b9%b4%e5%a4%a7%e5%90%89%ef%bc%81</loc>
+		<lastmod>2007-02-21T10:52:20+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9934: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/02/12/%e8%a2%ab%e7%82%b9%e5%90%8d%e4%ba%86</loc>
+		<lastmod>2007-02-12T13:24:05+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9933: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/01/31/essai-au-fil-de-la-plume</loc>
+		<lastmod>2007-01-31T11:27:35+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9932: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/01/26/%e9%9b%aa</loc>
+		<lastmod>2007-01-25T16:56:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9931: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/01/17/%e9%81%97%e5%bf%98</loc>
+		<lastmod>2007-01-17T11:27:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9930: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2007/01/09/%e5%90%84%e4%bd%8d%e5%90%84%e4%bd%8d%ef%bc%8c%e6%96%b0%e5%b9%b4%e5%bf%ab%e4%b9%90%e5%95%a6%ef%bc%81</loc>
+		<lastmod>2007-01-08T17:57:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9929: Comments: 9 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/11/30/%e5%8f%8c%e4%bd%8e</loc>
+		<lastmod>2006-11-30T14:12:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9928: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/11/30/%e6%88%8f</loc>
+		<lastmod>2006-11-30T12:56:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9927: Comments: 9 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/11/25/%e5%95%a6%e5%95%a6%e5%95%a6</loc>
+		<lastmod>2006-11-24T18:57:30+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9926: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/11/18/%e6%97%a0%e5%a3%b0%e5%b2%81%e6%9c%88</loc>
+		<lastmod>2006-11-18T15:33:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9925: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/11/16/%e4%b8%87%e5%9c%a3%e5%81%87%e6%9c%9f</loc>
+		<lastmod>2006-11-16T12:56:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9924: Comments: 7 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/10/24/%e5%8d%8a%e6%9c%88%e5%88%8a</loc>
+		<lastmod>2006-10-24T09:23:04+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9923: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/10/05/%e7%b3%8a%e9%87%8c%e7%b3%8a%e6%b6%82</loc>
+		<lastmod>2006-10-05T12:04:37+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9922: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/09/26/voyage-de-leglise</loc>
+		<lastmod>2006-09-25T17:31:27+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9921: Comments: 9 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/09/14/%e6%b3%95%e5%9b%bd%e5%9b%9e%e5%bf%86-souvenir</loc>
+		<lastmod>2006-09-14T15:21:19+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9920: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/09/12/nantes</loc>
+		<lastmod>2006-09-12T14:07:42+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9919: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/08/26/%e6%b3%95%e7%9b%9f%e7%9a%84%e5%90%8c%e5%ad%a6%e4%bb%ac%ef%bc%8c%e5%86%8d%e8%a7%81%e5%92%af%ef%bc%81</loc>
+		<lastmod>2006-08-26T04:18:04+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9918: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/08/22/%e6%89%a7%e5%ae%8c%e5%98%a2%e5%95%a6</loc>
+		<lastmod>2006-08-22T10:27:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9917: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/08/20/%e6%81%92%e4%bb%94%e4%b8%aa%e5%94%b1</loc>
+		<lastmod>2006-08-20T03:26:45+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9916: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/08/19/debut-ensuite-enfin</loc>
+		<lastmod>2006-08-18T16:19:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9915: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/08/16/%e7%ac%91%e4%b8%80%e7%ac%91</loc>
+		<lastmod>2006-08-16T14:36:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9914: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/08/14/%e5%93%a5%c2%b7%e5%be%b7%c2%b7%e5%a0%a1%c2%b7%e5%8f%b7</loc>
+		<lastmod>2006-08-14T12:09:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9913: Comments: 6 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/08/12/%e9%83%81%e9%97%b7%e7%9a%84%e4%b8%80%e5%a4%a9</loc>
+		<lastmod>2006-08-12T00:44:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9912: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/08/05/%e6%88%91%e7%9a%84%e6%b3%95%e8%af%ad%e8%af%be-une-semaine</loc>
+		<lastmod>2006-08-05T01:28:23+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9911: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/08/01/%e6%88%91%e7%9a%84%e6%b3%95%e8%af%ad%e8%af%be%ef%bc%8dday-two</loc>
+		<lastmod>2006-08-01T14:06:04+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9910: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/29/edufrance%e7%9a%84%e4%ba%a4%e6%b5%81%e4%bc%9a</loc>
+		<lastmod>2006-07-29T12:55:05+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9909: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/20/apres-ela-et-evaluation-de-laf</loc>
+		<lastmod>2006-07-20T13:32:30+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9908: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/20/ela%ef%bc%8c%e6%9d%a5%e5%95%a6</loc>
+		<lastmod>2006-07-20T02:42:09+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9907: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/18/hurt</loc>
+		<lastmod>2006-07-18T08:52:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9906: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/16/getting-started</loc>
+		<lastmod>2006-07-16T04:02:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9905: Comments: 6 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/08/kk%e7%90%aa</loc>
+		<lastmod>2006-07-08T14:35:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9904: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/08/%e6%a8%aa%e6%b8%a1%e7%8f%a0%e6%b1%9f</loc>
+		<lastmod>2006-07-08T00:04:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9903: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/07/%e5%bf%ab%e5%bf%ab</loc>
+		<lastmod>2006-07-07T14:13:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9902: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/07/%e5%88%86%e5%88%86%e9%92%9f%e9%9c%80%e8%a6%81%e4%bd%a0</loc>
+		<lastmod>2006-07-07T03:45:08+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9901: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/02/allez-les-bleus</loc>
+		<lastmod>2006-07-01T20:59:56+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9900: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/07/01/new-equipment</loc>
+		<lastmod>2006-07-01T15:49:38+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9899: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/06/28/allez-les-bleus-2</loc>
+		<lastmod>2006-06-28T00:24:09+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9898: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/06/28/%e6%af%95%e4%b8%9a</loc>
+		<lastmod>2006-06-27T17:19:32+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9897: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/06/24/%e3%80%82%e3%80%82%e3%80%82</loc>
+		<lastmod>2006-06-24T13:04:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9896: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/06/20/%e4%bc%98%ef%bc%8c%e5%b0%b1%e4%b8%80%e4%b8%aa%e5%ad%97%ef%bc%81</loc>
+		<lastmod>2006-06-20T10:09:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9895: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/06/19/%e7%88%b6%e4%ba%b2%e8%8a%82</loc>
+		<lastmod>2006-06-19T02:46:08+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9894: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/06/17/%e9%be%99%e6%b4%9e%ef%bc%8c%e5%b9%bf%e5%b7%a5%ef%bc%8c%e6%af%8d%e6%a0%a1</loc>
+		<lastmod>2006-06-17T15:37:28+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9893: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/06/14/cest-bon-%e6%80%a1%e5%ae%9d%ef%bc%81</loc>
+		<lastmod>2006-06-14T12:14:32+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9892: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/06/09/%e4%ba%89%e4%bc%98%ef%bc%9f%e4%ba%89%e5%bf%a7%ef%bc%9f</loc>
+		<lastmod>2006-06-09T10:41:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9891: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/06/09/cest-fini</loc>
+		<lastmod>2006-06-08T19:41:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9890: Comments: 7 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/06/04/%e9%80%9a%e7%9f%a5%e4%b9%a6</loc>
+		<lastmod>2006-06-04T12:29:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9889: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/05/28/%e3%80%82</loc>
+		<lastmod>2006-05-28T10:34:07+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9888: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/05/22/%e5%9d%8f%e5%a4%a9%e6%b0%94-il-fait-mauvais</loc>
+		<lastmod>2006-05-22T05:38:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9887: Comments: 8 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/05/19/%e5%a5%bd%e5%a4%a9%e6%b0%94</loc>
+		<lastmod>2006-05-19T00:41:06+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9886: Comments: 6 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/05/16/%e4%b8%80%e5%91%a8%e5%b9%b4%e5%bf%97%e5%ba%86</loc>
+		<lastmod>2006-05-16T05:29:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9885: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/05/16/%e8%8b%a6</loc>
+		<lastmod>2006-05-16T04:30:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9884: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/05/15/%e4%ba%94%e6%9c%88</loc>
+		<lastmod>2006-05-15T05:33:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9883: Comments: 7 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/05/05/%e5%85%b3%e4%ba%8e%e5%94%b1k</loc>
+		<lastmod>2006-05-05T15:52:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9882: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/05/04/%e4%bd%8f%e5%b1%8b%e6%9d%91%e5%a4%a7</loc>
+		<lastmod>2006-05-04T06:36:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9881: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/05/03/%e7%8f%a0%e6%b1%9f%e8%be%b9</loc>
+		<lastmod>2006-05-03T10:23:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9880: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/04/22/%e5%8d%81%e4%ba%8c%e6%ae%b5</loc>
+		<lastmod>2006-04-22T15:21:10+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9879: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/04/22/%e5%bc%b1%e5%9b%bd%e6%97%a0%e5%a4%96%e4%ba%a4</loc>
+		<lastmod>2006-04-22T03:15:07+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9878: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/04/15/tout-va-bien</loc>
+		<lastmod>2006-04-15T02:46:31+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9877: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/04/11/%e6%af%95%e4%b8%9a%e7%9b%b8</loc>
+		<lastmod>2006-04-11T14:58:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9876: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/04/08/%e5%a5%bd%e6%96%87%e5%85%b1%e4%ba%ab</loc>
+		<lastmod>2006-04-08T09:03:16+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9875: Comments: 6 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/04/02/%e9%9b%a8</loc>
+		<lastmod>2006-04-02T03:00:15+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9874: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/04/01/%e6%83%b3%e6%83%b3%e6%83%b3</loc>
+		<lastmod>2006-04-01T12:29:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9873: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/31/cest-bien-aujourdhui</loc>
+		<lastmod>2006-03-31T10:38:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9872: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/28/je-vous-dis</loc>
+		<lastmod>2006-03-28T12:44:28+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9871: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/25/%e3%80%82%e3%80%82%e3%80%82-2</loc>
+		<lastmod>2006-03-25T07:17:32+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9870: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/17/ce-soir-jai-voyage-sur-le-net</loc>
+		<lastmod>2006-03-16T16:43:19+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9869: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/16/vous-avez-compris</loc>
+		<lastmod>2006-03-16T06:46:09+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9868: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/15/%e6%97%a0%e9%a2%98</loc>
+		<lastmod>2006-03-15T13:49:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9867: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/13/annoucement</loc>
+		<lastmod>2006-03-12T17:36:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9866: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/10/%e5%90%8c%e4%bc%b4%e4%bb%ac</loc>
+		<lastmod>2006-03-10T03:46:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9865: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/02/final-examination</loc>
+		<lastmod>2006-03-02T15:52:10+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9864: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/02/les-rois-du-monde-%e4%b8%96%e4%b8%8a%e7%9a%84%e5%9b%bd%e7%8e%8b</loc>
+		<lastmod>2006-03-02T06:59:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9863: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/03/01/la-pensee-montage</loc>
+		<lastmod>2006-03-01T08:01:56+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9862: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/02/26/%e4%b8%80%e4%b8%aa%e5%ad%97%ef%bc%8c%e8%b1%aa%ef%bc%81</loc>
+		<lastmod>2006-02-26T03:21:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9861: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/02/13/%e9%9a%8f%e6%83%b3</loc>
+		<lastmod>2006-02-13T15:52:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9860: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/02/04/cerf-volant-et-le-fleur-de-narcisse</loc>
+		<lastmod>2006-02-03T16:06:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9859: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/30/%e6%96%b0%e5%b9%b4%e5%95%a6</loc>
+		<lastmod>2006-01-30T14:42:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9858: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/24/%e5%91%bc%ef%bd%9e%e5%99%ab%ef%bd%9evoir</loc>
+		<lastmod>2006-01-24T13:08:28+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9857: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/18/%e9%97%ad%e5%85%b3</loc>
+		<lastmod>2006-01-18T07:05:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9856: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/17/%e8%a6%81%e8%80%83%e8%af%95%e5%99%b6</loc>
+		<lastmod>2006-01-17T04:25:20+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9855: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/15/%e7%8b%ac%e5%85%b7%e6%85%a7%ef%bd%9e%e8%80%b3</loc>
+		<lastmod>2006-01-15T15:49:32+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9854: Comments: 10 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/12/%e5%bf%83up</loc>
+		<lastmod>2006-01-12T04:46:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9853: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/12/%e5%91%bc%ef%bd%9e%ef%bd%9e</loc>
+		<lastmod>2006-01-11T19:31:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9852: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/10/%e8%b5%b6</loc>
+		<lastmod>2006-01-09T16:34:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9851: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/04/epun</loc>
+		<lastmod>2006-01-04T04:08:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9850: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/04/%e8%95%be</loc>
+		<lastmod>2006-01-03T17:43:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9849: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2006/01/03/%e6%96%b0%e5%b9%b4%e9%9a%8f%e6%83%b3</loc>
+		<lastmod>2006-01-03T07:43:56+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9848: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/12/28/%e6%a2%a6%e6%83%b3%e5%88%b6%e9%80%a0%e8%80%85-weijie</loc>
+		<lastmod>2005-12-28T09:50:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9847: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/12/26/%e7%88%b6%e4%ba%b2%e7%bb%99%e5%ad%a9%e5%ad%90%e7%9a%84%e4%b8%80%e5%b0%81%e4%bf%a1</loc>
+		<lastmod>2005-12-25T17:41:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9846: Comments: 7 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/12/17/%e5%a6%82%e6%9e%9c%e3%80%82%e7%88%b1</loc>
+		<lastmod>2005-12-17T05:41:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9845: Comments: 6 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/12/15/hsbc%e4%b9%8b%e9%9d%a2%e8%af%95</loc>
+		<lastmod>2005-12-15T14:59:23+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9844: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/12/13/fear</loc>
+		<lastmod>2005-12-12T16:30:29+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9843: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/12/11/%e5%a4%b4%e7%96%bc</loc>
+		<lastmod>2005-12-11T10:30:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9842: Comments: 9 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/12/09/hsbc%e5%92%8ckingdee</loc>
+		<lastmod>2005-12-09T13:19:16+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9841: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/12/08/ecoutez-et-ecrivez</loc>
+		<lastmod>2005-12-08T15:01:20+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9840: Comments: 8 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/12/06/%e7%ae%80%e5%8d%95%e4%b8%8e%e4%b8%8d%e5%b9%b3%e5%87%a1</loc>
+		<lastmod>2005-12-06T13:50:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9839: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/12/04/%e5%bc%80%e5%a7%8b%e5%95%a6</loc>
+		<lastmod>2005-12-04T11:01:42+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9838: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/11/25/its-a-brand-new-day</loc>
+		<lastmod>2005-11-24T17:25:33+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9837: Comments: 6 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/11/21/yeah</loc>
+		<lastmod>2005-11-21T08:29:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9836: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/11/20/interview</loc>
+		<lastmod>2005-11-20T08:56:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9835: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/11/17/hsbc%e4%b9%8b%e7%ac%94%e8%af%95</loc>
+		<lastmod>2005-11-17T14:21:36+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9834: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/11/14/the-winters-tale</loc>
+		<lastmod>2005-11-14T13:31:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9833: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/11/13/chances-challenges</loc>
+		<lastmod>2005-11-13T05:55:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9832: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/11/10/programmera-fantasic-designer</loc>
+		<lastmod>2005-11-10T14:42:32+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9831: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/11/10/%e9%9f%a9%e5%9b%bd%e8%8f%9c</loc>
+		<lastmod>2005-11-10T05:54:20+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9830: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/11/09/%e4%b8%80%e8%bd%ae%e5%98%b4%ef%bd%9e%ef%bd%9e</loc>
+		<lastmod>2005-11-09T12:53:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9829: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/10/26/%e5%a5%b3%e5%84%bf%e8%ba%ab%e6%82%a3%e7%99%bd%e8%a1%80%e7%97%85%e3%80%80%e7%88%b6%e4%ba%b2%e6%9c%80%e5%90%8e2%e5%85%83%e4%b8%ad500%e4%b8%87%e7%bb%9d%e5%a4%84%e9%80%a2%e7%94%9f</loc>
+		<lastmod>2005-10-25T17:47:01+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9828: Comments: 8 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/10/19/sign-it-up</loc>
+		<lastmod>2005-10-19T10:26:29+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9827: Comments: 7 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/10/18/%e5%b7%b4%e9%bb%8e%e7%ab%a5%e8%af%9d%ef%bc%9a%e5%b0%8f%e5%a5%b3%e5%ad%a9%e5%8d%96%e5%a4%aa%e9%98%b3%e6%95%91%e5%a6%88%e5%a6%88</loc>
+		<lastmod>2005-10-18T10:16:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9826: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/10/15/cest-mon-aniversaire-aujourdi</loc>
+		<lastmod>2005-10-15T15:08:07+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9825: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/10/12/perceptivity</loc>
+		<lastmod>2005-10-12T12:43:22+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9824: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/10/10/voirle-cielcest-tres-bleu</loc>
+		<lastmod>2005-10-10T13:00:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9823: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/09/29/%e6%88%91%e9%a1%b6%ef%bd%9e%ef%bd%9e</loc>
+		<lastmod>2005-09-28T16:45:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9821: Comments: 5 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/09/24/%e9%97%ae%e4%bd%a0%e6%80%95%e6%9c%aa%ef%bd%9e%ef%bc%81</loc>
+		<lastmod>2005-09-24T11:20:29+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9820: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/09/18/%e5%86%b0%e7%9a%ae%e6%9c%88%e9%a5%bc</loc>
+		<lastmod>2005-09-17T16:46:27+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9819: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/09/14/make-a-decision</loc>
+		<lastmod>2005-09-13T16:03:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9818: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/09/12/%e6%a0%91%e7%86%8a%e7%9a%84%e7%94%9f%e6%97%a5party</loc>
+		<lastmod>2005-09-11T16:52:52+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9817: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/09/04/%e8%bf%bd%e6%b1%82</loc>
+		<lastmod>2005-09-04T10:23:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9816: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/09/03/wa</loc>
+		<lastmod>2005-09-02T16:36:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9815: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/08/28/%e9%9d%99</loc>
+		<lastmod>2005-08-28T13:57:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9814: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/08/26/%e9%9b%aa%e7%8b%bc%e6%b9%96</loc>
+		<lastmod>2005-08-26T09:07:32+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9813: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/08/22/%e9%9d%a2%e5%8c%85</loc>
+		<lastmod>2005-08-22T14:40:33+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9812: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/08/20/at-the-beginning</loc>
+		<lastmod>2005-08-20T02:07:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9811: Comments: 1 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/08/19/%e5%bc%80%e5%a7%8b%ef%bc%8c%e8%b5%b7%e8%b7%91%ef%bc%81</loc>
+		<lastmod>2005-08-19T06:07:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9810: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/08/19/%e5%9b%9e%e5%bf%86%ef%bc%8d%e9%87%91%e8%9d%b6</loc>
+		<lastmod>2005-08-19T05:46:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9809: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/08/19/%e5%ae%8c%e7%bb%93%e4%ba%86%e7%9a%84%e5%ae%9e%e4%b9%a0</loc>
+		<lastmod>2005-08-19T04:38:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9808: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/08/19/%e5%ae%9e%e4%b9%a0%e7%ac%ac%e4%b8%89%e5%a4%a9</loc>
+		<lastmod>2005-08-19T04:25:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9807: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/07/12/%e6%9e%9c%e7%84%b6%e8%be%9b%e8%8b%a6</loc>
+		<lastmod>2005-07-12T07:27:28+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9806: Comments: 2 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/07/08/%e7%88%b8%e5%a6%88%e5%be%88%e5%bc%80%e5%bf%83%ef%bc%81</loc>
+		<lastmod>2005-07-08T13:01:22+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9805: Comments: 4 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/07/08/%e8%bf%99%e6%a0%b7%e7%9a%84%e5%a5%b3%e4%ba%ba%e8%ae%a9%e6%88%91%e5%8f%8d%e6%84%9f</loc>
+		<lastmod>2005-07-08T12:55:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9804: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/07/08/%e5%93%88%e5%93%88%ef%bd%9e%e9%87%91%e8%9d%b6</loc>
+		<lastmod>2005-07-08T12:41:08+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9803: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/07/03/%e6%9c%ba%e4%bc%9a%e3%80%81%e9%87%8d%e8%ae%a4%e8%af%86%e4%b8%8e%e7%a4%be%e4%bc%9a%e7%88%b1</loc>
+		<lastmod>2005-07-03T13:29:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9802: Comments: 3 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/06/17/%e6%97%a0%e9%a2%98-2</loc>
+		<lastmod>2005-06-17T11:23:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9801: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/06/11/%e7%ab%af%e5%8d%88%e8%8a%82</loc>
+		<lastmod>2005-06-10T16:37:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9800: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/06/04/%e6%83%ad%e6%84%a7</loc>
+		<lastmod>2005-06-04T04:48:05+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9799: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/06/04/%e4%b8%b4%e6%89%be%e6%a0%91%e6%a8%9f%e5%89%8d</loc>
+		<lastmod>2005-06-04T03:06:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9798: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/06/04/%e5%85%b3%e4%ba%8e%e5%86%99%e5%ad%97</loc>
+		<lastmod>2005-06-03T18:06:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.2</priority>
+	</url>
+<!-- Debug: Priority report of postID 9797: Comments: 0 of 609 = 0 points -->
+	<url>
+		<loc>http://blog.cielyann.com/2005/05/13/%e5%93%a6%ef%bc%9f%e8%bf%99%e5%b0%b1%e6%98%af%e6%88%91%e7%9a%84blog</loc>
+		<lastmod>2005-05-12T16:40:58+00:00</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.2</priority>
 	</url>

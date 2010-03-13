@@ -18,6 +18,7 @@
 /** The name of the database for WordPress */
 define('WP_CACHE', true); //Added by WP-Cache Manager
 define('DB_NAME', 'cielyann_wordpress');
+//define('DB_NAME','cielyann_test');
 
 /** MySQL database username */
 define('DB_USER', 'cielyann');
